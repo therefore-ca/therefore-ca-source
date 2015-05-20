@@ -1,39 +1,40 @@
+.btn {
+	border-radius: 6px;
+	font-weight: 700;
+	font-family: 'Avenir';
+	padding: 10px 30px;
+}
+
 .btn-primary:not(.btn-link):not(.btn-flat) {
 	background-color: white;
-	background: url('/img/orange-button-back.png');
+	background: url('/images/orange-button-back.png');
 	color: white;
 	background-position: top center;
 }
 
 .btn-success:not(.btn-link):not(.btn-flat) {
-	background: url('/img/green-button-back.png');
+	background: url('/images/green-button-back.png');
 	color: white;
 }
 
 .btn-success:not(.btn-link):not(.btn-flat) {
-	background: url('/img/green-button-back.png');
+	background: url('/images/green-button-back.png');
 	color: white;
 }
 
 .btn-info:not(.btn-link):not(.btn-flat) {
-	background: url('/img/blue-button-back.png');
+	background: url('/images/blue-button-back.png');
 	color: white;
 }
 
 .btn-warning:not(.btn-link):not(.btn-flat) {
-	background: url('/img/yellow-button-back.png');
+	background: url('/images/yellow-button-back.png');
 	color: white;
 }
 
 .btn-danger:not(.btn-link):not(.btn-flat) {
-	background: url('/img/red-button-back.png');
+	background: url('/images/red-button-back.png');
 	color: white;
-}
-
-.btn {
-	border-radius: 6px;
-	font-weight: 700;
-	font-family: 'Avenir';
 }
 
 .btn-default:not(.btn-link):not(.btn-flat) {
