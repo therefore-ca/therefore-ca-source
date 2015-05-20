@@ -5,11 +5,17 @@
 	padding: 10px 30px;
 }
 
+.btn-link {
+	color: $primary;
+
+	&:focus, &:hover, &:active {
+		color: $primaryDarkest;
+	}
+}
+
 .btn-primary:not(.btn-link):not(.btn-flat) {
-	background-color: white;
 	background: url('/images/orange-button-back.png');
 	color: white;
-	background-position: top center;
 }
 
 .btn-success:not(.btn-link):not(.btn-flat) {
@@ -40,4 +46,21 @@
 .btn-default:not(.btn-link):not(.btn-flat) {
 	color: $grey;
 	border: solid 1px $greyLight50;
+}
+
+.dark-back {
+	.btn {
+		border: 2px white solid;
+	}
+
+	.btn-default:not(.btn-link):not(.btn-flat) {
+		color: white;
+		border: solid 2px white;
+	}
+
+	.btn-link {
+		color: white;
+	}
+
+
 }
