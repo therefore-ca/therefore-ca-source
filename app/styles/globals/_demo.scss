@@ -8,6 +8,7 @@ h1.demo, h2.demo {
 
 }
 
+
 .demo-box {
 	border: dashed #ddd 2px;
 	background: white;
@@ -15,12 +16,17 @@ h1.demo, h2.demo {
 	overflow: hidden;
 	margin-top: 2em;
 
+	h1.demo, h2.demo {
+		padding-bottom: 0.1em;
+	}
+
 	h1.demo {
 		font-size: 1.3em;
 	}
 
 	h2.demo {
 		font-size: 1.0em;
+		margin-top: 1.5em;
 	}
 }
 

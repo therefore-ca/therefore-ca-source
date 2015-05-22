@@ -9,6 +9,7 @@ $accent: #861c75;
 $red: #d64339;
 $blue: #28939f;
 $orange: #f69234;
+$yellow: $orange;
 $green: #27a786; 
 
 $grey: #404040;
@@ -18,7 +19,9 @@ $greyLight70: lighten($grey, 73);
 
 /* Global brand colors */
 
-.primary, .therefore-primary, .navbar.navbar.therefore-primary {
+.primary, .therefore-primary, 
+.navbar.navbar.therefore-primary, 
+.bg-primary {
 	background-color: $primary;
 	color: white;
 }
@@ -58,22 +61,22 @@ $greyLight70: lighten($grey, 73);
 	color: white;
 }
 
-.red, .warning {
+.red, .danger, .bg-danger {
 	background-color: $red;
 	color: white;
 }
 
-.blue, .info {
+.blue, .info, .bg-info {
 	background-color: $blue;
 	color: white;
 }
 
-.orange, .caution {
+.orange, .warning, .bg-warning {
 	background-color: $orange;
 	color: white;
 }
 
-.green, .success {
+.green, .success, .bg-success {
 	background-color: $green;
 	color: white;
 }
@@ -82,4 +85,47 @@ $greyLight70: lighten($grey, 73);
 	background-color: $accent;
 	color: white;	
 }
+
+
+.primary-poly {
+	background-image: url('/images/orange-button-back.png');
+	color: white;
+}
+
+.success-poly {
+	background-image: url('/images/green-button-back.png');
+	color: white;
+}
+
+.info-poly  {
+	background-image: url('/images/blue-button-back.png');
+	color: white;
+}
+
+.warning-poly  {
+	background-image: url('/images/yellow-button-back.png');
+	color: white;
+}
+
+.danger-poly  {
+	background-image: url('/images/red-button-back.png');
+	color: white;
+}
+
+.text-warning {
+	color: $red;
+}
+.text-primary {
+	color: $orange;
+}
+.text-danger {
+	color: $yellow;
+}
+.text-success {
+	color: $green;
+}
+.text-info {
+	color: $blue;
+}
+
 
