@@ -5,7 +5,7 @@ $primaryDarkest: #aa3b36;
 $primaryLighter: #f2784e;
 $primaryLightest: #f59572;
 
-$accent: #861c75;
+$accent: #cd1e60;
 $red: #d64339;
 $blue: #28939f;
 $orange: #f69234;
@@ -15,7 +15,7 @@ $green: #27a786;
 $grey: #404040;
 $greyLight30: lighten($grey, 30);
 $greyLight50: lighten($grey, 58);
-$greyLight70: lighten($grey, 73);
+$greyLight70: lighten($grey, 70);
 
 /* Global brand colors */
 
@@ -56,9 +56,18 @@ $greyLight70: lighten($grey, 73);
 	color: black;
 }
 
-.grey, .dark-back {
+.grey {
 	background-color: $grey;
-	color: white;
+	div, p, h1, h2 {
+		color: white;
+	}
+}
+
+.grey-trans {
+	background-color: rgba(64,64,64,0.9);
+	div, p, h1, h2 {
+		color: white;
+	}
 }
 
 .red, .danger, .bg-danger {
@@ -86,6 +95,7 @@ $greyLight70: lighten($grey, 73);
 	color: white;	
 }
 
+/* Button polygons */
 
 .primary-poly {
 	background-image: url('/images/orange-button-back.png');
@@ -112,6 +122,34 @@ $greyLight70: lighten($grey, 73);
 	color: white;
 }
 
+/* offering color polygons (500px) */
+.yellow-poly {
+	background-image: url('/images/yellow-back-500.png');
+	color: white;
+}
+
+.purple-poly {
+	background-image: url('/images/purple-back-500.png');
+	color: white;
+}
+
+.orange-poly {
+	background-image: url('/images/orange-back-500.png');
+	color: white;
+}
+
+.blue-poly {
+	background-image: url('/images/blue-back-500.png');
+	color: white;
+}
+
+.green-poly {
+	background-image: url('/images/green-back-500.png');
+	color: white;
+}
+
+
+/* Bootstrap color text */
 .text-warning {
 	color: $red;
 }
@@ -127,5 +165,6 @@ $greyLight70: lighten($grey, 73);
 .text-info {
 	color: $blue;
 }
+
 
 

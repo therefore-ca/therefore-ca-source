@@ -1,11 +1,15 @@
 
 article.offering {
-	height: 200px;
+
 	display: block;
 	position: relative;
 	margin-bottom: 1em;
 	margin-top: 1em;
 	position: relative;
+
+	@media screen and (max-width: 1200px) {
+		height: 200px;
+	}
 
 	.inner {
 		border-radius: 10px;
@@ -14,13 +18,10 @@ article.offering {
 	}
 
 	.offering-icon {
-		width: 40%;
-		float: left;
 		height: 200px;
 		display: block;
 		text-align: center;
 		display: block;
-		float: left;
 
 		i {
 			font-size: 100px;
@@ -31,33 +32,14 @@ article.offering {
 			transform: translateY(-50%);
 
 		}
-
-		&.yellow-poly {
-			background-image: url('/images/yellow-back-500.png');
-		}
-
-		&.purple-poly {
-			background-image: url('/images/purple-back-500.png');
-		}
-
-		&.orange-poly {
-			background-image: url('/images/orange-back-500.png');
-		}
-
-		&.blue-poly {
-			background-image: url('/images/blue-back-500.png');
-		}
-
-		&.green-poly {
-			background-image: url('/images/green-back-500.png');
-		}
 	}
 	.offering-info {
-		width: 60%;
 		float: right;
-		padding-left: 1em;
-		padding-right: 1em;
 		padding-bottom: 1em;
+
+		@media screen and (min-width: 1200px) {
+			height: 200px;
+		}
 
 		h1 {
 			font-size: 1.0em;

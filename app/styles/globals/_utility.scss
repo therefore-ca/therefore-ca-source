@@ -8,3 +8,22 @@
 	overflow: hidden;
 }
 
+.divider {
+	display: block;
+	overflow:hidden;
+	width: 6%;
+	height: 3px;
+	background: $grey;
+	opacity: 0.5;
+	margin-top: 1em;
+	margin-bottom: 1em;
+	clear: both;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.contrast {
+	.divider {
+		background: white;
+	}
+}
