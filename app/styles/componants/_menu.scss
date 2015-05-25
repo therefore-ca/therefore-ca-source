@@ -1,0 +1,57 @@
+nav {
+	position: absolute;
+	display: block;
+	width: 100%;
+
+	@media screen and (max-width: 768px) {
+		
+	}
+
+	@media screen and (min-width: 768px) {
+		padding-left: 2em;
+		padding-right: 2em;
+	}
+
+	ul.menu {
+		list-style: none;
+		margin: 0 0 0 0;
+		padding: 0 0 0 0;
+
+		@media screen and (max-width: 768px) {
+			text-align: center;
+		}
+
+		@media screen and (min-width: 768px) {
+			padding: 3em 0;
+			float: right;
+			font-size: 0.85em;
+
+		}
+
+		li {
+			padding: 0 0 0 0;
+
+			@media screen and (min-width: 768px) {
+				display: inline-block;
+				margin: 0px 1em;
+
+			}
+		}
+
+		a {
+			color: white;
+			font-family: 'Avenir';
+			font-weight: 700;
+			text-transform: uppercase;
+
+			&:hover, &:focus {
+				text-decoration: none;
+				@media screen and (min-width: 768px) {
+					border-bottom: 3px white solid;
+				}
+
+			}
+
+		}
+	}
+}

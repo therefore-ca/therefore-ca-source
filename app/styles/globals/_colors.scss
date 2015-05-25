@@ -95,64 +95,6 @@ $greyLight70: lighten($grey, 70);
 	color: white;	
 }
 
-/* Button polygons */
-
-.primary-poly {
-	background-image: url('/images/orange-button-back.png');
-	color: white;
-}
-
-.success-poly {
-	background-image: url('/images/green-button-back.png');
-	color: white;
-}
-
-.info-poly  {
-	background-image: url('/images/blue-button-back.png');
-	color: white;
-}
-
-.warning-poly  {
-	background-image: url('/images/yellow-button-back.png');
-	color: white;
-}
-
-.danger-poly  {
-	background-image: url('/images/red-button-back.png');
-	color: white;
-}
-
-/* offering color polygons (500px) */
-.yellow-poly {
-	background-image: url('/images/yellow-back-500.png');
-	color: white;
-}
-
-.purple-poly {
-	background-image: url('/images/purple-back-500.png');
-	color: white;
-}
-
-.orange-poly {
-	background-image: url('/images/orange-back-500.png');
-	color: white;
-}
-
-.blue-poly {
-	background-image: url('/images/blue-back-500.png');
-	color: white;
-}
-
-.green-poly {
-	background-image: url('/images/green-back-500.png');
-	color: white;
-}
-
-.orange-poly-lrg {
-	background-image: url('/images/orange-back-full.jpg');
-	background-size: cover;
-	color: white;
-}
 
 
 /* Bootstrap color text */
@@ -171,21 +113,6 @@ $greyLight70: lighten($grey, 70);
 .text-info {
 	color: $blue;
 }
-
-/* Gradient */
-.gradient {
-	background: -moz-linear-gradient(-45deg,  rgba(242,120,78,0.5) 0%, rgba(144,37,124,0.7) 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,rgba(242,120,78,0.5)), color-stop(100%,rgba(144,37,124,0.7))); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(-45deg,  rgba(242,120,78,0.5) 0%,rgba(144,37,124,0.7) 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(-45deg,  rgba(242,120,78,0.5) 0%,rgba(144,37,124,0.7) 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(-45deg,  rgba(242,120,78,0.5) 0%,rgba(144,37,124,0.7) 100%); /* IE10+ */
-	background: linear-gradient(135deg,  rgba(242,120,78,0.5) 0%,rgba(144,37,124,0.7) 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#80f2784e', endColorstr='#b390257c',GradientType=1 ); 
-	div, p, h1, h2 {
-		color: white;
-	}
-}
-
 
 
 

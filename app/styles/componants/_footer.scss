@@ -1,0 +1,59 @@
+footer {
+	font-size: 0.9em;
+	text-align: center;
+	margin-bottom: 2em;
+
+	a {
+		color: $greyLight30;
+		&:hover, &:focus {
+			color: $grey;
+		}
+	}
+
+	ul.social-menu {
+		list-style: none;
+		margin: 0 0;
+		padding: 0 0 0 0;
+		li {
+			margin: 0 0 0 0;
+			padding: 0 0.25em;
+			display: inline-block;
+		}
+
+		a {
+			color: $greyLight50;
+		}	
+
+		i {
+			font-size: 2.5em;
+		}
+
+		span {
+			position: absolute;
+			text-indent: -9999px;
+		}
+	}
+
+	ul.menu {
+		list-style: none;
+		margin: 0 0 0 0;
+		padding: 0 0 0 0;
+		li {
+			margin: 0 0 0 0;
+			padding: 0 0 0 0;
+			display: inline-block;
+		}
+	}
+
+	.contact, .copyright {
+		margin: 1.25em 0;
+	}
+
+	.address {
+		color: $greyLight30;
+	}
+
+	.address, .copyright {
+		font-size: 0.875em;
+	}
+}
