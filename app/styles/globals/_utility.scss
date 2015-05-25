@@ -27,3 +27,15 @@
 		background: white;
 	}
 }
+
+
+/* Gradient */
+.grandient {
+	background: -moz-linear-gradient(-45deg,  rgba(242,120,78,0.75) 0%, rgba(144,37,124,0.75) 100%);
+	background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,rgba(242,120,78,0.75)), color-stop(100%,rgba(144,37,124,0.75)));
+	background: -webkit-linear-gradient(-45deg,  rgba(242,120,78,0.75) 0%,rgba(144,37,124,0.75) 100%);
+	background: -o-linear-gradient(-45deg,  rgba(242,120,78,0.75) 0%,rgba(144,37,124,0.75) 100%);
+	background: -ms-linear-gradient(-45deg,  rgba(242,120,78,0.75) 0%,rgba(144,37,124,0.75) 100%);
+	background: linear-gradient(135deg,  rgba(242,120,78,0.75) 0%,rgba(144,37,124,0.75) 100%); 
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bff2784e', endColorstr='#bf90257c',GradientType=1 );
+}

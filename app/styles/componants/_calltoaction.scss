@@ -1,3 +1,11 @@
 .call-to-action {
 	margin-bottom: 2em;
+	padding-top: 3em;
+	padding-bottom: 3em;
+	text-align: center;
+	.inner {
+		max-width: 500px;
+		margin: 0 auto;
+	}
 }
+
