@@ -6,9 +6,16 @@
 		padding: 10em 1em 2em 1em;
 	}
 
+	h1 {
+		@media screen and (min-width: 1200px) {
+			font-size: 3.4em;
+		}
+	}
+
 	span.alt {
 		font-size: 1.5em;
 		line-height: 0.9em;
+		display: block;
 	}
 
 	.inner {
