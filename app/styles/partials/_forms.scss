@@ -24,14 +24,16 @@
 }
 
 .form-control {
-	border: $greyLight50 solid 1px;
+	border-color: $greyLight50;
 	box-shadow: none;
 
 	&:focus {
-		outline: none;
-		border-color: $grey;
-		box-shadow: none;
+		border-color: $blue;
 	}
+}
+
+.form-group {
+	margin-top: 1em;
 }
 
 .has-warning {
@@ -45,8 +47,7 @@
 		border-color: $red;
 		box-shadow: none;
 		&:focus {
-			box-shadow: none;
-			border-color: $grey;
+			border-color: $red;
 
 		}
 	}
@@ -63,8 +64,7 @@
 		border-color: $green;
 		box-shadow: none;
 		&:focus {
-			box-shadow: none;
-			border-color: $grey;
+			border-color: $green;
 		}
 	}
 }

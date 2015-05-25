@@ -8,6 +8,7 @@ span.underline {
 
 .nodes {
 	background-image: url('/images/nodes-full.svg');
+
 	background-size: 100% auto;
 	background-repeat: no-repeat;
 	background-position: -10px 0px;
@@ -25,6 +26,10 @@ span.underline {
 
 	@media screen and (min-width: 1600px) {
 		background-position: -10px -10%;
+	}
+
+	&.nodes-white {
+		background-image: url('/images/nodes-full-white.svg');
 	}
 }
 
