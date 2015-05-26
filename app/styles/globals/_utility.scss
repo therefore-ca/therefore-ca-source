@@ -11,8 +11,8 @@
 .divider {
 	display: block;
 	overflow:hidden;
-	width: 6%;
-	height: 3px;
+	width: 10%;
+	height: 1px;
 	background: $grey;
 	opacity: 0.5;
 	margin-top: 1em;
@@ -20,6 +20,10 @@
 	clear: both;
 	margin-left: auto;
 	margin-right: auto;
+
+	@include mobile {
+		width: 25%;
+	}	
 }
 
 .contrast {
@@ -38,4 +42,24 @@
 	max-width: 720px;
 	margin: 0 auto;
 	margin-bottom: 1.5em;
+}
+
+.single-col.skinny {
+	max-width: 540px;
+	margin: 0 auto;
+	padding-left: 15px;
+	padding-right: 15px;
+	margin-bottom: 1.5em;
+}
+
+.mobile-hidden {
+	@include mobile {
+		display: none;
+	}
+}
+
+.mobile {
+	@include desktop {
+		display: none;
+	}
 }

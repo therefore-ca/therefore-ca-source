@@ -30,13 +30,25 @@
 
       <nav class="navigation-bar">
         <a href = "/home.html" class = "logo"></a>
-        <ul class = "menu">
-          <li><a href="/home.html">Home</a></li>
-          <li><a href="">Services</a></li>
-          <li><a href="">About us</a></li>
-          <li><a href="https://medium.com/therefore-interactive" target = "_blank">Blog</a></li>
-          <li><a href="/contact.html">Contact</a></li>
-        </ul>
+        <a href = "#menu" class = "menu-open"><i class="fa fa-bars"></i><span>Menu</span></a>
+        <div class = "menu-container mobile-hidden">
+          <div class = "inner">
+            <a href = "#menu" class = "menu-close"><i class="fa fa-times"></i><span>Close</span></a>
+            <ul id = "menu" class = "main-menu">
+              <li><a href="/home.html">Home</a></li>
+              <li><a href="">Services</a></li>
+              <li><a href="">About us</a></li>
+              <li><a href="https://medium.com/therefore-interactive" target = "_blank">Blog</a></li>
+              <li><a href="/contact.html">Contact</a></li>
+            </ul>
+            <div class = "mobile">
+              <div class = "divider"></div>
+              <div class = "phone"><a href = "tel:+19059182690">905-918-2690</a></div>
+              <a class = "download" href = ""><span>Download PDF information package</span><i class="fa fa-download"></i>
+              </a>
+            </div>
+          </div>
+        </div>
       </nav>
 
       <section id = "home-introduction">
@@ -149,14 +161,19 @@
           <p class = "single-col" >We are able to develop an effective project strategy with you through a process of truth discovery.  We utilize this strategy to form a user-story backlog, which formalizes the interaction stories between users and the thing we’re building. These user-stories are the north-star that drive the creation of an information architecture, wireframes, user workflows, UI/UX, code development, and anything else needed for the project.</p>
 
           <p class = "single-col">When working with Therefore on a project, we assign a dedicated multidisciplinary team. This means 100% focus on your project. Close collaboration between you and our team means that we remain focused on building the right thing, the right way.</p>
+          <div class = "divider"></div>
         </div>
       </div>
     </section>
-
-    <section id = "home-clients" class = "grey-lightest home-clients">
+    <section id = "home-clients" class = "text-center logo-cloud">
       <h1>Our <span class = "underline">amazing clients</h1>
-      <div class = "brand-logo"><img src = "">
-      </div>
+      <p class = "lead single-col skinny">Over the past 10 years, we’ve had the privilege to work with some amazing organizations.</p>
+      <div class = "brand-logo"><img src = "images/cloverleaf-box.png"></div>
+      <div class = "brand-logo"><img src = "images/opera-box.png"></div>
+      <div class = "brand-logo"><img src = "images/lcbo-box.png"></div>
+      <div class = "brand-logo"><img src = "images/allseating-box.png"></div>
+      <div class = "brand-logo"><img src = "images/unifor-box.png"></div>
+      <div class = "brand-logo"><img src = "images/snapd-box.png"></div>
     </section>
 
     <section id = "home-calltoaction">
@@ -196,7 +213,7 @@
               </span>
             </span>
           </div>
-          <div class = "copyright">© 2015 Therefore Interactive Inc.  All Rights Reserved.</div>
+          <div class = "copyright">© 2015 Therefore Interactive Inc. All Rights Reserved.</div>
           <ul class = "menu">
             <li><a href = "">Privacy policy</a></li> |
             <li><a href = "">Accessibility</a></li>
@@ -236,6 +253,8 @@
 
       <!-- build:js({app,.tmp}) scripts/main.js -->
       <script src="scripts/main.js"></script>
+      <script src="scripts/componants/menu.js"></script>
+
       <!-- endbuild -->
     </body>
     </html>

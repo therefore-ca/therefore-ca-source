@@ -3,55 +3,143 @@ nav {
 	display: block;
 	width: 100%;
 
-	@media screen and (max-width: 768px) {
-		
-	}
-
 	@media screen and (min-width: 768px) {
 		padding-left: 2em;
 		padding-right: 2em;
 	}
 
-	ul.menu {
-		list-style: none;
-		margin: 0 0 0 0;
+}
+
+ul.main-menu {
+	list-style: none;
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
+
+	@include mobile	{
+		text-align: center;
+		font-size: 2.3em;
+		padding-top: 2em;
+	}
+
+	@include desktop {
+		padding: 3em 0;
+		float: right;
+		font-size: 0.85em;
+
+	}
+
+	li {
 		padding: 0 0 0 0;
 
-		@media screen and (max-width: 768px) {
-			text-align: center;
-		}
-
 		@media screen and (min-width: 768px) {
-			padding: 3em 0;
-			float: right;
-			font-size: 0.85em;
+			display: inline-block;
+			margin: 0px 1em;
 
 		}
+	}
 
-		li {
-			padding: 0 0 0 0;
+	a {
+		color: white;
+		font-family: 'Avenir';
+		font-weight: 700;
+		text-transform: uppercase;
 
+		&:hover, &:focus {
+			text-decoration: none;
 			@media screen and (min-width: 768px) {
-				display: inline-block;
-				margin: 0px 1em;
-
+				border-bottom: 3px white solid;
 			}
-		}
 
-		a {
-			color: white;
-			font-family: 'Avenir';
-			font-weight: 700;
+		}
+	}
+}
+
+.menu-container {
+
+	@include mobile {
+		@include primaryPoly;
+		position: absolute;
+		top: 0px;
+		width: 100%;
+		z-index: 100;
+		max-height: 600px;
+		overflow: hidden;
+	}
+
+	.divider {
+		@include mobile {
+			background: white;
+			width: 100%;
+		}
+	}
+
+	.inner {
+		@include mobile {
+			@include gradient;
+			padding: 2em;
+			height: 600px;
+		}
+	}
+
+	.phone {
+		font-size: 1.5em;
+		font-family: 'Avenir';
+		text-align: center;
+		display: block;
+	}
+
+	a.download {
+		font-size: 0.9em;
+		font-family: 'Avenir';
+		text-align: center;
+		display: block;
+		color: white;
+		span {
+			clear: both;
 			text-transform: uppercase;
-
-			&:hover, &:focus {
-				text-decoration: none;
-				@media screen and (min-width: 768px) {
-					border-bottom: 3px white solid;
-				}
-
-			}
-
+			display: block;
+			margin-top: 0.75em;
 		}
+
+		i {
+			margin-top: 0.3em;
+			font-size: 2em;
+		}
+		&:hover, &:focus {
+			color: white;
+			text-decoration: none;
+		}
+	}
+}
+
+a.menu-open, a.menu-close {
+
+	z-index: 99;
+	position: absolute;
+	right: 1em;
+	top: 1em;
+	color: white;
+	text-align: center;
+
+	&:hover, &:focus {
+		text-decoration: none;
+	}
+
+	@include desktop {
+		display: none;
+	}
+
+	i {
+		font-size: 2.0em;
+		clear: both;
+		display: block;
+		margin-bottom: -9px;
+	}
+
+	span {
+		font-size: 0.6em;
+		text-transform: uppercase;
+		clear: both;
+		line-height: 1.0em;
 	}
 }

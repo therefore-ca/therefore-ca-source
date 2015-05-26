@@ -1,3 +1,16 @@
+@mixin mobile {
+	@media screen and (max-width: 767px) {
+		@content;
+	}
+}
+
+@mixin desktop {
+	@media screen and (min-width: 768px) {
+		@content;
+	}
+}
+
+
 @media (min-width: 992px) {
 	.container {
 		width: 100%;

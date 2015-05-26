@@ -1,6 +1,11 @@
 .promotional {
 	text-align: center;
-	padding: 3em 1em;
+	padding: 9em 1em 2em 1em;
+
+	@include mobile {
+		height: 600px;
+	}
+
 
 	@media screen and (min-width: 768px) {
 		padding: 10em 1em 2em 1em;
@@ -19,13 +24,13 @@
 	}
 
 	.inner {
-		max-width: 500px;
+		max-width: 540px;
 		margin: 0 auto;
 	}
 
 	.divider {
 		background: white;
-		width: 75%;
+		width: 100%;
 	}
 
 	a.next {

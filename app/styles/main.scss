@@ -1,9 +1,10 @@
+@import 'globals/grid';
+
 @import 'globals/colors';
 @import 'globals/demo';
 @import 'globals/utility';
 @import 'globals/typography';
 @import 'globals/branding';
-@import 'globals/grid';
 @import 'globals/images';
 
 @import 'partials/forms';
@@ -15,3 +16,4 @@
 @import 'componants/promotional';
 @import 'componants/footer';
 @import 'componants/contact';
+@import 'componants/logocloud';

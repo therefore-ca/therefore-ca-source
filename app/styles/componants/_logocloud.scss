@@ -1,0 +1,26 @@
+.logo-cloud {
+	clear: both;
+	overflow: hidden;
+	max-width: 1200px; 
+	margin: 0 auto;
+}
+
+
+.brand-logo {
+	display: block;
+	padding: 0 2em;
+	background-size: 100% auto;
+	width: 16.66667%;
+	float: left;
+
+	@media screen and (max-width: 1024px) {
+		width: 33.333%;
+	}
+
+	img {
+		width: 100%;
+		height: auto;
+	}
+}
+
+
