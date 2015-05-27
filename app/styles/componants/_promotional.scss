@@ -1,14 +1,13 @@
 .promotional {
 	text-align: center;
-	padding: 9em 1em 2em 1em;
+	padding: 6em 1em 2em 1em;
 
 	@include mobile {
-		height: 600px;
 	}
 
 
-	@media screen and (min-width: 768px) {
-		padding: 10em 1em 2em 1em;
+	@include desktop {
+		padding: 7em 1em 2em 1em;
 	}
 
 	h1 {
@@ -44,6 +43,10 @@
 	.decoration {
 		font-size: 5.5em;
 		line-height: 1em;
+	}
+
+	.btn {
+		margin: 1em 1em;
 	}
 }
 
