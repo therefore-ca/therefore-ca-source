@@ -72,6 +72,17 @@
   font-style: normal;
 }
 
+.alt-lead {
+  font-family: 'Avenir';
+  text-transform: uppercase;
+  margin-bottom: 2em;
+  margin-top: 1em;
+}
+
+.lead.single-col {
+  margin-bottom: 1em;
+}
+
 body {
   font-family: 'Museo Sans';
   background: white;

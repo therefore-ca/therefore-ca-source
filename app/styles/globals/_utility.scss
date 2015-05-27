@@ -63,3 +63,47 @@
 		display: none;
 	}
 }
+
+.wrapper {
+	padding-top: 2em;
+	padding-bottom: 2em;
+}
+
+.two-col {
+	@include desktop {
+		-webkit-column-count: 2; /* Chrome, Safari, Opera */
+    	-moz-column-count: 2; /* Firefox */
+    	column-count: 2;
+    }
+}
+
+.two-col.bullets {
+	li {
+		@include desktop {
+			display: inline-block;
+			clear: both;
+			width: 100%;
+		}
+	}
+}
+
+.bullets {
+	list-style: none;
+	padding-left: 0px;
+
+	li {
+		padding-left: 2em;
+		margin-bottom: 0.2em;
+		position: relative;
+
+		&:before {
+			position: absolute;
+			left: 0;
+			top: 0;
+			font-family: 'fontawesome';
+			content:"\f00c";
+			color: $primary;
+		}
+	}
+
+}

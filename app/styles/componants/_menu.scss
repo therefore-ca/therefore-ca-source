@@ -81,11 +81,16 @@ ul.main-menu {
 		}
 	}
 
-	.phone {
+	a.phone {
 		font-size: 1.5em;
 		font-family: 'Avenir';
 		text-align: center;
 		display: block;
+		color: white;
+		&:hover, &:focus {
+			color: white;
+			text-decoration: none;
+		}
 	}
 
 	a.download {
