@@ -49,16 +49,64 @@
 	}
 }
 
-#about-us-quick-facts {
-
-	font-size: 14px;
-}
 
 #about-us-main {
+
+	h3 {
+		font-size: 18px;
+	}
+
 	.container {
 		max-width: 1000px;
 	}
 	aside {
-		font-size: 14px;
+		font-size: 13px;
+		h2 {
+			font-size: 1.4em;
+		}
+	}
+	.panel {
+		padding-left: 1em;
+		padding-right: 1em;
+		border-radius: 1em;
+		padding-bottom: 1em;
 	}
 }
+
+#about-us-people {
+	img {
+		margin: 0 auto;
+		border: white solid 2px;
+	}
+
+	.container {
+		max-width: 1000px;
+	}
+
+	.person {
+		font-size: 14px;
+		background: $whiteTrans;
+		padding-left: 2em;
+		padding-right: 2em;
+		padding-top: 1em;
+		margin-bottom: 2em;
+		border: solid 2px white;
+		border-radius: 1em;
+		p, h1, h2, div {
+			color: $grey;
+		}
+
+		@include desktop {
+			min-height:300px;
+		}
+
+		@include mobile {
+			min-height: 275px;
+		}
+
+		h3 {
+			font-size: 1.2em;	
+		}
+	}
+}
+
