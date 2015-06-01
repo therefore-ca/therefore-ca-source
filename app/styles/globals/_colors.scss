@@ -16,7 +16,7 @@ $grey: #404040;
 $greyLight30: lighten($grey, 30);
 $greyLight50: lighten($grey, 58);
 $greyLight70: lighten($grey, 70);
-$greyTrans: rgba(64,64,64,0.95);
+$greyTrans: rgba(64,64,64,0.90);
 $greyTransLight: rgba(64,64,64,0.5);
 $whiteTrans: rgba(255,255,255,0.60);
 
@@ -68,7 +68,7 @@ $whiteTrans: rgba(255,255,255,0.60);
 }
 
 .grey-trans {
-	background-color: rgba(64,64,64,0.95);
+	background-color: $greyTrans;
 	div, p, h1, h2 {
 		color: white;
 	}
