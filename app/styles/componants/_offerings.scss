@@ -26,14 +26,21 @@ article.offering {
 		text-align: center;
 		display: block;
 
-		i {
-			font-size: 100px;
+		img {
+			border-radius: 100%;
+			border: 5px solid white;
+			width: 60%;
+			height: auto;
 			display: block;
 			color: white;
+			margin: 0 auto;
 			position: relative;
 			top: 50%;
 			transform: translateY(-50%);
-
+			
+			@include mobile {
+				width: 90%;
+			}
 		}
 	}
 	.offering-info {
@@ -58,9 +65,22 @@ article.offering {
 		border-radius: 10px;
 		margin: 0 auto;
 		font-size: 4.2em;
-		i {
+	}
 
+	img {
+		border-radius: 100%;
+		border: 3px solid white;
+		width: 60%;
+		height: auto;
+		display: block;
+		color: white;
+		margin: 0 auto;
+		position: relative;
+		top: 50%;
+		transform: translateY(-50%);
+
+		@include mobile {
+			width: 90%;
 		}
 	}
 }
-

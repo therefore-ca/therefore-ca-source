@@ -21,7 +21,8 @@
   <link rel="manifest" href="/manifest.json">
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
-  <meta name="theme-color" content="#ffffff">  <!-- Place favicon.ico and apple-touch-icon.png in the root directory --> 
+  <meta name="theme-color" content="#ffffff">
+  <!-- Place favicon.ico and apple-touch-icon.png in the root directory --> 
   <!-- build:css(.tmp) styles/bootstrap.css -->
   <link rel="stylesheet" href="styles/bootstrap.css">
   <!-- endbuild -->
@@ -66,17 +67,35 @@
           </div>
         </div>
       </nav>
-      
+
       <section id = "home-introduction">
         <div class = "orange-poly-lrg">
           <div class = "promotional gradient">
-            <div class = "inner">
-              <div class = "decoration"><i class="fa fa-cubes"></i></div>
-              <h1><span class = "alt">Build</span> the right thing</h1>
-              <p class = "lead">Discover the Truth, Design the Solution, <br>Build It the Right Way.</p>
+            <div id = "carousel-1" class = "carousel inner">
+              <ul class = "slides">
+                <li class = "slide">
+                  <h1><span class = "alt">Discover</span> the truth</h1>
+                  <p class = "lead">through research, discovery and analysis</p>
+                </li>
+                <li class = "slide inner hidden">
+                  <h1><span class = "alt">Design</span> the solution</h1>
+                  <p class = "lead">through collaborative design process</p>
+                </li>
+                <li class = "slide inner hidden">
+                  <h1><span class = "alt">Build</span> the right thing</h1>
+                  <p class = "lead">the right way. Open source. Agile.</p>
+                </li>
+              </ul>
               <div class = "divider"></div>
-              <p class = "">Therefore is a digital agency based in Toronto that specializes in building superior enterprise communication systems using open source web technologies.</p>
-              <a class = "next" href = "#home-offerings"><i class="fa fa-arrow-circle-o-down"></i></a>
+              <ul class = "controls">
+                <li class = "active"><a href = "#" class = ""><span>1</span><i class="fa fa-circle"></i></a></li>
+                <li><a href = "#" class = ""><span>2</span><i class="fa fa-circle"></i></a></li>
+                <li><a href = "#" class = ""><span>3</span><i class="fa fa-circle"></i></a></li>
+              </ul>
+              <div class = "inner-slim">
+                <p class = "">Therefore is a digital agency based in Toronto that specializes in building superior enterprise communication systems using open source web technologies.</p>
+                <a class = "next" href = "#home-offerings"><i class="fa fa-arrow-circle-o-down"></i></a>
+              </div>
             </div>
           </div>
         </div>
@@ -93,7 +112,7 @@
             <article class = "col-sm-12 col-md-5ths offering">
               <div class = "inner">
                 <div class = "offering-icon col-xs-5 col-md-12 green-poly">
-                  <i class="fa fa-compass"></i>
+                  <img src = "images/offering-strategy.svg">
                 </div>
                 <div class = "offering-info col-xs-7 col-md-12">
                   <h2>Strategy</h2>
@@ -108,7 +127,7 @@
             <article class = "col-sm-12 col-md-5ths offering">
               <div class = "inner">
                 <div class = "offering-icon col-xs-5 col-md-12 yellow-poly">
-                  <i class="fa fa-anchor"></i>
+                  <img src = "images/offering-design.svg">
                 </div>
                 <div class = "offering-info col-xs-7 col-md-12">
                   <h1>Design</h1>
@@ -123,7 +142,7 @@
             <article class = "col-sm-12 col-md-5ths offering">
               <div class = "inner">
                 <div class = "offering-icon col-xs-5 col-md-12 blue-poly">
-                  <i class="fa fa-drupal"></i>
+                  <img src = "images/offering-drupal.svg">
                 </div>
                 <div class = "offering-info col-xs-7 col-md-12">
                   <h1>Drupal</h1>
@@ -138,7 +157,7 @@
             <article class = "col-sm-12 col-md-5ths offering">
               <div class = "inner">
                 <div class = "offering-icon col-xs-5 col-md-12 orange-poly">
-                  <i class="fa fa-code-fork"></i>
+                  <img src = "images/offering-code.svg">
                 </div>
                 <div class = "offering-info col-xs-7 col-md-12">
                   <h1>Development</h1>
@@ -153,7 +172,7 @@
             <article class = "col-sm-12 col-md-5ths offering">
               <div class = "inner">
                 <div class = "offering-icon col-xs-5 col-md-12 purple-poly">
-                  <i class="fa fa-life-ring"></i>
+                  <img src = "images/offering-support.svg">
                 </div>
                 <div class = "offering-info col-xs-7 col-md-12">
                   <h1>Long-term Support</h1>
@@ -186,12 +205,22 @@
     <section id = "home-clients" class = "text-center logo-cloud wrapper">
       <h1>Our <span class = "underline">amazing clients</h1>
       <p class = "lead single-col skinny">Over the past 10 years, we’ve had the privilege to work with some amazing organizations.</p>
-      <div class = "brand-logo"><img src = "images/cloverleaf-box.png"></div>
-      <div class = "brand-logo"><img src = "images/opera-box.png"></div>
-      <div class = "brand-logo"><img src = "images/lcbo-box.png"></div>
-      <div class = "brand-logo"><img src = "images/allseating-box.png"></div>
-      <div class = "brand-logo"><img src = "images/unifor-box.png"></div>
-      <div class = "brand-logo"><img src = "images/snapd-box.png"></div>
+      <div class = "brand-logo"><img src = "images/logo-cloverleaf-box.png"></div>
+      <div class = "brand-logo"><img src = "images/logo-opera-box.png"></div>
+      <div class = "brand-logo"><img src = "images/logo-lcbo-box.png"></div>
+      <div class = "brand-logo"><img src = "images/logo-allseating-box.png"></div>
+      <div class = "brand-logo"><img src = "images/logo-unifor-box.png"></div>
+      <div class = "brand-logo"><img src = "images/logo-snapd-box.png"></div>
+      <div class = "brand-logo"><img src = "images/logo-esri-box.png"></div>
+      <div class = "brand-logo"><img src = "images/logo-cupw-box.png"></div>
+      <div class = "brand-logo"><img src = "images/logo-canadalands-box.png"></div>
+      <div class = "brand-logo"><img src = "images/logo-opseu-box.png"></div>
+      <div class = "brand-logo"><img src = "images/logo-ipsg-box.png"></div>
+      <div class = "brand-logo"><img src = "images/logo-opseu-box.png"></div>
+
+
+
+
     </section>
 
     <section id = "home-calltoaction">
