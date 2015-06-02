@@ -1,0 +1,30 @@
+.showcase-wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+.showcase-text {
+    .lead {
+        font-size: 1.1em;
+    }
+    @media screen and (max-width: 1200px) {
+        font-size: 14px;
+        padding-top: 0px;
+    }
+}
+
+.showcase {
+    img {
+        right: 0%;
+        position: relative;
+        width: 150%;
+        height: auto;
+        @media screen and (max-width: 1300px) {
+            width: 190%;
+        }
+        @media screen and (max-width: 992px) {
+            width: 100%;
+            display: none;
+        }
+    }
+}
