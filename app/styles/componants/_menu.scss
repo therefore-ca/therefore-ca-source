@@ -96,29 +96,6 @@ ul.main-menu {
 			text-decoration: none;
 		}
 	}
-
-	a.download {
-		font-size: 0.9em;
-		font-family: 'Avenir';
-		text-align: center;
-		display: block;
-		color: white;
-		span {
-			clear: both;
-			text-transform: uppercase;
-			display: block;
-			margin-top: 0.75em;
-		}
-
-		i {
-			margin-top: 0.3em;
-			font-size: 2em;
-		}
-		&:hover, &:focus {
-			color: white;
-			text-decoration: none;
-		}
-	}
 }
 
 a.menu-open, a.menu-close {
