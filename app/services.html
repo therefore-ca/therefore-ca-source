@@ -26,8 +26,8 @@
   <link rel="stylesheet" href="styles/bootstrap.css">
   <!-- endbuild -->
   <!-- build:css(.) styles/material.css -->
-  <link rel="stylesheet" href="bower_components/bootstrap-material-design/dist/css/material.css" />
-  <link rel="stylesheet" href="bower_components/bootstrap-material-design/dist/css/ripples.css" />
+  <link rel="stylesheet" href="styles/vendor/material/css/material.css" />
+  <link rel="stylesheet" href="styles/vendor/material/css/ripples.css" />
   <!-- endbuild -->
   <!-- build:css(.tmp) styles/main.css -->
   <link rel="stylesheet" href="styles/main.css">
@@ -80,7 +80,9 @@
               <a href="#service-development" class="btn btn-default">Development<div class="ripple-wrapper"></div></a>
               <a href="#service-support" class="btn btn-default">Support<div class="ripple-wrapper"></div></a>
             </div>
-            <a class = "next" href = "#service-strategy"><i class="fa fa-arrow-circle-o-down"></i></a>
+            <a class = "next" href = "#service-strategy">                
+              <i class="fa fa-chevron-down"></i>
+            </a>
           </div>
         </div>
       </section>
@@ -271,8 +273,11 @@
         <script src="bower_components/bootstrap-material-design/dist/js/material.js"></script>
         <script src="bower_components/bootstrap-material-design/dist/js/ripples.js"></script>
         <!-- endbower -->
+        <script src="styles/vendor/material/js/material.js"></script>
+        <script src="styles/vendor/material/js/ripples.js"></script>
         <!-- endbuild -->
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        
         <script>
         (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
           function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;

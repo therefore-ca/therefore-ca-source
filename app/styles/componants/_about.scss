@@ -50,26 +50,22 @@
 }
 
 
-#about-us-main {
+#about-us-quick-facts {
 
 	h3 {
 		font-size: 18px;
 	}
 
-	.container {
-		max-width: 1000px;
-	}
-	aside {
-		font-size: 13px;
-		h2 {
-			font-size: 1.4em;
-		}
-	}
+
 	.panel {
 		padding-left: 1em;
 		padding-right: 1em;
 		border-radius: 1em;
 		padding-bottom: 1em;
+
+		h2 {
+			font-size: 1.4em;
+		}
 	}
 }
 
@@ -90,7 +86,7 @@
 		padding-right: 2em;
 		padding-top: 1em;
 		margin-bottom: 2em;
-		border: solid 2px white;
+		border: solid 2px $greyLight70;
 		border-radius: 1em;
 		p, h1, h2, div {
 			color: $grey;

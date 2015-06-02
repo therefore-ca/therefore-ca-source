@@ -11,8 +11,8 @@
   <link rel="stylesheet" href="/styles/bootstrap.css">
   <!-- endbuild -->
   <!-- build:css(.) styles/material.css -->
-  <link rel="stylesheet" href="/bower_components/bootstrap-material-design/dist/css/material.css" />
-  <link rel="stylesheet" href="/bower_components/bootstrap-material-design/dist/css/ripples.css" />
+  <link rel="stylesheet" href="styles/vendor/material/css/material.css" />
+  <link rel="stylesheet" href="styles/vendor/material/css/ripples.css" />
   <!-- endbuild -->
   <!-- build:css(.tmp) styles/main.css -->
   <link rel="stylesheet" href="/styles/main.css">
@@ -312,19 +312,68 @@
             <section id = "home-introduction">
               <div class = "orange-poly-lrg">
                 <div class = "promotional gradient">
-                  <div class = "inner">
-                    <div class = "decoration"><i class="fa fa-cubes"></i></div>
-                    <h1><span class = "alt">Build</span> the right thing</h1>
-                    <p class = "lead">The right way. Open source. Agile.</p>
+                  <div id = "carousel-1" class = "carousel inner">
+                    <ul class = "slides">
+                      <li class = "slide">
+                        <h1><span class = "alt">Discover</span> the truth</h1>
+                        <p class = "lead">through research, discovery and analysis</p>
+                      </li>
+                      <li class = "slide inner hidden">
+                        <h1><span class = "alt">Design</span> the solution</h1>
+                        <p class = "lead">through collaborative design process</p>
+                      </li>
+                      <li class = "slide inner hidden">
+                        <h1><span class = "alt">Build</span> the right thing</h1>
+                        <p class = "lead">the right way. Open source. Agile.</p>
+                      </li>
+                    </ul>
                     <div class = "divider"></div>
-                    <p class = "">Therefore is a digital agency based in Toronto that specializes in building superior enterprise communication systems using open source web technologies.</p>
-                    <a class = "next" href = "#home-offerings"><i class="fa fa-arrow-circle-o-down"></i></a>
+                    <ul class = "controls">
+                      <li class = "active"><a href = "#" class = ""><span>1</span><i class="fa fa-circle"></i></a></li>
+                      <li><a href = "#" class = ""><span>2</span><i class="fa fa-circle"></i></a></li>
+                      <li><a href = "#" class = ""><span>3</span><i class="fa fa-circle"></i></a></li>
+                    </ul>
+                    <div class = "inner-slim">
+                      <p class = "">Therefore is a digital agency based in Toronto that specializes in building superior enterprise communication systems using open source web technologies.</p>
+                      <a class = "next" href = "#home-offerings"><i class="fa fa-chevron-down"></i></a>
+                    </div>
                   </div>
                 </div>
               </div>
             </section>
           </div>
         </section>
+
+        <div class = "demo-box">
+          <section id = "about-us-promotional">
+            <h1 class = "demo">Promotional</h1>
+            <div class = "promo-image-2">
+              <div class = "contrast darker-gradient">
+                <div class = "nodes">
+                  <div class = "inner container">
+                    <div class = "row">
+                      <div class = "col-md-12">
+                        <p class = "lead">Come visit us in historic Liberty Village, Toronto</p>
+                      </div>
+                      <div class = "col-sm-3 col-md-3">
+                        <h2><span class = "number">20+ </span><span class = "detail">Employees<span></h2>
+                        <p>are ready to take on your most challenging projects.</p>
+                      </div>
+                      <div class = "col-sm-5 col-md-6">
+                        <h2><span class = "number">1 Million </span><span class = "detail">Site Visitors</span></h2>
+                        <p>is the number of people that use products and platforms we've built.</p>
+                      </div>
+                      <div class = "col-sm-4 col-md-3">
+                        <h2><span class = "number">10+ </span><span class = "detail">Years Experience</span></h2>
+                        <p>is how long we've been doing this web thing.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
 
         <div class = "demo-box">
           <h1 class = "demo">footer</h1>
@@ -375,10 +424,11 @@
           <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/modal.js"></script>
           <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/tooltip.js"></script>
           <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/popover.js"></script>
-          <script src="bower_components/bootstrap-material-design/dist/js/material.js"></script>
-          <script src="bower_components/bootstrap-material-design/dist/js/ripples.js"></script>
           <!-- endbower -->
+          <script src="styles/vendor/material/js/material.js"></script>
+          <script src="styles/vendor/material/js/ripples.js"></script>
           <!-- endbuild -->
+
 
           <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
           <script>
