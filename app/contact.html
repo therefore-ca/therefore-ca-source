@@ -89,32 +89,47 @@
                   <h2>We are ready to <span class = "underline">listen</span></h2>
                   <div class = "divider"></div>
                   <p class = "lead">Go ahead and drop us a line</span></p>
-                  <form>
+                  <form id="contact-form" novalidate>
                     <div class = "container contact">
                       <div clas = "row">
                         <div class = "col-sm-6">
-
-                          <div class="input-group input-group-lg">
-                            <span class="input-group-addon" id="basic-addon1"><i class="fa fa-user"></i></span>
-                            <input type="text" class="form-control" placeholder="Name" aria-describedby="basic-addon1">
+                          <div class="control-group">
+                            <div class="input-group input-group-lg ">
+                              <span class="input-group-addon" id="basic-addon1"><i class="fa fa-user"></i></span>
+                              <input type="text" name="name" id="name"class="form-control" placeholder="Name" 
+                                      aria-describedby="basic-addon1"  
+                                      data-validation-required-message="Field required"
+                                      required  >
+                            </div>
+                            <p class="help-block"></p>
                           </div>
-
-                          <div class="input-group input-group-lg">
-                            <span class="input-group-addon"><i class="fa fa-envelope-o"></i></span>
-                            <input type="text" class="form-control" placeholder="Email">
+                          <div class="control-group">
+                            <div class="input-group input-group-lg" >
+                              <span class="input-group-addon"><i class="fa fa-envelope-o"></i></span>
+                              <input type="email" name="email" id="email" class="form-control" placeholder="Email" 
+                                  data-validation-email-message="This is not a e-mail address" 
+                                  data-validation-required-message="Field required"
+                                  required >
+                            </div>
+                            <p class="help-block"></p>
                           </div>
 
                         </div>
                         <div class = "col-sm-6">
-                          <div class="form-group input-group-lg">
-                            <textarea class="form-control" rows="5" id="comment" placeholder = "Message"></textarea>
+                          <div class="control-group">
+                            <div class="form-group input-group-lg">
+                              <textarea class="form-control" name="comment" rows="5" id="comment" placeholder = "Message" 
+                                   data-validation-required-message="Field required"
+                                  required></textarea>
+                            </div>
+                             <p class="help-block"></p>
                           </div>
                         </div>
 
                       </div>
                     </div>
+                    <button  type="submit" class="btn btn-success btn-lg">Submit<div class="ripple-wrapper"></div></button>
                   </form>
-                  <button class="btn btn-success btn-lg">Submit<div class="ripple-wrapper"></div></button>
                 </div>
               </div>
             </div>
@@ -182,7 +197,10 @@
         </script>
 
         <!-- build:js({app,.tmp}) scripts/main.js -->
+        <script src="scripts/contact/jqBootstrapValidation.js"></script>
+        <script src="scripts/contact/contact.js"></script>
         <script src="scripts/main.js"></script>
+
         <!-- endbuild -->
       </body>
       </html>
