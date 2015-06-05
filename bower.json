@@ -1,9 +1,8 @@
 {
-  "name": "therefore-webapp",
-  "private": true,
-  "dependencies": {
-    "bootstrap-sass-official": "~3.2.0",
-    "modernizr": "~2.8.2",
-    "bootstrap-material-design": "~0.3.0"
-  }
+	"name": "therefore-webapp",
+	"private": true,
+	"dependencies": {
+		"bootstrap-sass-official": "~3.2.0",
+		"modernizr": "~2.8.2"
+	}
 }

@@ -16,9 +16,9 @@ $( document ).ready(function() {
 		$('a.menu-open').removeClass('mobile-hidden');	
 	});
 
-	var carouselController = function() {
-		var items = $('div.carousel ul.slides li'),
-		controls = $('div.carousel ul.controls li'),
+	var carouselController = function(id) {
+		var items = $(id + ' ul.slides li'),
+		controls = $(id + ' ul.controls li'),
 		count = items.length,
 		index = 0;
 
@@ -26,8 +26,11 @@ $( document ).ready(function() {
 			var control = controls.eq(index);
 			var item = items.eq(index);
 
-			items.addClass('hidden');
-			item.removeClass('hidden');
+			items.removeClass('animate');
+			items.addClass('hidden').removeClass('active');
+			item.removeClass('hidden').addClass('active');
+			$(item).addClass('animate');
+
 
 			controls.removeClass('active')
 			control.addClass('active');
@@ -42,7 +45,7 @@ $( document ).ready(function() {
 		}, 6000);
 
 		$('div.carousel ul.controls li a').click(function(e) {
-			e.preventDefault;
+			e.preventDefault();
 			var control = $(this).parent('li').index();
 			activate(control);
 			clearInterval(cycleSlides);
@@ -51,11 +54,21 @@ $( document ).ready(function() {
 
 	};
 
-	carouselController();
+	carouselController('#carousel-1');
+	carouselController('#carousel-2');
+
+
+	$('#animate').click(function(e) {
+		e.preventDefault();
+		$('#home-summary').toggleClass('animate');
+	});
+
+
 });
 
 
-/* 
+/*
+
 
 
 
