@@ -53,7 +53,7 @@
         opacity: 1.0;
     }
     to {
-        opacity: 0.5;
+        opacity: 0.0;
     }
 }
 
@@ -258,6 +258,15 @@
 }
 }
 
+.grey-curtain-3 {
+    background: #e6e7e8;
+    width: 180px;
+    height: 163px;
+    position: absolute;
+    top: 152px;
+    left: 20px;
+}
+
 .showcase-frame {
     height: 650px;
     width: 1045px;
@@ -322,7 +331,7 @@
 
     .fade-out {
         animation-name: fadeOut;
-        animation-duration: 1.25s;
+        animation-duration: 2s;
         -webkit-animation-fill-mode: forwards;
         animation-timing-function: ease;
     }
@@ -333,6 +342,8 @@
         -webkit-animation-fill-mode: forwards;
         animation-timing-function: ease;
     }
+
+
 
 }
 
