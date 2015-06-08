@@ -1,12 +1,6 @@
 @keyframes analyticsWindow {
-    from {
-        left: 300px;
-        top: 100px;
-    }
-    to {
-        left:24px;
-        top: 100px;
-    }
+    from { left: 300px; top: 100px; }
+    to { left:24px; top: 100px; }
 }
 
 @keyframes diagramWindow {
@@ -66,6 +60,27 @@
     }
 }
 
+@keyframes codeWindow {
+    from {
+       left: 290px;
+       top: 120px;
+   }
+   to {
+      left: 290px;
+      top: 100px;
+  }
+}
+
+@keyframes iphoneWindow {
+    from {
+        left: 500px;
+        bottom: 10px;
+    }
+    to {
+        left: 10px;
+        bottom: 10px;
+    }
+}
 
 @keyframes analyticsCurtain {
     from {
@@ -232,14 +247,14 @@
     }
 
     .gradient {
-     height: 650px;
-     width: 1000px;
-     position:absolute;
-     top: 0;
-     left: 0; 
- }
+       height: 650px;
+       width: 1000px;
+       position:absolute;
+       top: 0;
+       left: 0; 
+   }
 
- .offering-bar {
+   .offering-bar {
     position: absolute;
     padding: 10px;
     bottom: -100px;
@@ -362,13 +377,47 @@ img.window {
 
 /* Window */
 div.window {
-   position: absolute;
-   height: auto;
-   -webkit-box-shadow: 0px 10px 52px 3px rgba(64,64,64,0.55);
-   -moz-box-shadow: 0px 10px 52px 3px rgba(64,64,64,0.55);
-   box-shadow: 0px 10px 52px 3px rgba(64,64,64,0.55);  
+ position: absolute;
+ height: auto;
+ -webkit-box-shadow: 0px 10px 52px 3px rgba(64,64,64,0.55);
+ -moz-box-shadow: 0px 10px 52px 3px rgba(64,64,64,0.55);
+ box-shadow: 0px 10px 52px 3px rgba(64,64,64,0.55);  
 }
 
+div.window-badge {
+  position: absolute;
+  height: auto;
+}
+
+.badges {
+    position: absolute;
+    top: 90px;
+    left: -10px;
+}
+
+.html-badge {
+    left: 0px;
+    top: 0px;
+    width: 100px;
+}
+
+.css-badge {
+    left: 10px;
+    top: 120px;
+    width: 80px;
+}
+
+.js-badge {
+    left: -5px;
+    top: 240px;
+    width: 110px;
+}
+
+.drupal-badge {
+    left: 13px;
+    top: 360px;
+    width: 80px;
+}
 
 .desktop-window {
     width: 460px;
@@ -410,6 +459,12 @@ div.window {
     top: 120px;
 }
 
+.iphone-window {
+    position: absolute;
+    width: 200px;
+    left: 10px;
+    bottom: 10px;
+}
 
 .animate {
     img.sidebar {
@@ -488,6 +543,20 @@ div.window {
       -webkit-animation-fill-mode: forwards;
       animation-timing-function: ease;
   }
+
+  .code-window {
+    animation-name: codeWindow;
+    animation-duration: 0.5s;
+    -webkit-animation-fill-mode: forwards;
+    animation-timing-function: ease;
+}
+
+.iphone-window {
+    animation-name: iphoneWindow;
+    animation-duration: 0.5s;
+    -webkit-animation-fill-mode: forwards;
+    animation-timing-function: ease;
+}
 }
 
 

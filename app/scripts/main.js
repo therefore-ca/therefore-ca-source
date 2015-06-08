@@ -44,7 +44,7 @@ $( document ).ready(function() {
 			};
 		}, 6000);
 
-		$('div.carousel ul.controls li a').click(function(e) {
+		$(id + ' ul.controls li a').click(function(e) {
 			e.preventDefault();
 			var control = $(this).parent('li').index();
 			activate(control);
@@ -58,11 +58,14 @@ $( document ).ready(function() {
 	carouselController('#carousel-2');
 
 
-	$('#animate').click(function(e) {
-		e.preventDefault();
-		$('#home-summary').toggleClass('animate');
-	});
+	var waypoint = new Waypoint({
+		element: document.getElementById('carousel-2'),
+		handler: function() {
+			$('ul.slides li.active').addClass('animate');
+		},
+		offset: '50%'
 
+	});
 
 });
 
