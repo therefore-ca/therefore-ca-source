@@ -5,9 +5,67 @@
     }
     to {
         left:24px;
-        top: 50px;
+        top: 100px;
     }
 }
+
+@keyframes diagramWindow {
+    from {
+        left: 300px;
+        top: 130px;
+    }
+    to {
+        left: 400px;
+        top: 130px;
+    }
+}
+
+@keyframes desktopWindow {
+    from {
+        left: 270px;
+        top: 130px;
+    }
+    to {
+        left: 270px;
+        top: 120px;
+    }
+}
+
+@keyframes mobileWindow {
+    from {
+
+        left: 240px;
+        top: 140px;
+    }
+    to {
+        left: 100px;
+        top: 100px;
+    }
+}
+
+@keyframes tabletWindow {
+    from {
+        left: 300px;
+        top: 130px;
+    }
+    to {
+        left: 600px;
+        top: 100px;
+    }
+}
+
+@keyframes toolbarWindow {
+    from {
+
+        left: 200px;
+        top: 180px;
+    }
+    to {
+        left: 80px;
+        top: 210px;
+    }
+}
+
 
 @keyframes analyticsCurtain {
     from {
@@ -145,7 +203,7 @@
     }
 
     @media screen and (max-width: 991px) {
-        padding-top: 2em;
+        padding-top: 0em;
     }
 
     @media screen and (min-width: 992px) {
@@ -174,14 +232,14 @@
     }
 
     .gradient {
-       height: 650px;
-       width: 1000px;
-       position:absolute;
-       top: 0;
-       left: 0; 
-   }
+     height: 650px;
+     width: 1000px;
+     position:absolute;
+     top: 0;
+     left: 0; 
+ }
 
-   .offering-bar {
+ .offering-bar {
     position: absolute;
     padding: 10px;
     bottom: -100px;
@@ -277,19 +335,9 @@
 }
 
 .analytics-window {
-    position: absolute;
-    height: auto;
-    -webkit-box-shadow: 0px 10px 52px 3px rgba(64,64,64,0.55);
-    -moz-box-shadow: 0px 10px 52px 3px rgba(64,64,64,0.55);
-    box-shadow: 0px 10px 52px 3px rgba(64,64,64,0.55);
     width: 480px;
     left: 300px;
     top: 100px;
-
-    img.window {
-        width: 100%;
-        height: auto;
-    }
 
     img.sidebar {
         position: absolute;
@@ -299,6 +347,69 @@
         opacity: 0;
     }
 }
+
+.diagram-window {
+    width: 480px;
+    left: 400px;
+    top: 140px;
+
+}
+
+img.window {
+    width: 100%;
+    height: auto;
+}
+
+/* Window */
+div.window {
+   position: absolute;
+   height: auto;
+   -webkit-box-shadow: 0px 10px 52px 3px rgba(64,64,64,0.55);
+   -moz-box-shadow: 0px 10px 52px 3px rgba(64,64,64,0.55);
+   box-shadow: 0px 10px 52px 3px rgba(64,64,64,0.55);  
+}
+
+
+.desktop-window {
+    width: 460px;
+    left: 270px;
+    top: 120px;
+}
+
+.mobile-window {
+
+    width: 180px;
+    left: 100px;
+    top: 100px;
+}
+
+.tablet-window {
+
+    width: 360px;
+    left: 600px;
+    top: 100px;
+}
+
+.toolbar-window {
+
+    width: 35px;
+    left: 100px;
+    top: 210px;
+}
+
+.how-title {
+    @media screen and (min-width: 992px) {
+        clear:both;
+        padding-top: 120px;
+    }
+}
+
+.code-window {
+    width: 460px;
+    left: 290px;
+    top: 120px;
+}
+
 
 .animate {
     img.sidebar {
@@ -310,6 +421,13 @@
 
     .analytics-window {
         animation-name: analyticsWindow;
+        animation-duration: 0.5s;
+        -webkit-animation-fill-mode: forwards;
+        animation-timing-function: ease;
+    }
+
+    .diagram-window {
+        animation-name: diagramWindow;
         animation-duration: 0.5s;
         -webkit-animation-fill-mode: forwards;
         animation-timing-function: ease;
@@ -343,8 +461,33 @@
         animation-timing-function: ease;
     }
 
+    .mobile-window {
+      animation-name: mobileWindow;
+      animation-duration: 0.5s;
+      -webkit-animation-fill-mode: forwards;
+      animation-timing-function: ease;
+  }
 
+  .desktop-window {
+      animation-name: desktopWindow;
+      animation-duration: 0.5s;
+      -webkit-animation-fill-mode: forwards;
+      animation-timing-function: ease;
+  }
 
+  .toolbar-window {
+      animation-name: toolbarWindow;
+      animation-duration: 0.5s;
+      -webkit-animation-fill-mode: forwards;
+      animation-timing-function: ease;
+  }
+
+  .tablet-window {
+      animation-name: tabletWindow;
+      animation-duration: 0.5s;
+      -webkit-animation-fill-mode: forwards;
+      animation-timing-function: ease;
+  }
 }
 
 
