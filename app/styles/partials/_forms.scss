@@ -2,146 +2,150 @@
 /* Fields */
 
 .input-group .form-control:first-child {
-	width: 100%;
-	border-bottom-left-radius: 6px;
-	border-top-left-radius: 6px;
-	border-bottom-right-radius: 6px;
-	border-top-right-radius: 6px;
+    width: 100%;
+    border-bottom-left-radius: 6px;
+    border-top-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+    border-top-right-radius: 6px;
 }
 
 .input-group {
-	margin-top: 1em;
+    margin-top: 1em;
 }
 
-
 .input-group-lg > .form-control {
-	font-size: 1.0em;
+    font-size: 1.0em;
 }
 
 .input-group-addon {
-	border: $greyLight50 solid 1px;
-	background: $greyLight70;
+    border: $greyLight50 solid 1px;
+    background: $greyLight70;
 }
 
 .form-control {
-	border-color: $greyLight50;
-	box-shadow: none;
-
-	&:focus {
-		border-color: $blue;
-	}
+    border-color: $greyLight50;
+    box-shadow: none;
+    &:focus {
+        border-color: $blue;
+    }
 }
 
 .form-group {
-	margin-top: 1em;
+    margin-top: 1em;
 }
 
 .has-warning {
-	.input-group-addon {
-		color: white;
-		border-color: $red;
-		background-color: $red;
-	}
-
-	.form-control {
-		border-color: $red;
-		box-shadow: none;
-		&:focus {
-			border-color: $red;
-
-		}
-	}
+    .input-group-addon {
+        color: white;
+        border-color: $red;
+        background-color: $red;
+    }
+    .form-control {
+        border-color: $red;
+        box-shadow: none;
+        &:focus {
+            border-color: $red;
+        }
+    }
 }
 
 .has-success {
-	.input-group-addon {
-		color: white;
-		border-color: $green;
-		background-color: $green;
-	}
-
-	.form-control {
-		border-color: $green;
-		box-shadow: none;
-		&:focus {
-			border-color: $green;
-		}
-	}
+    .input-group-addon {
+        color: white;
+        border-color: $green;
+        background-color: $green;
+    }
+    .form-control {
+        border-color: $green;
+        box-shadow: none;
+        &:focus {
+            border-color: $green;
+        }
+    }
 }
 
-
-.checkbox, .radio, .togglebutton {
-	label {
-		font-weight: 700;
-		color: $grey;
-		font-size: 0.9em;
-	}	
-} 
-
+.checkbox,
+.radio,
+.togglebutton {
+    label {
+        font-weight: 700;
+        color: $grey;
+        font-size: 0.9em;
+    }
+}
 /* Checkbox */
-.checkbox input[type=checkbox]:checked + .checkbox-material .check:after, 
+
+.checkbox input[type=checkbox]:checked + .checkbox-material .check:after,
 .checkbox-default input[type=checkbox]:checked + .checkbox-material .check:after {
-	background-color: $green;
+    background-color: $green;
 }
 
-.checkbox input[type=checkbox]:checked + .checkbox-material .check, 
+.checkbox input[type=checkbox]:checked + .checkbox-material .check,
 .checkbox-default input[type=checkbox]:checked + .checkbox-material .check {
-	color: $green;
+    color: $green;
 }
 
-.checkbox input[type=checkbox]:checked + .checkbox-material .check:before, 
+.checkbox input[type=checkbox]:checked + .checkbox-material .check:before,
 .checkbox-default input[type=checkbox]:checked + .checkbox-material .check:before {
-	color: $green;
+    color: $green;
 }
 
 .checkbox .checkbox-material {
-	vertical-align: middle;
-	position: relative;
-	top: 4px;
+    vertical-align: middle;
+    position: relative;
+    top: 4px;
 }
 
 span.check-label {
-	padding-left: 1.3em;
+    padding-left: 1.3em;
 }
-
 /* Radio */
+
 .radio-success input[type=radio]:checked ~ .circle {
-	border-color: $green;
+    border-color: $green;
 }
 
 .radio-success input[type=radio]:checked ~ .check {
-	background-color: $green;
+    background-color: $green;
 }
 
 span.check {
-	padding-right: 1em;
+    padding-right: 1em;
 }
 
 .radio label .check {
-	height: 20px;
-	width: 20px;
+    height: 20px;
+    width: 20px;
 }
 
 .radio label .circle {
-	height: 20px;
-	width: 20px;
+    height: 20px;
+    width: 20px;
 }
 
 div.radio-label {
-	display: inline-block;
-	padding-top: 3px;
+    display: inline-block;
+    padding-top: 3px;
 }
-
 /* Toggle */
-.togglebutton label input[type=checkbox]:checked + .toggle, 
+
+.togglebutton label input[type=checkbox]:checked + .toggle,
 .togglebutton-default label input[type=checkbox]:checked + .toggle {
-	background-color: lighten($green,20);
-
+    background-color: lighten($green, 20);
 }
 
-.togglebutton label input[type=checkbox]:checked + .toggle:after, 
+.togglebutton label input[type=checkbox]:checked + .toggle:after,
 .togglebutton-default label input[type=checkbox]:checked + .toggle:after {
-	background-color: lighten($green,20);
-	background-color: $green;
+    background-color: lighten($green, 20);
+    background-color: $green;
 }
+/* Validation */
 
+.help-block {
+    position: absolute;
+    bottom: 10px;
+    ul {
+        list-style: none;
+        margin: 0 0 0 0;
+    }
+}
