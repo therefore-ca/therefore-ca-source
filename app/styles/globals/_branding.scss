@@ -17,7 +17,7 @@ span.underline {
 
 	@media screen and (max-width: 600px) {
 		background-size: 150% auto;
-
+		padding-top: 2em;
 	}
 
 	@media screen and (min-width: 1400px) {
@@ -32,6 +32,22 @@ span.underline {
 
 .contrast.nodes, .contrast .nodes {
 	background-image: url('/images/white-nodes-full.svg');
+}
+
+.offering-box {
+	width: 100px;
+	height: 100px;
+	display: inline-block;
+	border-radius: 10px;
+	padding: 0.5em;
+	margin-right: 0.5em;
+
+	img {
+		width: 100%;
+		border-radius: 100%;
+		border: 3px solid white;
+		height: auto;
+	}
 }
 
 .logo {

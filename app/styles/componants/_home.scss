@@ -148,11 +148,11 @@
         }
 
         @media screen and (max-width: 540px) {
-            height: 450px;
+            height: 360px;
         }
 
-        @media screen and (max-width: 540px) {
-            height: 500px;
+        @media screen and (max-width: 400px) {
+            height: 400px;
         }
     }
 
@@ -199,6 +199,9 @@
 }
 
 .showcase-wrapper .col-md-6 {
+
+    padding-left: 3em;
+    padding-right: 2em;
     display: block;
     @media screen and (min-width: 992px) {
         height: 650px;
@@ -207,12 +210,14 @@
 
 .showcase-text {
 
-    h1 {
-        margin-top: 0px;
+    h2 {
+        @media screen and (max-width: 500px) {
+            font-size: 1.4em;
+        }
     }
 
     .lead {
-        font-size: 1.1em;
+        font-size: 1.05em;
     }
     @media screen and (max-width: 1200px) {
         font-size: 14px;
@@ -556,7 +561,7 @@ div.window-badge {
 
 .showcase-intro.col-md-6 {
     text-align: center;
-    margin-top: 4.5em;
+    margin-top: 4.0em;
     height: auto;
 }
 
@@ -574,22 +579,37 @@ div.window-badge {
 
     li {
         display: inline-block;
-        margin-right: 0.5em;
-        margin-right: 0.5em;
-
+        padding-right: 1.0em;
+        padding-right: 1.0em;
         margin-bottom: 1em;
-    }
+        position: relative;
 
-    li.active a {
-        opacity: 1.0;
-    }
+        &:after {
+            content:"\f111";
+            font-family: 'fontawesome';
+            font-size: 0.2em;
+            position: absolute;
+            right: -5px;
+            padding: 10px;
+        }
 
-    a {
-        color: white;
-        opacity: 0.5;
+        &:nth-child(3) {
+          &:after {
+            content: none;
+        }
     }
+}
 
-    a:hover, a:focus {
-        text-decoration: none;
-    }
+li.active a {
+    opacity: 1.0;
+}
+
+a {
+    color: white;
+    opacity: 0.5;
+}
+
+a:hover, a:focus {
+    text-decoration: none;
+}
 }
