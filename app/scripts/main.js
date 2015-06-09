@@ -19,11 +19,14 @@ $( document ).ready(function() {
 	var carouselController = function(id) {
 		var items = $(id + ' ul.slides li'),
 		controls = $(id + ' ul.controls li'),
+		tabs = $(id + ' ul.tabs li'),
+
 		count = items.length,
 		index = 0;
 
 		var activate = function(index) {
 			var control = controls.eq(index);
+			var tab = tabs.eq(index);
 			var item = items.eq(index);
 
 			items.removeClass('animate');
@@ -31,9 +34,11 @@ $( document ).ready(function() {
 			item.removeClass('hidden').addClass('active');
 			$(item).addClass('animate');
 
-
 			controls.removeClass('active')
 			control.addClass('active');
+
+			tabs.removeClass('active')
+			tab.addClass('active');
 		}
 
 		var cycleSlides = setInterval(function () {
@@ -51,6 +56,12 @@ $( document ).ready(function() {
 			clearInterval(cycleSlides);
 		});
 
+		$(id + ' ul.tabs li a').click(function(e) {
+			e.preventDefault();
+			var tab = $(this).parent('li').index();
+			activate(tab);
+			clearInterval(cycleSlides);
+		});
 
 	};
 

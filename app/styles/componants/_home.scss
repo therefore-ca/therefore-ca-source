@@ -62,13 +62,13 @@
 
 @keyframes codeWindow {
     from {
-       left: 290px;
-       top: 120px;
-   }
-   to {
-      left: 290px;
-      top: 100px;
-  }
+     left: 290px;
+     top: 120px;
+ }
+ to {
+  left: 290px;
+  top: 100px;
+}
 }
 
 @keyframes iphoneWindow {
@@ -170,11 +170,13 @@
     }
 
     ul.controls {
+
         text-align:center;
 
         @media screen and (min-width: 992px) {
+            width: 50%;
+            float: left;
             position: absolute;
-            left: 25%;
             bottom: 100px;
         }
     }
@@ -247,14 +249,14 @@
     }
 
     .gradient {
-       height: 650px;
-       width: 1000px;
-       position:absolute;
-       top: 0;
-       left: 0; 
-   }
+     height: 650px;
+     width: 1000px;
+     position:absolute;
+     top: 0;
+     left: 0; 
+ }
 
-   .offering-bar {
+ .offering-bar {
     position: absolute;
     padding: 10px;
     bottom: -100px;
@@ -377,11 +379,11 @@ img.window {
 
 /* Window */
 div.window {
- position: absolute;
- height: auto;
- -webkit-box-shadow: 0px 10px 52px 3px rgba(64,64,64,0.55);
- -moz-box-shadow: 0px 10px 52px 3px rgba(64,64,64,0.55);
- box-shadow: 0px 10px 52px 3px rgba(64,64,64,0.55);  
+   position: absolute;
+   height: auto;
+   -webkit-box-shadow: 0px 10px 52px 3px rgba(64,64,64,0.55);
+   -moz-box-shadow: 0px 10px 52px 3px rgba(64,64,64,0.55);
+   box-shadow: 0px 10px 52px 3px rgba(64,64,64,0.55);  
 }
 
 div.window-badge {
@@ -444,13 +446,6 @@ div.window-badge {
     width: 35px;
     left: 100px;
     top: 210px;
-}
-
-.how-title {
-    @media screen and (min-width: 992px) {
-        clear:both;
-        padding-top: 120px;
-    }
 }
 
 .code-window {
@@ -559,4 +554,42 @@ div.window-badge {
 }
 }
 
+.showcase-intro.col-md-6 {
+    text-align: center;
+    margin-top: 4.5em;
+    height: auto;
+}
 
+.showcase-wrapper  ul.tabs {
+    position: relative;
+    bottom: initial;
+    left: initial;
+    border-bottom: $greyLight30 solid 1px;
+    text-transform: uppercase;
+    z-index: 1000;
+    padding-bottom: 2em;
+    list-style: none;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+
+    li {
+        display: inline-block;
+        margin-right: 0.5em;
+        margin-right: 0.5em;
+
+        margin-bottom: 1em;
+    }
+
+    li.active a {
+        opacity: 1.0;
+    }
+
+    a {
+        color: white;
+        opacity: 0.5;
+    }
+
+    a:hover, a:focus {
+        text-decoration: none;
+    }
+}
