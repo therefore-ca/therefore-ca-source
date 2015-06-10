@@ -31,6 +31,45 @@
 }
 
 
+#work-clients {
+	.logo-cloud {
+		clear: both;
+		overflow: hidden;
+		max-width: 1200px; 
+		margin: 0 auto;
+		transition: all 0.3s ease;
+
+		@media screen and (max-width: 600px) {
+			width: 100%;
+			margin-left: 0%;
+		}
+
+	}
+
+	.brand-logo {
+		padding: 0 1.2em;
+		width: 20%;
+		filter: grayscale(0%);
+		opacity: 1.0;
+
+		@media screen and (min-width: 950px) {
+			padding: 0 2.2em;
+		}
+
+		@media screen and (min-width: 1300px) {
+			padding: 0 1.5em;
+		}
+
+		@media screen and (max-width: 950px) {
+			width: 25%;
+		}
+
+		@media screen and (max-width: 600px) {
+			width: 50%;
+		}
+	}
+}
+
 .brand-logo {
 	display: block;
 	padding: 0 1.2em;
