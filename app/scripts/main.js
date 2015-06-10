@@ -78,6 +78,48 @@ $( document ).ready(function() {
 
 	});
 
+
+	$(function() {
+		$('.logo-cloud').swipe( {
+			swipe:function(event,direction,distance) {
+				console.log(direction + ' ' + distance);
+
+				var logoCloud = $('.touch .logo-cloud');
+				var middlePos = $('.touch .logo-cloud.middle');
+				var rightPos = $('.touch .logo-cloud.right');
+				var leftPos = $('.touch .logo-cloud.left');
+
+				var positions = {
+					toLeft: function() {
+						middlePos.css('margin-left', '-50%');
+						middlePos.removeClass('middle').addClass('left');
+
+						rightPos.css('margin-left', '-25%');
+						rightPos.removeClass('right left').addClass('middle');
+
+					},
+					toRight: function() {
+						middlePos.css('margin-left', '0%');
+						middlePos.removeClass('middle').addClass('right');
+
+						leftPos.css('margin-left', '-25%');
+						leftPos.removeClass('right left').addClass('middle');
+					}
+				};
+
+				console.log(logoCloud.css('margin-left'));
+
+				if (direction == 'left') {
+					positions.toLeft();
+				};
+
+				if (direction == 'right') {
+					positions.toRight();
+				};
+			}
+		});
+	});
+
 });
 
 
