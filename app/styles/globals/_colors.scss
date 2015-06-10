@@ -1,122 +1,133 @@
-
 /* base brand colors */
+
 $primary: #f05b36;
 $primaryDarkest: #aa3b36;
 $primaryLighter: #f2784e;
 $primaryLightest: #f59572;
-
 $accent: #cd1e60;
 $red: #d64339;
 $blue: #28939f;
 $orange: #f69234;
 $yellow: $orange;
-$green: #27a786; 
-
+$green: #27a786;
+$lightRed: lighten($red, 41);
+$lightBlue: lighten($blue, 52);
+$lightGreen: lighten($green, 52);
 $grey: #404040;
 $greyLight30: lighten($grey, 30);
 $greyLight50: lighten($grey, 58);
 $greyLight70: lighten($grey, 70);
-$greyTrans: rgba(64,64,64,0.90);
-$greyTransLight: rgba(64,64,64,0.5);
-$whiteTrans: rgba(255,255,255,0.60);
-
-
+$greyTrans: rgba(64, 64, 64, 0.90);
+$greyTransLight: rgba(64, 64, 64, 0.5);
+$whiteTrans: rgba(255, 255, 255, 0.60);
 /* Global brand colors */
 
-.primary, .therefore-primary, 
-.navbar.navbar.therefore-primary, 
+.primary,
+.therefore-primary,
+.navbar.navbar.therefore-primary,
 .bg-primary {
-	background-color: $primary;
-	color: white;
+    background-color: $primary;
+    color: white;
 }
 
 .primary-darker {
-	background-color: $primaryDarkest;
-	color: white;
+    background-color: $primaryDarkest;
+    color: white;
 }
 
 .primary-lighter {
-	background-color: $primaryLighter;
-	color: white;
+    background-color: $primaryLighter;
+    color: white;
 }
 
 .primary-lightest {
-	background-color: $primaryLightest;
-	color: white;
+    background-color: $primaryLightest;
+    color: white;
 }
 
-.grey-light-30, .grey-medium {
-	background-color: $greyLight30;
-	color: white;
+.grey-light-30,
+.grey-medium {
+    background-color: $greyLight30;
+    color: white;
 }
 
-.grey-light-50, .grey-lighter {
-	background-color: $greyLight50;
-	color: black;
+.grey-light-50,
+.grey-lighter {
+    background-color: $greyLight50;
+    color: black;
 }
 
-.grey-light-70, .grey-lightest {
-	background-color: $greyLight70;
-	color: black;
+.grey-light-70,
+.grey-lightest {
+    background-color: $greyLight70;
+    color: black;
 }
 
 .grey {
-	background-color: $grey;
-	div, p, h1, h2 {
-		color: white;
-	}
+    background-color: $grey;
+    div, p, h1, h2 {
+        color: white;
+    }
 }
 
 .grey-trans {
-	background-color: $greyTrans;
-	div, p, h1, h2 {
-		color: white;
-	}
+    background-color: $greyTrans;
+    div, p, h1, h2 {
+        color: white;
+    }
 }
 
-.red, .danger, .bg-danger {
-	background-color: $red;
-	color: white;
+.red,
+.danger,
+.bg-danger {
+    background-color: $red;
+    color: white;
 }
 
-.blue, .info, .bg-info {
-	background-color: $blue;
-	color: white;
+.blue,
+.info,
+.bg-info {
+    background-color: $blue;
+    color: white;
 }
 
-.orange, .warning, .bg-warning {
-	background-color: $orange;
-	color: white;
+.orange,
+.warning,
+.bg-warning {
+    background-color: $orange;
+    color: white;
 }
 
-.green, .success, .bg-success {
-	background-color: $green;
-	color: white;
+.green,
+.success,
+.bg-success {
+    background-color: $green;
+    color: white;
 }
 
-.purple, .accent {
-	background-color: $accent;
-	color: white;	
+.purple,
+.accent {
+    background-color: $accent;
+    color: white;
 }
-
-
-
 /* Bootstrap color text */
+
 .text-warning {
-	color: $red;
+    color: $red;
 }
+
 .text-primary {
-	color: $orange;
+    color: $orange;
 }
+
 .text-danger {
-	color: $yellow;
+    color: $yellow;
 }
+
 .text-success {
-	color: $green;
+    color: $green;
 }
+
 .text-info {
-	color: $blue;
+    color: $blue;
 }
-
-
-

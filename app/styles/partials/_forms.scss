@@ -18,7 +18,7 @@
 }
 
 .input-group-addon {
-    border: $greyLight50 solid 1px;
+    border: $greyLight50 solid 0px;
     background: $greyLight70;
 }
 
@@ -141,11 +141,57 @@ div.radio-label {
 }
 /* Validation */
 
+.control-group {
+    .form-control {
+        transition: none;
+        border-width: 3px;
+        border-color: $greyLight70;
+    }
+    .form-control:focus {
+        box-shadow: none;
+        border-color: $blue;
+        border-left: 3px solid $blue;
+        background: $lightBlue;
+    }
+    &.warning,
+    &.error {
+        background: transparent;
+        .form-control:focus {
+            border-color: $red;
+            border-left: solid 3px $red;
+            box-shadow: none;
+            background: $lightRed;
+        }
+        .input-group-addon {
+            background: $red;
+            color: white;
+            border-color: $red;
+        }
+        .form-control {
+            border-color: $red;
+        }
+    }
+    &.success {
+        background: transparent;
+        .form-control:focus {
+            background: $lightGreen;
+        }
+        .input-group-addon {
+            background: $green;
+            color: white;
+            border-color: $green;
+        }
+        .form-control {
+            border-color: $green;
+        }
+    }
+}
+
 .help-block {
-    position: absolute;
-    bottom: 10px;
+    background: transparent;
     ul {
         list-style: none;
         margin: 0 0 0 0;
+        padding: 0 0 0 0;
     }
 }
