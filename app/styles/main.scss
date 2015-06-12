@@ -1,6 +1,9 @@
 @import 'globals/grid';
 @import 'globals/colors';
 @import 'globals/demo';
+@import 'globals/animation';
+@import 'globals/polygons';
+@import 'globals/gradient';
 @import 'globals/utility';
 @import 'globals/typography';
 @import 'globals/branding';
@@ -9,10 +12,11 @@
 @import 'partials/buttons';
 @import 'componants/menu';
 @import 'componants/offerings';
-@import 'componants/calltoaction';
+@import 'componants/call-to-action';
 @import 'componants/promotional';
 @import 'componants/footer';
 @import 'componants/contact';
 @import 'componants/logocloud';
-@import 'componants/about';
-@import 'componants/home';
+@import 'componants/quick-facts';
+@import 'componants/how-its-done';
+@import 'componants/our-people';

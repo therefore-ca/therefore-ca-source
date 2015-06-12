@@ -65,3 +65,25 @@
 		float: left;
 	}
 }
+
+.two-col {
+	@include desktop {
+		-webkit-column-count: 2; /* Chrome, Safari, Opera */
+    	-moz-column-count: 2; /* Firefox */
+    	column-count: 2;
+    }
+}
+
+.single-col {
+	max-width: 720px;
+	margin: 0 auto;
+	margin-bottom: 1.5em;
+}
+
+.single-col.skinny {
+	max-width: 540px;
+	margin: 0 auto;
+	padding-left: 15px;
+	padding-right: 15px;
+	margin-bottom: 1.5em;
+}

@@ -1,0 +1,19 @@
+.quick-facts {
+    &.container {
+        max-width: 1200px;
+    }
+    font-size: 0.9em;
+    h2 {
+        font-size: 1.4em;
+    }
+    .panel {
+        padding-left: 1em;
+        padding-right: 1em;
+        padding-bottom: 1em;
+        border-radius: 1em;
+        background: none;
+        box-shadow: none;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+}

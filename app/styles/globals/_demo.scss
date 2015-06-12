@@ -53,3 +53,44 @@ h1.demo, h2.demo {
 
 	}
 }
+
+#about-us-promotional {
+	.darker-gradient {
+		@include mobile {
+			background: rgba(64, 64, 64, 0.95);
+		}
+	}
+	.inner {
+		@include mobile {}
+		@include desktop {
+			padding-top: 10em;
+		}
+		padding-bottom: 4em;
+	}
+	.lead {
+		@media screen and (max-width: 1024px) {
+			font-size: 1.4em;
+		}
+	}
+	h2 {
+		span.detail {
+			color: $green;
+			text-transform: none;
+			font-weight: 300;
+			font-family: 'Museo Sans';
+			display: block;
+		}
+		span.number {
+			color: white;
+			display: block;
+			font-size: 2.5em;
+			text-transform: uppercase;
+			font-weight: 700;
+			font-family: 'Museo Sans';
+			@media screen and (max-width: 1024px) {
+				font-size: 1.4em;
+			}
+			@include mobile
+		}
+	}
+}

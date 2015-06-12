@@ -1,0 +1,64 @@
+/* Button polygons */
+
+.primary-poly {
+	background-image: url('/images/orange-button-back.png');
+	color: white;
+}
+
+.success-poly {
+	background-image: url('/images/green-button-back.png');
+	color: white;
+}
+
+.info-poly  {
+	background-image: url('/images/blue-button-back.png');
+	color: white;
+}
+
+.warning-poly  {
+	background-image: url('/images/yellow-button-back.png');
+	color: white;
+}
+
+.danger-poly  {
+	background-image: url('/images/red-button-back.png');
+	color: white;
+}
+
+/* offering color polygons (500px) */
+.yellow-poly {
+	background-image: url('/images/yellow-back-500.png');
+	color: white;
+}
+
+.purple-poly {
+	background-image: url('/images/purple-back-500.png');
+	color: white;
+}
+
+.orange-poly {
+	background-image: url('/images/orange-back-500.png');
+	color: white;
+}
+
+.blue-poly {
+	background-image: url('/images/blue-back-500.png');
+	color: white;
+}
+
+.green-poly {
+	background-image: url('/images/green-back-500.png');
+	color: white;
+}
+
+@mixin primaryPoly {
+	background-image: url('/images/orange-back-full.jpg');
+	background-size: cover;
+	color: white;
+}
+
+.orange-poly-lrg {
+	background-image: url('/images/orange-back-full.jpg');
+	background-size: cover;
+	color: white;
+}

@@ -1,0 +1,22 @@
+/* Gradient */
+
+@mixin gradient {
+	background: -moz-linear-gradient(45deg,  rgba(242,120,78,0.5) 0%, rgba(92,24,137,0.75) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,rgba(242,120,78,0.5)), color-stop(100%,rgba(92,24,137,0.75))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(45deg,  rgba(242,120,78,0.5) 0%,rgba(92,24,137,0.75) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(45deg,  rgba(242,120,78,0.5) 0%,rgba(92,24,137,0.75) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(45deg,  rgba(242,120,78,0.5) 0%,rgba(92,24,137,0.75) 100%); /* IE10+ */
+	background: linear-gradient(45deg,  rgba(242,120,78,0.5) 0%,rgba(92,24,137,0.75) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#80f2784e', endColorstr='#bf5c1889',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+	div, p, h1, h2 {
+		color: white;
+	}
+}
+
+.gradient {
+	@include gradient;
+	div, p, h1, h2 {
+		color: white;
+	}
+}

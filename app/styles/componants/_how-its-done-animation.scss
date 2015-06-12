@@ -1,0 +1,215 @@
+@keyframes analyticsWindow {
+    from {
+        left: 300px;
+        top: 100px;
+    }
+    to {
+        left: 24px;
+        top: 100px;
+    }
+}
+
+@keyframes diagramWindow {
+    from {
+        left: 300px;
+        top: 130px;
+    }
+    to {
+        left: 400px;
+        top: 130px;
+    }
+}
+
+@keyframes desktopWindow {
+    from {
+        left: 270px;
+        top: 130px;
+    }
+    to {
+        left: 270px;
+        top: 120px;
+    }
+}
+
+@keyframes mobileWindow {
+    from {
+        left: 240px;
+        top: 140px;
+    }
+    to {
+        left: 100px;
+        top: 100px;
+    }
+}
+
+@keyframes tabletWindow {
+    from {
+        left: 300px;
+        top: 130px;
+    }
+    to {
+        left: 600px;
+        top: 100px;
+    }
+}
+
+@keyframes toolbarWindow {
+    from {
+        left: 200px;
+        top: 180px;
+    }
+    to {
+        left: 80px;
+        top: 210px;
+    }
+}
+
+@keyframes codeWindow {
+    from {
+        left: 290px;
+        top: 120px;
+    }
+    to {
+        left: 290px;
+        top: 100px;
+    }
+}
+
+@keyframes iphoneWindow {
+    from {
+        left: 500px;
+        bottom: 10px;
+    }
+    to {
+        left: 10px;
+        bottom: 10px;
+    }
+}
+
+@keyframes analyticsCurtain {
+    from {
+        width: 296px;
+    }
+    to {
+        width: 0px;
+    }
+}
+
+@keyframes offeringBarUp {
+    from {
+        bottom: -100px;
+    }
+    to {
+        bottom: 40px;
+    }
+}
+
+@keyframes analyticsCurtainTwo {
+    from {
+        height: 163px;
+        bottom: 30px;
+    }
+    to {
+        height: 0px;
+        bottom: 193px;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1.0;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1.0;
+    }
+    to {
+        opacity: 0.0;
+    }
+}
+
+.animate {
+    img.sidebar {
+        animation-name: fadeIn;
+        animation-duration: 0.5s;
+        -webkit-animation-fill-mode: forwards;
+        animation-timing-function: ease;
+    }
+    .analytics-window {
+        animation-name: analyticsWindow;
+        animation-duration: 0.5s;
+        -webkit-animation-fill-mode: forwards;
+        animation-timing-function: ease;
+    }
+    .diagram-window {
+        animation-name: diagramWindow;
+        animation-duration: 0.5s;
+        -webkit-animation-fill-mode: forwards;
+        animation-timing-function: ease;
+    }
+    .grey-curtain {
+        animation-name: analyticsCurtain;
+        animation-duration: 1.2s;
+        -webkit-animation-fill-mode: forwards;
+        animation-timing-function: ease;
+    }
+    .grey-curtain-2 {
+        animation-name: analyticsCurtainTwo;
+        animation-duration: 1.2s;
+        -webkit-animation-fill-mode: forwards;
+        animation-timing-function: ease;
+    }
+    .fade-out {
+        animation-name: fadeOut;
+        animation-duration: 2s;
+        -webkit-animation-fill-mode: forwards;
+        animation-timing-function: ease;
+    }
+    .offering-bar {
+        animation-name: offeringBarUp;
+        animation-duration: 1s;
+        -webkit-animation-fill-mode: forwards;
+        animation-timing-function: ease;
+    }
+    .mobile-window {
+        animation-name: mobileWindow;
+        animation-duration: 0.5s;
+        -webkit-animation-fill-mode: forwards;
+        animation-timing-function: ease;
+    }
+    .desktop-window {
+        animation-name: desktopWindow;
+        animation-duration: 0.5s;
+        -webkit-animation-fill-mode: forwards;
+        animation-timing-function: ease;
+    }
+    .toolbar-window {
+        animation-name: toolbarWindow;
+        animation-duration: 0.5s;
+        -webkit-animation-fill-mode: forwards;
+        animation-timing-function: ease;
+    }
+    .tablet-window {
+        animation-name: tabletWindow;
+        animation-duration: 0.5s;
+        -webkit-animation-fill-mode: forwards;
+        animation-timing-function: ease;
+    }
+    .code-window {
+        animation-name: codeWindow;
+        animation-duration: 0.5s;
+        -webkit-animation-fill-mode: forwards;
+        animation-timing-function: ease;
+    }
+    .iphone-window {
+        animation-name: iphoneWindow;
+        animation-duration: 0.5s;
+        -webkit-animation-fill-mode: forwards;
+        animation-timing-function: ease;
+    }
+}
