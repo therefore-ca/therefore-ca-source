@@ -1,0 +1,171 @@
+.carousel.slideshow {
+	height: 460px;
+
+	.slide-bar {
+		background: $greyTransLight;
+		text-align: center;
+		padding-top: 1em;
+		padding-bottom: 1em;
+	}
+}
+
+/*.glow {
+	width: 100%;
+	height: 400px;
+	background: yellow;
+	border-radius: 100%;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	filter: blur(200px);
+	opacity: 0.3;
+	background-blend-mode: soft-light;
+
+}*/
+
+
+.carousel.slideshow {
+	.slide {
+		transition: margin-left 1.0s ease;
+		-webkit-transition: margin-left 1.0s ease;
+	}
+
+	.slide.hidden {
+		display: block !important;
+		visibility: visible !important;
+		opacity: 0;
+	}	
+
+	.slide.active {
+		margin-left: 0;
+	}
+
+	.slide.next {
+		margin-left: -200%;
+	}
+
+	.slide.in.hidden {
+		opacity: 1;
+	}
+	.slide.previous {
+		margin-left: 200%;
+	}
+}
+
+ul.arrows {
+	list-style: none;
+	margin: 0 auto;
+	padding: 0 0 0 0;
+	max-width: 1200px;
+	position: relative;
+	top: 180px;
+
+	li {
+
+	}
+
+	a {
+		color: white;
+		border-radius: 100%;
+		width: 40px;
+		height: 40px;
+		display: block;
+		border: white 3px solid;
+		font-size: 1.4em;
+		position: absolute;
+
+
+		&.previous {
+			left: 0em;
+			padding: 3px 8px;
+		}
+
+		&.next {
+			right: 0em;
+			padding: 3px 11px;
+		}
+	}
+
+	span {
+		position: absolute;
+		text-indent: -9999px;
+	}
+}
+
+img.case-study {
+	width: 100%;
+	height: auto;
+	&.unifor {
+		bottom: 20px;
+	}
+
+	&.allseating {
+		width: 124%;
+		bottom: -10px;
+		left: -252px;
+	}
+
+	&.cloverleaf {
+		width: 90%;
+		margin: 0 auto;
+
+	}
+}
+
+a.disabled {
+	pointer-events: none;
+	cursor: default;
+	opacity: 0.5;
+}
+
+.case-study-showcase {
+	max-width: 1150px;
+	padding-left: 1em;
+	padding-right: 1em;
+	margin: 0 auto;
+	margin-top: -40px;
+	text-align: center;
+
+
+	img {
+		position: relative;
+	}
+
+	a.btn {
+		position: relative;
+		bottom: 160px;
+	}
+}
+
+.case-studies.wrapper {
+	padding-bottom: 0;
+	padding-top: 1em;
+	position: relative;
+
+	h1 {
+		font-size: 3.5em;
+		display: block;
+		margin-bottom: 0;
+	}
+
+	h2 {
+		margin-bottom: 0;
+		text-transform: none;
+	}
+
+
+	.divider {
+		width: 100%;
+		max-width: 390px;
+		padding: 0;
+		margin-top: 0;
+		margin-bottom: 0;
+		clear: both;
+	}
+}
+
+.hundred {
+	width: 100%;
+	height: auto;
+}
+

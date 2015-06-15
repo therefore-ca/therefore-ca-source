@@ -25,11 +25,14 @@ $( document ).ready(function() {
 		index = 0;
 
 		var activate = function(index) {
+
 			var control = controls.eq(index);
 			var tab = tabs.eq(index);
 			var item = items.eq(index);
+			var nextItem;
+			var prevItem;
 
-			items.removeClass('animate');
+			items.removeClass('animate next previous');
 			items.addClass('hidden').removeClass('active');
 			item.removeClass('hidden').addClass('active');
 			$(item).addClass('animate');
@@ -39,14 +42,34 @@ $( document ).ready(function() {
 
 			tabs.removeClass('active')
 			tab.addClass('active');
+
+
+			if (index < count - 1) {
+				nextItem = items.eq(index + 1);
+				nextItem.addClass('next');
+			} else {
+				nextItem = items.eq(0);
+				nextItem.addClass('next');
+			}
+
+			if (index > 0) {
+				prevItem = items.eq(index - 1);
+				prevItem.addClass('previous');
+			} else {
+				prevItem = items.eq(2);
+				prevItem.addClass('previous');
+			}
 		}
 
 		var cycleSlides = setInterval(function () {
+			$('li.slide').removeClass('in');
 			activate(index);
+			$('li.slide.previous').addClass('in');
 			index += 1;
 			if(index > count - 1) {
 				index = 0;
 			};
+
 		}, 6000);
 
 		$(id + ' ul.controls li a').click(function(e) {
@@ -63,10 +86,56 @@ $( document ).ready(function() {
 			clearInterval(cycleSlides);
 		});
 
+		$(id + ' ul.arrows a.previous').click(function(e) {
+			$('.slideshow ul.arrows li a').addClass('disabled');
+
+			e.preventDefault();
+			clearInterval(cycleSlides);
+
+			if (index > 0) {
+				index = index - 1;
+				$('li.slide').removeClass('in');
+				activate(index);
+				$('li.slide.next').addClass('in');
+			} else {
+				index = count - 1;
+				$('li.slide').removeClass('in');
+				activate(index);
+				$('li.slide.next').addClass('in');
+			}
+			$("li.slide.active").bind("transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd", function(){
+				$('.slideshow ul.arrows li a').removeClass('disabled');
+			});
+		});
+
+
+		$(id + ' ul.arrows a.next').click(function(e) {
+			$('.slideshow ul.arrows li a').addClass('disabled');
+			e.preventDefault();
+			clearInterval(cycleSlides);
+
+			if (index < count - 1) {
+				index = index + 1;
+				$('li.slide').removeClass('in');
+				activate(index);
+				$('li.slide.previous').addClass('in');
+
+			} else {
+				index = 0;
+				$('li.slide').removeClass('in');
+				activate(index);
+				$('li.slide.previous').addClass('in');
+			}
+
+			$("li.slide.active").bind("transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd", function(){
+				$('.slideshow ul.arrows li a').removeClass('disabled');
+			});
+		});
 	};
 
 	carouselController('#carousel-1');
 	carouselController('#carousel-2');
+	carouselController('#carousel-3');
 
 
 	var waypoint = new Waypoint({
