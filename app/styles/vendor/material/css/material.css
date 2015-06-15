@@ -88,7 +88,6 @@ a:focus {
   text-decoration: none;
   color: rgba(255, 255, 255, 0.84);
   transition: background-color 0.2s ease, box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1);
-  outline: none !important;
 }
 .btn:hover:not(.btn-link):not(.btn-flat):not(.btn-fab) {
   box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.12), 0 1px 6px 0 rgba(0, 0, 0, 0.12);
@@ -979,7 +978,7 @@ a:focus {
 }
 .checkbox {
   -webkit-transform: translateZ(0);
-          transform: translateZ(0);
+  transform: translateZ(0);
 }
 .checkbox label {
   cursor: pointer;
@@ -1014,7 +1013,7 @@ a:focus {
   opacity: 0;
   margin: 0;
   -webkit-transform: scale3d(2.3, 2.3, 1);
-          transform: scale3d(2.3, 2.3, 1);
+  transform: scale3d(2.3, 2.3, 1);
 }
 .checkbox .checkbox-material .check {
   position: relative;
@@ -1030,22 +1029,22 @@ a:focus {
   position: absolute;
   content: "";
   -webkit-transform: rotate(45deg);
-      -ms-transform: rotate(45deg);
-          transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
   display: block;
   margin-top: -4px;
   margin-left: 6px;
   width: 0;
   height: 0;
   box-shadow: 0 0 0 0,
-        0 0 0 0,
-        0 0 0 0,
-        0 0 0 0,
-        0 0 0 0,
-        0 0 0 0,
-        0 0 0 0 inset;
+  0 0 0 0,
+  0 0 0 0,
+  0 0 0 0,
+  0 0 0 0,
+  0 0 0 0,
+  0 0 0 0 inset;
   -webkit-animation: checkbox-off 0.3s forwards;
-          animation: checkbox-off 0.3s forwards;
+  animation: checkbox-off 0.3s forwards;
 }
 .checkbox input[type=checkbox]:focus + .checkbox-material .check:after {
   opacity: 0.2;
@@ -1053,23 +1052,23 @@ a:focus {
 .checkbox input[type=checkbox]:checked + .checkbox-material .check:before {
   box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0px 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 20px -12px 0 11px;
   -webkit-animation: checkbox-on 0.3s forwards;
-          animation: checkbox-on 0.3s forwards;
+  animation: checkbox-on 0.3s forwards;
 }
 .checkbox input[type=checkbox]:not(:checked) + .checkbox-material:before {
   -webkit-animation: rippleOff 500ms;
-          animation: rippleOff 500ms;
+  animation: rippleOff 500ms;
 }
 .checkbox input[type=checkbox]:checked + .checkbox-material:before {
   -webkit-animation: rippleOn 500ms;
-          animation: rippleOn 500ms;
+  animation: rippleOn 500ms;
 }
 .checkbox input[type=checkbox]:not(:checked) + .checkbox-material .check:after {
   -webkit-animation: rippleOff 500ms forwards;
-          animation: rippleOff 500ms forwards;
+  animation: rippleOff 500ms forwards;
 }
 .checkbox input[type=checkbox]:checked + .checkbox-material .check:after {
   -webkit-animation: rippleOn 500ms forwards;
-          animation: rippleOn 500ms forwards;
+  animation: rippleOn 500ms forwards;
 }
 .checkbox input[type=checkbox][disabled]:not(:checked) ~ .checkbox-material .check:before,
 .checkbox input[type=checkbox][disabled] + .circle {
@@ -1078,8 +1077,8 @@ a:focus {
 .checkbox input[type=checkbox][disabled] + .checkbox-material .check:after {
   background-color: rgba(0, 0, 0, 0.84);
   -webkit-transform: rotate(-45deg);
-      -ms-transform: rotate(-45deg);
-          transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
 }
 .checkbox input[type=checkbox]:checked + .checkbox-material .check:after,
 .checkbox-default input[type=checkbox]:checked + .checkbox-material .check:after {
@@ -1367,7 +1366,7 @@ a:focus {
   }
   50% {
     -webkit-transform: rotate(45deg);
-            transform: rotate(45deg);
+    transform: rotate(45deg);
     margin-top: -4px;
     margin-left: 6px;
     width: 0px;
@@ -1376,33 +1375,33 @@ a:focus {
   }
   51% {
     -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+    transform: rotate(0deg);
     margin-top: -2px;
     margin-left: -2px;
     width: 20px;
     height: 20px;
     box-shadow: 0 0 0 0,
-      0 0 0 0,
-      0 0 0 0,
-      0 0 0 0,
-      0 0 0 0,
-      0 0 0 0,
-      0px 0px 0 10px inset;
+    0 0 0 0,
+    0 0 0 0,
+    0 0 0 0,
+    0 0 0 0,
+    0 0 0 0,
+    0px 0px 0 10px inset;
   }
   100% {
     -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+    transform: rotate(0deg);
     margin-top: -2px;
     margin-left: -2px;
     width: 20px;
     height: 20px;
     box-shadow: 0 0 0 0,
-      0 0 0 0,
-      0 0 0 0,
-      0 0 0 0,
-      0 0 0 0,
-      0 0 0 0,
-      0px 0px 0 0px inset;
+    0 0 0 0,
+    0 0 0 0,
+    0 0 0 0,
+    0 0 0 0,
+    0 0 0 0,
+    0px 0px 0 0px inset;
   }
 }
 @keyframes checkbox-off {
@@ -1414,7 +1413,7 @@ a:focus {
   }
   50% {
     -webkit-transform: rotate(45deg);
-            transform: rotate(45deg);
+    transform: rotate(45deg);
     margin-top: -4px;
     margin-left: 6px;
     width: 0px;
@@ -1423,33 +1422,33 @@ a:focus {
   }
   51% {
     -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+    transform: rotate(0deg);
     margin-top: -2px;
     margin-left: -2px;
     width: 20px;
     height: 20px;
     box-shadow: 0 0 0 0,
-      0 0 0 0,
-      0 0 0 0,
-      0 0 0 0,
-      0 0 0 0,
-      0 0 0 0,
-      0px 0px 0 10px inset;
+    0 0 0 0,
+    0 0 0 0,
+    0 0 0 0,
+    0 0 0 0,
+    0 0 0 0,
+    0px 0px 0 10px inset;
   }
   100% {
     -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+    transform: rotate(0deg);
     margin-top: -2px;
     margin-left: -2px;
     width: 20px;
     height: 20px;
     box-shadow: 0 0 0 0,
-      0 0 0 0,
-      0 0 0 0,
-      0 0 0 0,
-      0 0 0 0,
-      0 0 0 0,
-      0px 0px 0 0px inset;
+    0 0 0 0,
+    0 0 0 0,
+    0 0 0 0,
+    0 0 0 0,
+    0 0 0 0,
+    0px 0px 0 0px inset;
   }
 }
 @-webkit-keyframes rippleOn {
@@ -1504,9 +1503,9 @@ a:focus {
 .togglebutton input,
 .togglebutton .toggle {
   -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 .togglebutton label {
   font-weight: 400;
@@ -1835,7 +1834,7 @@ a:focus {
   border-radius: 100%;
   background-color: rgba(0, 0, 0, 0.84);
   -webkit-transform: scale3d(0, 0, 0);
-          transform: scale3d(0, 0, 0);
+  transform: scale3d(0, 0, 0);
 }
 .radio label .check:after {
   display: block;
@@ -1851,15 +1850,15 @@ a:focus {
   opacity: 0;
   margin: 0;
   -webkit-transform: scale3d(1.5, 1.5, 1);
-          transform: scale3d(1.5, 1.5, 1);
+  transform: scale3d(1.5, 1.5, 1);
 }
 .radio label input[type=radio]:not(:checked) ~ .check:after {
   -webkit-animation: rippleOff 500ms;
-          animation: rippleOff 500ms;
+  animation: rippleOff 500ms;
 }
 .radio label input[type=radio]:checked ~ .check:after {
   -webkit-animation: rippleOn 500ms;
-          animation: rippleOn 500ms;
+  animation: rippleOn 500ms;
 }
 .radio input[type=radio]:checked ~ .check,
 .radio-default input[type=radio]:checked ~ .check {
@@ -2043,7 +2042,7 @@ a:focus {
 }
 .radio input[type=radio]:checked ~ .check {
   -webkit-transform: scale3d(0.55, 0.55, 1);
-          transform: scale3d(0.55, 0.55, 1);
+  transform: scale3d(0.55, 0.55, 1);
 }
 .radio input[type=radio][disabled] ~ .circle {
   border-color: rgba(0, 0, 0, 0.84);
@@ -3266,8 +3265,8 @@ fieldset[disabled] .navbar .btn-link:focus {
   transition: -webkit-transform 0.2s ease-in-out, opacity 0.2s ease-in, height 0 linear 0.2s, padding 0 linear 0.2s, height 0 linear 0.2s;
   transition: transform 0.2s ease-in-out, opacity 0.2s ease-in, height 0 linear 0.2s, padding 0 linear 0.2s, height 0 linear 0.2s;
   -webkit-transform: translateY(200%);
-      -ms-transform: translateY(200%);
-          transform: translateY(200%);
+  -ms-transform: translateY(200%);
+  transform: translateY(200%);
 }
 .snackbar.snackbar-opened {
   padding: 14px 15px;
@@ -3276,8 +3275,8 @@ fieldset[disabled] .navbar .btn-link:focus {
   transition: -webkit-transform 0.2s ease-in-out, opacity 0.2s ease-in, height 0 linear 0.2s, height 0 linear 0.2s;
   transition: transform 0.2s ease-in-out, opacity 0.2s ease-in, height 0 linear 0.2s, height 0 linear 0.2s;
   -webkit-transform: none;
-      -ms-transform: none;
-          transform: none;
+  -ms-transform: none;
+  transform: none;
 }
 .snackbar.toast {
   border-radius: 200px;
@@ -3287,9 +3286,9 @@ fieldset[disabled] .navbar .btn-link:focus {
   -webkit-touch-callout: none;
   -ms-touch-action: none;
   -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   box-sizing: border-box;
 }
 .noUi-base {
@@ -3377,7 +3376,7 @@ fieldset[disabled] .navbar .btn-link:focus {
 }
 .noUi-handle.noUi-active {
   -webkit-transform: scale3d(2.5, 2.5, 1);
-          transform: scale3d(2.5, 2.5, 1);
+  transform: scale3d(2.5, 2.5, 1);
 }
 [disabled].noUi-slider {
   opacity: 0.5;

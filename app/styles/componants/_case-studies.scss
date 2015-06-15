@@ -49,6 +49,7 @@
 	.slide {
 		transition: margin-left 1.0s ease;
 		-webkit-transition: margin-left 1.0s ease;
+
 		@media screen and (max-width: 700px) {
 			transition: margin-left 0.5s ease;
 			-webkit-transition: margin-left 0.5s ease;
@@ -129,11 +130,14 @@ ul.arrows {
 	margin: 0 auto;
 	padding: 0 0 0 0;
 	max-width: 1200px;
+	z-index: 200;
 	position: relative;
 	top: 180px;
 
 	@media screen and (max-width: 700px) {
 		top: 25px;
+		position: absolute;
+		width: 100%;
 	}
 
 
@@ -158,6 +162,10 @@ ul.arrows {
 			@media screen and (min-width: 1200px) {
 				left: 0;
 			}
+
+			@media screen and (max-width: 700px) {
+				left: 1em;
+			}
 		}
 
 		&.next {
@@ -166,6 +174,10 @@ ul.arrows {
 
 			@media screen and (min-width: 1200px) {
 				right: 0;
+			}
+
+			@media screen and (max-width: 700px) {
+				right: 1em;
 			}
 		}
 	}
@@ -220,6 +232,9 @@ a.disabled {
 
 	a.btn {
 		position: relative;
+		-webkit-box-shadow: 0px 10px 52px 3px rgba(64, 64, 64, 0.55);
+		-moz-box-shadow: 0px 10px 52px 3px rgba(64, 64, 64, 0.55);
+		box-shadow: 0px 10px 52px 3px rgba(64, 64, 64, 0.55);
 	}
 }
 
@@ -227,10 +242,14 @@ a.disabled {
 
 .case-studies.wrapper {
 
+	ul.slides {
+		overflow: hidden;
+		height: 500px;
+	}
 
 	.button-wrapper {
 		position: absolute;
-		bottom: 60px;
+		bottom: 50px;
 		display: block;
 		width: 100%;
 		text-align: center;
