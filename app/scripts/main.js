@@ -105,6 +105,8 @@ $( document ).ready(function() {
 			}
 			$("li.slide.active").bind("transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd", function(){
 				$('.slideshow ul.arrows li a').removeClass('disabled');
+				$('.li.slide').removeClass('in');
+				
 			});
 		});
 
@@ -129,6 +131,8 @@ $( document ).ready(function() {
 
 			$("li.slide.active").bind("transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd", function(){
 				$('.slideshow ul.arrows li a').removeClass('disabled');
+				$('.li.slide').removeClass('in');
+
 			});
 		});
 	};

@@ -1,5 +1,26 @@
 .carousel.slideshow {
 	height: 460px;
+	@media screen and (max-width: 1300px) {
+		height: 400px;
+	}
+
+	@media screen and (max-width: 1200px) {
+		height: 360px;
+	}
+
+	@media screen and (max-width: 1024px) {
+		height: 340px;
+	}
+
+
+	@media screen and (max-width: 900px) {
+		height: 300px;
+	}
+
+
+	@media screen and (max-width: 700px) {
+		height: 400px;
+	}
 
 	.slide-bar {
 		background: $greyTransLight;
@@ -28,6 +49,10 @@
 	.slide {
 		transition: margin-left 1.0s ease;
 		-webkit-transition: margin-left 1.0s ease;
+		@media screen and (max-width: 700px) {
+			transition: margin-left 0.5s ease;
+			-webkit-transition: margin-left 0.5s ease;
+		}
 	}
 
 	.slide.hidden {
@@ -41,14 +66,61 @@
 	}
 
 	.slide.next {
-		margin-left: -200%;
+		margin-left: -100%;
 	}
 
 	.slide.in.hidden {
 		opacity: 1;
 	}
 	.slide.previous {
-		margin-left: 200%;
+		margin-left: 100%;
+	}
+
+	img {
+		@media screen and (max-width: 700px) {
+			display: none;
+		}
+	}
+}
+
+li.slide.unifor {
+	@media screen and (max-width: 700px) {
+		background-image: url('/images/unifor-case.jpg');
+		background-size: cover;
+		background-position: center;
+		height: 400px;
+		width: 100%;
+	}
+}
+
+
+li.slide.allseating {
+	@media screen and (max-width: 700px) {
+		background-image: url('/images/case-allseating.jpg');
+		background-size: cover;
+		background-position: center;
+		height: 400px;
+		width: 100%;
+	}
+}
+
+li.slide.cloverleaf {
+	@media screen and (max-width: 700px) {
+		background-image: url('/images/case-cloverleaf.jpg');
+		background-size: cover;
+		background-position: center;
+		height: 400px;
+		width: 100%;
+	}
+}
+
+.title-wrapper {
+	@media screen and (max-width: 700px) {
+		background: rgba(0,0,0,0.5);
+		display: block;
+		margin: 0;
+		padding-bottom: 2em;
+		padding-top: 0.5em;
 	}
 }
 
@@ -60,9 +132,10 @@ ul.arrows {
 	position: relative;
 	top: 180px;
 
-	li {
-
+	@media screen and (max-width: 700px) {
+		top: 25px;
 	}
+
 
 	a {
 		color: white;
@@ -73,16 +146,27 @@ ul.arrows {
 		border: white 3px solid;
 		font-size: 1.4em;
 		position: absolute;
+		@media screen and (max-width: 700px) {
+		}
+
 
 
 		&.previous {
-			left: 0em;
+			left: 2em;
 			padding: 3px 8px;
+
+			@media screen and (min-width: 1200px) {
+				left: 0;
+			}
 		}
 
 		&.next {
-			right: 0em;
+			right: 2em;
 			padding: 3px 11px;
+
+			@media screen and (min-width: 1200px) {
+				right: 0;
+			}
 		}
 	}
 
@@ -93,23 +177,26 @@ ul.arrows {
 }
 
 img.case-study {
-	width: 100%;
+	width: 115%;
+	bottom: -10px;
 	height: auto;
-	&.unifor {
-		bottom: 20px;
+	left: -200px;
+	@media screen and (max-width: 1300px) {
+		width: 100%;
+		left: -100px;
 	}
 
-	&.allseating {
-		width: 124%;
+	@media screen and (max-width: 1024px) {
+		width: 100%;
+		bottom: 0;
+	}
+
+	@media screen and (max-width: 900px) {
+		width: 100%;
 		bottom: -10px;
-		left: -252px;
+		left: -70px;
 	}
 
-	&.cloverleaf {
-		width: 90%;
-		margin: 0 auto;
-
-	}
 }
 
 a.disabled {
@@ -133,11 +220,27 @@ a.disabled {
 
 	a.btn {
 		position: relative;
-		bottom: 160px;
 	}
 }
 
+
+
 .case-studies.wrapper {
+
+
+	.button-wrapper {
+		position: absolute;
+		bottom: 60px;
+		display: block;
+		width: 100%;
+		text-align: center;
+		left: 0;
+
+		@media screen and (max-width: 700px) {
+			bottom: -30px;
+		}
+	}
+
 	padding-bottom: 0;
 	padding-top: 1em;
 	position: relative;
@@ -146,6 +249,10 @@ a.disabled {
 		font-size: 3.5em;
 		display: block;
 		margin-bottom: 0;
+		@media screen and (max-width: 700px) {
+			font-size: 2.4em;
+			margin-bottom: 0.5em;
+		}
 	}
 
 	h2 {
@@ -161,6 +268,9 @@ a.disabled {
 		margin-top: 0;
 		margin-bottom: 0;
 		clear: both;
+		@media screen and (max-width: 700px) {
+			display: none;
+		}
 	}
 }
 
