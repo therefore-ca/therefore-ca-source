@@ -62,9 +62,7 @@ $( document ).ready(function() {
 		}
 
 		var cycleSlides = setInterval(function () {
-			$('li.slide').removeClass('in');
 			activate(index);
-			$('li.slide.previous').addClass('in');
 			index += 1;
 			if(index > count - 1) {
 				index = 0;

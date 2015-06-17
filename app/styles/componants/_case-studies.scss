@@ -5,7 +5,7 @@
 	}
 
 	@media screen and (max-width: 1200px) {
-		height: 360px;
+		height: 390px;
 	}
 
 	@media screen and (max-width: 1024px) {
@@ -113,6 +113,9 @@ li.slide.cloverleaf {
 
 	h2 {
 		margin-bottom: 0;	
+		@media screen and (max-width: 700px) {
+			color: white;
+		}
 	} 
 
 	@media screen and (max-width: 700px) {
@@ -152,6 +155,8 @@ ul.arrows {
 		font-size: 1.4em;
 		position: absolute;
 		@media screen and (max-width: 700px) {
+			color: white;
+			border-color: white;
 		}
 
 
@@ -201,12 +206,12 @@ img.case-study {
 
 	@media screen and (max-width: 1024px) {
 		width: 100%;
-		bottom: 0;
+		bottom: -30px;
 	}
 
 	@media screen and (max-width: 900px) {
 		width: 100%;
-		bottom: -10px;
+		bottom: -40px;
 		left: -70px;
 	}
 
@@ -244,49 +249,56 @@ a.disabled {
 }
 
 .case-studies.wrapper {
-background: -moz-linear-gradient(top, rgba(243,243,243,1) 0%, rgba(64,64,64,0.19) 100%); /* FF3.6+ */
-background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(243,243,243,1)), color-stop(100%,rgba(64,64,64,0.19))); /* Chrome,Safari4+ */
-background: -webkit-linear-gradient(top, rgba(243,243,243,1) 0%,rgba(64,64,64,0.19) 100%); /* Chrome10+,Safari5.1+ */
-background: -o-linear-gradient(top, rgba(243,243,243,1) 0%,rgba(64,64,64,0.19) 100%); /* Opera 11.10+ */
-background: -ms-linear-gradient(top, rgba(243,243,243,1) 0%,rgba(64,64,64,0.19) 100%); /* IE10+ */
-background: linear-gradient(to bottom, rgba(243,243,243,1) 0%,rgba(64,64,64,0.19) 100%); /* W3C */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f3f3f3', endColorstr='#30404040',GradientType=0 ); /* IE6-9 */
+	background: -moz-linear-gradient(top, rgba(243,243,243,1) 0%, rgba(64,64,64,0.19) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(243,243,243,1)), color-stop(100%,rgba(64,64,64,0.19))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, rgba(243,243,243,1) 0%,rgba(64,64,64,0.19) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, rgba(243,243,243,1) 0%,rgba(64,64,64,0.19) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, rgba(243,243,243,1) 0%,rgba(64,64,64,0.19) 100%); /* IE10+ */
+	background: linear-gradient(to bottom, rgba(243,243,243,1) 0%,rgba(64,64,64,0.19) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f3f3f3', endColorstr='#30404040',GradientType=0 ); /* IE6-9 */
 
-.lead.single-col {
-	margin-bottom: 0em;
-}
-
-ul.slides {
-	overflow: hidden;
-	height: 500px;
-}
-
-.button-wrapper {
-	position: absolute;
-	bottom: 50px;
-	display: block;
-	width: 100%;
-	text-align: center;
-	left: 0;
-
-	@media screen and (max-width: 700px) {
-		bottom: -30px;
+	.lead.single-col {
+		margin-bottom: 0em;
+		@media screen and (max-width: 700px) {
+			margin-bottom: 2em;
+		}
 	}
-}
 
-padding-bottom: 0;
-padding-top: 1em;
-position: relative;
-
-.divider {
-	width: 100%;
-	max-width: 390px;
-	margin-bottom: 0;
-	clear: both;
-	@media screen and (max-width: 700px) {
-		display: none;
+	ul.slides {
+		overflow: hidden;
+		height: 500px;
 	}
-}
+
+	.button-wrapper {
+		position: absolute;
+		bottom: 50px;
+		display: block;
+		width: 100%;
+		text-align: center;
+		left: 0;
+
+		@media screen and (max-width: 900px) {
+			bottom: 10px;
+		}
+
+		@media screen and (max-width: 700px) {
+			bottom: -30px;
+		}
+	}
+
+	padding-bottom: 0;
+	padding-top: 1em;
+	position: relative;
+
+	.divider {
+		width: 100%;
+		max-width: 390px;
+		margin-bottom: 0;
+		clear: both;
+		@media screen and (max-width: 700px) {
+			display: none;
+		}
+	}
 }
 
 .hundred {
