@@ -86,6 +86,13 @@ $( document ).ready(function() {
 			clearInterval(cycleSlides);
 		});
 
+		$(id + ' ul.slides li a.btn').focus(function() {
+			$('.slideshow li.slide').addClass('no-animate');
+			clearInterval(cycleSlides);
+			var itemFocus = $(this).parents('li').prev().index() + 1;
+			activate(itemFocus);
+		});
+
 		$(id + ' ul.arrows a.previous').click(function(e) {
 			$('.slideshow ul.arrows li a').addClass('disabled');
 
@@ -134,6 +141,7 @@ $( document ).ready(function() {
 				$('.slideshow li.slide').removeClass('in');
 
 			});
+
 		});
 	};
 

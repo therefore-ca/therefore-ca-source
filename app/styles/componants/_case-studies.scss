@@ -30,19 +30,11 @@
 	}
 }
 
-/*.glow {
-	width: 100%;
-	height: 400px;
-	background: yellow;
-	border-radius: 100%;
-	position: absolute;
-	top: 0px;
-	left: 0px;
-	filter: blur(200px);
-	opacity: 0.3;
-	background-blend-mode: soft-light;
+.no-animate {
+	transition: none !important;
+	-webkit-transition: none !important;
 
-}*/
+}
 
 
 .carousel.slideshow {
@@ -116,6 +108,13 @@ li.slide.cloverleaf {
 }
 
 .title-wrapper {
+	padding-bottom: 0em;
+	padding-top: 0.5em;
+
+	h2 {
+		margin-bottom: 0;	
+	} 
+
 	@media screen and (max-width: 700px) {
 		background: rgba(0,0,0,0.5);
 		display: block;
@@ -142,12 +141,14 @@ ul.arrows {
 
 
 	a {
-		color: white;
+		transition: opacity 1.0s ease;
+		-webkit-transition: opacity 1.0s ease;
+		color: $grey;
 		border-radius: 100%;
 		width: 40px;
 		height: 40px;
 		display: block;
-		border: white 3px solid;
+		border: $grey 3px solid;
 		font-size: 1.4em;
 		position: absolute;
 		@media screen and (max-width: 700px) {
@@ -190,7 +191,7 @@ ul.arrows {
 
 img.case-study {
 	width: 115%;
-	bottom: -10px;
+	bottom: -25px;
 	height: auto;
 	left: -200px;
 	@media screen and (max-width: 1300px) {
@@ -238,59 +239,54 @@ a.disabled {
 	}
 }
 
-
+#home-logos.wrapper {
+	padding-top: 4em;
+}
 
 .case-studies.wrapper {
+background: -moz-linear-gradient(top, rgba(243,243,243,1) 0%, rgba(64,64,64,0.19) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(243,243,243,1)), color-stop(100%,rgba(64,64,64,0.19))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top, rgba(243,243,243,1) 0%,rgba(64,64,64,0.19) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top, rgba(243,243,243,1) 0%,rgba(64,64,64,0.19) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top, rgba(243,243,243,1) 0%,rgba(64,64,64,0.19) 100%); /* IE10+ */
+background: linear-gradient(to bottom, rgba(243,243,243,1) 0%,rgba(64,64,64,0.19) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f3f3f3', endColorstr='#30404040',GradientType=0 ); /* IE6-9 */
 
-	ul.slides {
-		overflow: hidden;
-		height: 500px;
+.lead.single-col {
+	margin-bottom: 0em;
+}
+
+ul.slides {
+	overflow: hidden;
+	height: 500px;
+}
+
+.button-wrapper {
+	position: absolute;
+	bottom: 50px;
+	display: block;
+	width: 100%;
+	text-align: center;
+	left: 0;
+
+	@media screen and (max-width: 700px) {
+		bottom: -30px;
 	}
+}
 
-	.button-wrapper {
-		position: absolute;
-		bottom: 50px;
-		display: block;
-		width: 100%;
-		text-align: center;
-		left: 0;
+padding-bottom: 0;
+padding-top: 1em;
+position: relative;
 
-		@media screen and (max-width: 700px) {
-			bottom: -30px;
-		}
+.divider {
+	width: 100%;
+	max-width: 390px;
+	margin-bottom: 0;
+	clear: both;
+	@media screen and (max-width: 700px) {
+		display: none;
 	}
-
-	padding-bottom: 0;
-	padding-top: 1em;
-	position: relative;
-
-	h1 {
-		font-size: 3.5em;
-		display: block;
-		margin-bottom: 0;
-		@media screen and (max-width: 700px) {
-			font-size: 2.4em;
-			margin-bottom: 0.5em;
-		}
-	}
-
-	h2 {
-		margin-bottom: 0;
-		text-transform: none;
-	}
-
-
-	.divider {
-		width: 100%;
-		max-width: 390px;
-		padding: 0;
-		margin-top: 0;
-		margin-bottom: 0;
-		clear: both;
-		@media screen and (max-width: 700px) {
-			display: none;
-		}
-	}
+}
 }
 
 .hundred {
