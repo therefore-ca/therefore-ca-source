@@ -1,11 +1,13 @@
 @keyframes analyticsWindow {
     from {
-        left: 300px;
-        top: 100px;
+        left: 250px;
+        top: 110px;
+        transform: scale(0.75);
     }
     to {
         left: 24px;
-        top: 100px;
+        top: 110px;
+        transform: scale(0.92);
     }
 }
 

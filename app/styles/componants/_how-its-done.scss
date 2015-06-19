@@ -4,17 +4,17 @@
 /* How it's done */
 .how-its-done {
     overflow: hidden;
-    height: 650px;
+    height: 580px;
     @media screen and (max-width: 992px) {
         height: auto;
     }
     /* Grid */
     .col-md-6 {
-        padding-left: 2em;
-        padding-right: 2em;
+        padding-left: 5em;
+        padding-right: 5em;
         display: block;
         @media screen and (min-width: 992px) {
-            height: 650px;
+            height: 580px;
         }
     }
 
@@ -30,13 +30,15 @@
     }
 
     .showcase-text {
+        font-size: 14px;
+
         h2 {
             @media screen and (max-width: 500px) {
                 font-size: 1.4em;
             }
         }
         .lead {
-            font-size: 1.05em;
+            font-size: 1.2em;
         }
         @media screen and (max-width: 1200px) {
             font-size: 14px;
@@ -46,16 +48,13 @@
         }
         @media screen and (min-width: 992px) {
             position: relative;
-            top: 50%;
-            -webkit-transform: translateY(-50%);
-            -ms-transform: translateY(-50%);
-            transform: translateY(-50%);
+            top:11.75em;
         }
     }
 
     .showcase-frame {
-        height: 650px;
-        width: 1045px;
+        height: 580px;
+        width: 850px;
         display: block;
         position: absolute;
         top: 0px;
@@ -63,8 +62,7 @@
     }
 
     .showcase-intro.col-md-6 {
-        text-align: center;
-        margin-top: 4.0em;
+        margin-top: 3.7em;
         height: auto;
     }
 
@@ -105,8 +103,6 @@
 
             .analytics-window {
                 width: 480px;
-                left: 300px;
-                top: 100px;
                 img.sidebar {
                     position: absolute;
                     top: 47px;
@@ -167,15 +163,15 @@
         .orange-poly-lrg,
         .absolutely,
         .gradient {
-            height: 650px;
-            width: 1000px;
+            height: 580px;
+            width: 850px;
             position: absolute;
             top: 0;
             left: 0;
         }
         .gradient {
-            height: 650px;
-            width: 1000px;
+            height: 580px;
+            width: 850px;
             position: absolute;
             top: 0;
             left: 0;
@@ -244,7 +240,7 @@
     /* Slider customizations */
     ul.slides {
         @media screen and (min-width: 992px) {
-            height: 650px;
+            height: 580px;
         }
         @media screen and (max-width: 991px) {
             height: 320px;
@@ -274,7 +270,7 @@
             width: 50%;
             float: left;
             position: absolute;
-            bottom: 100px;
+            bottom: 50px;
         }
     }
     li.slide.active {
@@ -289,11 +285,9 @@
     }
 
     ul.tabs {
-        position: relative;
-        bottom: initial;
-        left: initial;
-        border-bottom: $greyLight30 solid 1px;
+
         text-transform: uppercase;
+        position: relative;
         z-index: 1000;
         padding-bottom: 2em;
         list-style: none;
@@ -301,15 +295,16 @@
         padding: 0 0 0 0;
         li {
             display: inline-block;
-            padding-left: 0.5em;
-            padding-right: 0.5em;
-            margin-bottom: 1em;
+            padding-left: 0.6em;
+            padding-right: 0.6em;
+            margin-bottom: 1.2em;
             position: relative;
             &:after {
                 content: "\f111";
                 font-family: 'fontawesome';
                 font-size: 0.2em;
                 position: absolute;
+                opacity: 0.35;
                 right: -13px;
                 padding-right: 10px;
                 padding-top: 9px;
@@ -325,6 +320,8 @@
             opacity: 1.0;
         }
         a {
+            padding: 0.5em 1em;
+            border-radius: 5px;
             color: white;
             opacity: 0.5;
         }
