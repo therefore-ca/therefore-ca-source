@@ -1,0 +1,36 @@
+article.blog {
+
+	h1 {
+		font-size: 3.0em;
+
+		@include mobile {
+			font-size: 2.0em;
+		}
+	}
+
+	span.alt {
+		line-height: 1.0em;
+		@include mobile {
+			font-size: 1.0em;
+		}
+	}
+
+	strong.text-center {
+		display: block;
+	}
+
+	img {
+		max-width: 720px;
+		text-align: center;
+		margin: 0 auto;
+	}
+}
+
+article.card {
+}
+
+article.teaser {
+	h1 {
+		font-size: 1.0em;
+	}
+}
