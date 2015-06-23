@@ -23,14 +23,45 @@ article.blog {
 		max-width: 720px;
 		text-align: center;
 		margin: 0 auto;
+
+		@media screen and (max-width: 500px) {
+			width: 100% !important;
+			height: auto !important;
+		}
+	}
+
+	h2 {
+		display: block;
+		text-align: center;
+		max-width: 540px;
+		margin: 0.7em auto;
+	}
+
+	h3 {
 	}
 }
 
 article.card {
+	padding: 0.5em 1em;
+	background: white;
+	border-radius: 10px;
+	margin-bottom: 1em;
 }
 
 article.teaser {
 	h1 {
 		font-size: 1.0em;
+	}
+}
+
+#home-blog-teasers {
+	.container {
+	}
+}
+
+article {
+	.author {
+		font-size: 0.9em;
+		color: $greyLight30;
 	}
 }
