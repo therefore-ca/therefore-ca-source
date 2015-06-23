@@ -32,19 +32,15 @@
 
 .no-animate {
 	transition: none !important;
-	-webkit-transition: none !important;
-
 }
 
 
 .carousel.slideshow {
 	.slide {
 		transition: margin-left 1.0s ease;
-		-webkit-transition: margin-left 1.0s ease;
 
 		@media screen and (max-width: 700px) {
 			transition: margin-left 0.5s ease;
-			-webkit-transition: margin-left 0.5s ease;
 		}
 	}
 
@@ -240,8 +236,6 @@ ul.arrows {
 
  	a.btn {
  		position: relative;
- 		-webkit-box-shadow: 0px 10px 52px 3px rgba(64, 64, 64, 0.55);
- 		-moz-box-shadow: 0px 10px 52px 3px rgba(64, 64, 64, 0.55);
  		box-shadow: 0px 10px 52px 3px rgba(64, 64, 64, 0.55);
  	}
  }
