@@ -2,11 +2,10 @@
   "name": "therefore-webapp",
   "private": true,
   "dependencies": {
-    "bootstrap-sass-official": "~3.2.0",
     "modernizr": "~2.8.2",
     "jquery-touchswipe": "~1.6.9"
-  },
-  "devDependencies": {
-    "html5shiv": "~3.7.2"
+    },
+    "devDependencies": {
+      "html5shiv": "~3.7.2"
+    }
   }
-}
