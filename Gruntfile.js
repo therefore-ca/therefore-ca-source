@@ -328,7 +328,20 @@ htmlmin: {
   }, {
     src: 'node_modules/apache-server-configs/dist/.htaccess',
     dest: '<%= config.dist %>/.htaccess'
-  }, {
+  },
+  {
+    src: 'custom_files/Gruntfile.js',
+    dest: '<%= config.dist %>/Gruntfile.js'
+  },
+   {
+    src: 'custom_files/gruntstart.js',
+    dest: '<%= config.dist %>/gruntstart.js'
+  },
+   {
+    src: 'custom_files/package.json',
+    dest: '<%= config.dist %>/package.json'
+  },
+   {
     expand: true,
     dot: true,
     cwd: '.',
