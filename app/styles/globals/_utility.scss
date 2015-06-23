@@ -91,7 +91,9 @@
     	column-count: 2;
     }
 }
-
+ul.bullets li ul {
+    padding-left: 0px;
+} 
 .two-col.bullets {
 	li {
 		@include desktop {
