@@ -35,33 +35,33 @@ module.exports = function (grunt) {
         tasks: ['wiredep']
       },
       js: {
-      files: ['<%= config.app %>/scripts/{,*/}*.js'],
-      tasks: ['jshint'],
-      options: {
-        livereload: true
-      }
+        files: ['<%= config.app %>/scripts/**/*.js'],
+        tasks: [],
+        options: {
+          livereload: true
+        }
+      },
+      jstest: {
+        files: ['test/spec/**/*.js'],
+        tasks: ['test:watch']
+      },
+      gruntfile: {
+        files: ['Gruntfile.js']
+      },
+      sass: {
+      files: ['<%= config.app %>/styles/{,*/}*.{scss,sass}'],
+      tasks: ['sass:server', 'autoprefixer']
     },
-    jstest: {
-    files: ['test/spec/{,*/}*.js'],
-    tasks: ['test:watch']
+    styles: {
+    files: ['<%= config.app %>/styles/{,*/}*.css'],
+    tasks: ['newer:copy:styles', 'autoprefixer']
   },
-  gruntfile: {
-    files: ['Gruntfile.js']
-  },
-  sass: {
-  files: ['<%= config.app %>/styles/{,*/}*.{scss,sass}'],
-  tasks: ['sass:server', 'autoprefixer']
-},
-styles: {
-files: ['<%= config.app %>/styles/{,*/}*.css'],
-tasks: ['newer:copy:styles', 'autoprefixer']
-},
-livereload: {
-  options: {
-    livereload: '<%= connect.options.livereload %>'
-  },
-  files: [
-'<%= config.app %>/{,*/}*.html',
+  livereload: {
+    options: {
+      livereload: '<%= connect.options.livereload %>'
+    },
+    files: [
+  '<%= config.app %>/{,*/}*.html',
 '.tmp/styles/{,*/}*.css',
 '<%= config.app %>/images/{,*/}*'
 ]
@@ -125,19 +125,6 @@ livereload: {
       server: '.tmp'
     },
 
-    // Make sure code styles are up to par and there are no obvious mistakes
-    jshint: {
-      options: {
-        jshintrc: '.jshintrc',
-        reporter: require('jshint-stylish')
-      },
-      all: [
-      'Gruntfile.js',
-    '<%= config.app %>/scripts/{,*/}*.js',
-    '!<%= config.app %>/scripts/vendor/*',
-  'test/spec/{,*/}*.js'
-  ]
-},
 
     // Mocha testing framework configuration options
     mocha: {
@@ -333,15 +320,15 @@ htmlmin: {
     src: 'custom_files/Gruntfile.js',
     dest: '<%= config.dist %>/Gruntfile.js'
   },
-   {
+  {
     src: 'custom_files/gruntstart.js',
     dest: '<%= config.dist %>/gruntstart.js'
   },
-   {
+  {
     src: 'custom_files/package.json',
     dest: '<%= config.dist %>/package.json'
   },
-   {
+  {
     expand: true,
     dot: true,
     cwd: '.',
@@ -366,14 +353,14 @@ src: '{,*/}*.css'
         outputFile: '<%= config.dist %>/scripts/vendor/modernizr.js',
         files: {
           src: [
-        '<%= config.dist %>/scripts/{,*/}*.js',
-      '<%= config.dist %>/styles/{,*/}*.css',
-      '!<%= config.dist %>/scripts/vendor/*'
-      ]
-    },
-    uglify: true
-  }
-},
+          '<%= config.dist %>/scripts/**/*.js',
+        '<%= config.dist %>/styles/{,*/}*.css',
+        '!<%= config.dist %>/scripts/vendor/*'
+        ]
+      },
+      uglify: true
+    }
+  },
 
     // Run some tasks in parallel to speed up build process
     concurrent: {
@@ -449,7 +436,6 @@ grunt.registerTask('build', [
   ]);
 
 grunt.registerTask('default', [
-  'newer:jshint',
   'test',
   'build'
   ]);
