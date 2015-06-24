@@ -1,11 +1,10 @@
 footer {
-	font-size: 0.9em;
+	font-size: 1.0em;
 	text-align: center;
 	margin-bottom: 2em;
 	padding-top: 2em;
-
 	a {
-		color: $greyLight30;
+		color: $grey;
 		&:hover, &:focus {
 			color: $grey;
 		}
@@ -51,7 +50,7 @@ footer {
 	}
 
 	.address {
-		color: $greyLight30;
+
 	}
 
 	.address, .copyright {
