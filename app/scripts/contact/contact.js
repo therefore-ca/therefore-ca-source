@@ -28,11 +28,11 @@ $( document ).ready(function() {
             					'name': 'Clément Hurel',
             					'type': 'to'
             				},
-				       /*   {
+				          {
 				            'email': 'alex@therefore.ca',
 				            'name': 'Alex De Winne',
 				            'type': 'to'
-				        },*/
+				        },
 				        {
 				        	'email': 'sean@therefore.ca',
 				        	'name': 'Sean De Rioux',
