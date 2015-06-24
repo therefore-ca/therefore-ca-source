@@ -15,7 +15,6 @@ module.exports = function (grunt) {
 
   // Load grunt tasks automatically
   require('load-grunt-tasks')(grunt);
-
   // Configurable paths
   var config = {
     dist: '.'
@@ -38,7 +37,32 @@ module.exports = function (grunt) {
       options: {
         port: 8080,
         open: true,
-       
+        middleware: function (connect, options, middlewares) {
+            middlewares.unshift(function(req, res, next){
+                var status = 302;
+                 if (req.url == '/blog/accessibility-wcag-aoda-presentation-follow' || req.url == '/blog/accessibility-wcag-aoda-presentation-follow/' ) {
+                    res.statusCode = status;
+                    res.setHeader('Location', '/accessibility-wcag-aoda-presentation.html');
+                    res.setHeader('Content-Length', '0');
+                    res.end();
+                 }
+                 else if(req.url == '/blog/birth-merlin' || req.url == '/blog/birth-merlin/') {
+                    res.statusCode = status;
+                    res.setHeader('Location', '/birth-of-merlin.html');
+                    res.setHeader('Content-Length', '0');
+                    res.end();
+                 }
+                 else if(req.url == '/blog/decoupling-drupal' || req.url == '/blog/decoupling-drupal/') {
+                    res.statusCode = status;
+                    res.setHeader('Location', '/decoupling-drupal.html');
+                    res.setHeader('Content-Length', '0');
+                    res.end();
+                 }
+                 next();
+              });
+
+            return middlewares;
+          },
         // Change this to '0.0.0.0' to access the server from outside
         hostname: '0.0.0.0'
       },
