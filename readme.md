@@ -4,4 +4,5 @@ This repository is the main source code for the therefore.ca website. The projec
 ## Getting started
 1. clone the repo and run ```npm install``` and ```bower install```
 2. Run ```grunt serve``` for local development
+3. A browser window should open, with Live Reload and you're good to go.
 
