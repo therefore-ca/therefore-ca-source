@@ -44,11 +44,21 @@ article.blog {
 article.card {
 
 	margin-bottom: 1em;
+	padding: 1em;
 }
 
 article.teaser {
 	h1 {
 		font-size: 1.0em;
+	}
+
+	img.person {
+		float: left;
+		width: 50px;
+		margin-top: 1em;
+		border-radius: 100%;
+		margin-right: 1em;
+		margin-bottom: 0.5em;
 	}
 }
 
