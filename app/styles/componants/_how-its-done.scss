@@ -53,17 +53,17 @@
     }
 
     .showcase-frame {
-      height: 550px;
-      width: 825px;
-      display: block;
-      position: absolute;
-      top: 0px;
-      left: 0px;
-  }
+        height: 550px;
+        width: 825px;
+        display: block;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+    }
 
-  .showcase-intro {
-    padding-bottom: 1em;
-}
+    .showcase-intro {
+        padding-bottom: 1em;
+    }
 
     /* Main stage */
     .showcase-stage {
@@ -230,11 +230,6 @@
     }
 }
 
-
-.ie li.slide.hidden .showcase-stage {
-    display: none;
-}
-
 ul.slides {
     @media screen and (min-width: 992px) {
         height: 500px;
@@ -262,6 +257,7 @@ li.slide.hidden {
         display: none;
     }
 }
+
 ul.controls {
     text-align: center;
     margin-left: -8px;
