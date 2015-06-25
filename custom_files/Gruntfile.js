@@ -35,9 +35,14 @@ module.exports = function (grunt) {
     // The actual grunt server settings
     connect: {
       options: {
-        port: 8080,
+        port: 80,
         open: true,
         middleware: function (connect, options, middlewares) {
+           /* middlewares.push(function(req, res, next){
+              if(req.method === 'POST' && req.url == '/contact-process' ) {
+                console.log(req);
+              }
+            });*/
             middlewares.unshift(function(req, res, next){
                 var status = 301;
                  if (req.url == '/blog/accessibility-wcag-aoda-presentation-follow' || req.url == '/blog/accessibility-wcag-aoda-presentation-follow/' ) {
@@ -91,6 +96,36 @@ module.exports = function (grunt) {
                  else if(req.url == '/contact' || req.url == '/contact/') {
                     res.statusCode = status;
                     res.setHeader('Location', '/contact.html');
+                    res.setHeader('Content-Length', '0');
+                    res.end();
+                 }
+                  else if(req.url == '/brand/loblaws' || req.url == '/brand/loblaws/') {
+                    res.statusCode = status;
+                    res.setHeader('Location', '/work.html');
+                    res.setHeader('Content-Length', '0');
+                    res.end();
+                 }
+                  else if(req.url == '/brand/canada-lands' || req.url == '/brand/canada-lands/') {
+                    res.statusCode = status;
+                    res.setHeader('Location', '/work.html');
+                    res.setHeader('Content-Length', '0');
+                    res.end();
+                 }
+                  else if(req.url == '/portfolio/slide/129/all' || req.url == '/portfolio/slide/129/all') {
+                    res.statusCode = status;
+                    res.setHeader('Location', '/work.html');
+                    res.setHeader('Content-Length', '0');
+                    res.end();
+                 }
+                 else if(req.url == '/portfolio/slide/131/all' || req.url == '/portfolio/slide/131/all/') {
+                    res.statusCode = status;
+                    res.setHeader('Location', '/work.html');
+                    res.setHeader('Content-Length', '0');
+                    res.end();
+                 }
+                 else if(req.url == '/portfolio/slide/125/all' || req.url == '/portfolio/slide/125/all/') {
+                    res.statusCode = status;
+                    res.setHeader('Location', '/work.html');
                     res.setHeader('Content-Length', '0');
                     res.end();
                  }
