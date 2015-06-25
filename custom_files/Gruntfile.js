@@ -129,6 +129,24 @@ module.exports = function (grunt) {
                     res.setHeader('Content-Length', '0');
                     res.end();
                  }
+                  else if(req.url == '/cupw' || req.url == '/cupw/') {
+                    res.statusCode = status;
+                    res.setHeader('Location', '/work.html');
+                    res.setHeader('Content-Length', '0');
+                    res.end();
+                 }
+                  else if(req.url == '/youre-agency' || req.url == '/youre-agency/') {
+                    res.statusCode = status;
+                    res.setHeader('Location', '/contact.html');
+                    res.setHeader('Content-Length', '0');
+                    res.end();
+                 }
+                  else if(req.url == '/sites/default/files/do-the-right-thing-slides.pdf') {
+                    res.statusCode = status;
+                    res.setHeader('Location', '/do-the-right-thing-slides.pdf');
+                    res.setHeader('Content-Length', '0');
+                    res.end();
+                 }
                  next();
               });
 

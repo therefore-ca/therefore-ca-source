@@ -307,7 +307,7 @@ htmlmin: {
           cwd: '<%= config.app %>',
           dest: '<%= config.dist %>',
           src: [
-          '*.{ico,png,txt}',
+          '*.{ico,png,txt,pdf}',
         'images/{,*/}*.webp',
       '{,*/}*.html',
     'styles/fonts/{,*/}*.*'
