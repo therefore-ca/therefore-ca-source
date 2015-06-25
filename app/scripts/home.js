@@ -57,7 +57,6 @@ $( document ).ready(function() {
 			if(globalIndex > count - 1) {
 				globalIndex = 0;
 			};
-			console.log(globalIndex);
 			activate(globalIndex);
 			$('.slideshow li.slide.next').children().addClass('hidden');
 			
