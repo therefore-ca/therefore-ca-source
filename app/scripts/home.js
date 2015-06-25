@@ -54,11 +54,13 @@ $( document ).ready(function() {
 
 		var cycleSlides = setInterval(function () {
 			globalIndex += 1;
-			activate(globalIndex);
-			$('.slideshow li.slide.next').children().addClass('hidden');
 			if(globalIndex > count - 1) {
 				globalIndex = 0;
 			};
+			console.log(globalIndex);
+			activate(globalIndex);
+			$('.slideshow li.slide.next').children().addClass('hidden');
+			
 
 		}, 6000);
 
