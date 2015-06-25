@@ -82,7 +82,6 @@ $( document ).ready(function() {
 			var itemFocus = $(this).parents('li').prev().index() + 1;
 			activate(itemFocus);
 		});
-		console.log(globalIndex);
 		$(id + ' ul.arrows a.previous').click(function(e) {
 			$('.slideshow ul.arrows li a').addClass('disabled');
 
@@ -113,7 +112,6 @@ $( document ).ready(function() {
 			$('.slideshow ul.arrows li a').addClass('disabled');
 			e.preventDefault();
  			clearInterval(cycleSlides);
- 			console.log(globalIndex);
  			if (globalIndex < count - 1) {
 				globalIndex = globalIndex + 1;
 				//$('li.slide').removeClass('in');
@@ -155,7 +153,6 @@ $( document ).ready(function() {
 	$(function() {
 		$('.logo-cloud').swipe( {
 			swipe:function(event,direction,distance) {
-				console.log(direction + ' ' + distance);
 
 				var logoCloud = $('.touch .logo-cloud');
 				var middlePos = $('.touch .logo-cloud.middle');
@@ -180,7 +177,6 @@ $( document ).ready(function() {
 					}
 				};
 
-				console.log(logoCloud.css('margin-left'));
 
 				if (direction == 'left') {
 					positions.toLeft();
