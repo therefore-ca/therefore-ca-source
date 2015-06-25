@@ -39,7 +39,7 @@ module.exports = function (grunt) {
         open: true,
         middleware: function (connect, options, middlewares) {
             middlewares.unshift(function(req, res, next){
-                var status = 302;
+                var status = 301;
                  if (req.url == '/blog/accessibility-wcag-aoda-presentation-follow' || req.url == '/blog/accessibility-wcag-aoda-presentation-follow/' ) {
                     res.statusCode = status;
                     res.setHeader('Location', '/accessibility-wcag-aoda-presentation.html');
@@ -55,6 +55,42 @@ module.exports = function (grunt) {
                  else if(req.url == '/blog/decoupling-drupal' || req.url == '/blog/decoupling-drupal/') {
                     res.statusCode = status;
                     res.setHeader('Location', '/decoupling-drupal.html');
+                    res.setHeader('Content-Length', '0');
+                    res.end();
+                 }
+                 else if(req.url == '/about-us' || req.url == '/about-us/') {
+                    res.statusCode = status;
+                    res.setHeader('Location', '/about-us.html');
+                    res.setHeader('Content-Length', '0');
+                    res.end();
+                 }
+                 else if(req.url == '/mobile-web' || req.url == '/mobile-web/') {
+                    res.statusCode = status;
+                    res.setHeader('Location', '/work.html');
+                    res.setHeader('Content-Length', '0');
+                    res.end();
+                 }
+                 else if(req.url == '/meet-the-team' || req.url == '/meet-the-team/') {
+                    res.statusCode = status;
+                    res.setHeader('Location', '/about-us.html');
+                    res.setHeader('Content-Length', '0');
+                    res.end();
+                 }
+                 else if(req.url == '/portfolio' || req.url == '/portfolio/') {
+                    res.statusCode = status;
+                    res.setHeader('Location', '/work.html');
+                    res.setHeader('Content-Length', '0');
+                    res.end();
+                 }
+                 else if(req.url == '/blog' || req.url == '/blog/') {
+                    res.statusCode = status;
+                    res.setHeader('Location', '/#home-blog-teasers');
+                    res.setHeader('Content-Length', '0');
+                    res.end();
+                 }
+                 else if(req.url == '/contact' || req.url == '/contact/') {
+                    res.statusCode = status;
+                    res.setHeader('Location', '/contact.html');
                     res.setHeader('Content-Length', '0');
                     res.end();
                  }
