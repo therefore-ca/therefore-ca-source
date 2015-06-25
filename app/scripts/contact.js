@@ -52,7 +52,7 @@ $( document ).ready(function() {
             			}
             		}
             	}).done(function(response) {
-            		$('#contact-calltoaction .inner.container').html('<div class = "call-to-action col-12"><h1>Thank you for contacting <span class = "underline">us</span></h1><p class = "lead">Someone will be in touch shortly!</p></div>')
+            		$('#contact-calltoaction .inner.container').html('<div class = "call-to-action col-12"><h1>Thank you for contacting us</h1><p class = "lead">Someone will be in touch shortly!</p></div>')
 				
 				});
             },
