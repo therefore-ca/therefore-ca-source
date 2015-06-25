@@ -354,13 +354,13 @@ src: '{,*/}*.css'
         files: {
           src: [
           '<%= config.dist %>/scripts/**/*.js',
-        '<%= config.dist %>/styles/{,*/}*.css',
-        '!<%= config.dist %>/scripts/vendor/*'
-        ]
-      },
-      uglify: true
-    }
-  },
+          '<%= config.dist %>/styles/**/*.css',
+          '!<%= config.dist %>/scripts/vendor/*'
+          ]
+        },
+        uglify: true
+      }
+    },
 
     // Run some tasks in parallel to speed up build process
     concurrent: {

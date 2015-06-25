@@ -28,30 +28,30 @@ $( document ).ready(function() {
             					'name': 'Clément Hurel',
             					'type': 'to'
             				},
-				          {
-				            'email': 'alex@therefore.ca',
-				            'name': 'Alex De Winne',
-				            'type': 'to'
-				        },
-				        {
-				        	'email': 'sean@therefore.ca',
-				        	'name': 'Sean De Rioux',
-				        	'type': 'to'
-				        }
-				        ],
-				        'autotext': 'true',
-				        'subject': 'New Contact Form Submission',
-				        'html': 'Contact information : <br/>' +
-				        'Name : ' + name + '<br/>' +
-				        'Email : ' + email + '<br/>' +
-				        'Comment : ' + comment + '<br/>'
-				    }
-				}
-			}).done(function(response) {
-				$('#contact-calltoaction .inner.container').html('<div class = "call-to-action col-12"><h1>Thank you for contacting <span class = "underline">us</span></h1><p class = "lead">Someone will be in touch shortly!</p></div>')
+            				{
+            					'email': 'alex@therefore.ca',
+            					'name': 'Alex De Winne',
+            					'type': 'to'
+            				},
+            				{
+            					'email': 'sean@therefore.ca',
+            					'name': 'Sean De Rioux',
+            					'type': 'to'
+            				}
+            				],
+            				'autotext': 'true',
+            				'subject': 'New Contact Form Submission',
+            				'html': 'Contact information : <br/>' +
+            				'Name : ' + name + '<br/>' +
+            				'Email : ' + email + '<br/>' +
+            				'Comment : ' + comment + '<br/>'
+            			}
+            		}
+            	}).done(function(response) {
+            		$('#contact-calltoaction .inner.container').html('<div class = "call-to-action col-12"><h1>Thank you for contacting <span class = "underline">us</span></h1><p class = "lead">Someone will be in touch shortly!</p></div>')
 				   //console.log(response); // if you're into that sorta thing
 				});
-		},
-	}
-	); 
+            },
+        }
+        ); 
 });
