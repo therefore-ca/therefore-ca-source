@@ -1,13 +1,13 @@
+
 $( document ).ready(function() {
 	'use strict';
-
+	
 	var carouselController = function(id) {
 		var items = $(id + ' ul.slides li'),
 		controls = $(id + ' ul.controls li'),
 		tabs = $(id + ' ul.tabs li'),
-
-		count = items.length,
-		index = 0;
+		count = items.length;
+		var globalIndex = 0;
 
 		var activate = function(index) {
 
@@ -18,8 +18,10 @@ $( document ).ready(function() {
 			var prevItem;
 
 			items.removeClass('animate next previous');
+			
 			items.addClass('hidden').removeClass('active');
 			item.removeClass('hidden').addClass('active');
+			item.children().removeClass('hidden');
 			$(item).addClass('animate');
 
 			controls.removeClass('active')
@@ -31,9 +33,11 @@ $( document ).ready(function() {
 
 			if (index < count - 1) {
 				nextItem = items.eq(index + 1);
+	
 				nextItem.addClass('next');
 			} else {
 				nextItem = items.eq(0);
+			
 				nextItem.addClass('next');
 			}
 
@@ -44,13 +48,16 @@ $( document ).ready(function() {
 				prevItem = items.eq(2);
 				prevItem.addClass('previous');
 			}
+			$('.slideshow li.slide.previous').addClass('in');
+			$('.slideshow li.slide.next').addClass('in');
 		}
 
 		var cycleSlides = setInterval(function () {
-			activate(index);
-			index += 1;
-			if(index > count - 1) {
-				index = 0;
+			globalIndex += 1;
+			activate(globalIndex);
+			$('.slideshow li.slide.next').children().addClass('hidden');
+			if(globalIndex > count - 1) {
+				globalIndex = 0;
 			};
 
 		}, 6000);
@@ -75,28 +82,29 @@ $( document ).ready(function() {
 			var itemFocus = $(this).parents('li').prev().index() + 1;
 			activate(itemFocus);
 		});
-
+		console.log(globalIndex);
 		$(id + ' ul.arrows a.previous').click(function(e) {
 			$('.slideshow ul.arrows li a').addClass('disabled');
 
 			e.preventDefault();
 			clearInterval(cycleSlides);
-
-			if (index > 0) {
-				index = index - 1;
-				$('li.slide').removeClass('in');
-				activate(index);
+			if (globalIndex > 0) {
+				globalIndex = globalIndex - 1;
+				//$('li.slide').removeClass('in');
+				activate(globalIndex);
+				$('.slideshow li.slide.previous').children().addClass('hidden');
 				$('.slideshow li.slide.next').addClass('in');
 			} else {
-				index = count - 1;
-				$('.slideshow li.slide').removeClass('in');
-				activate(index);
+				globalIndex = count - 1;
+				//$('.slideshow li.slide').removeClass('in');
+				activate(globalIndex);
+				$('.slideshow li.slide.previous').children().addClass('hidden');
 				$('.slideshow li.slide.next').addClass('in');
 			}
 			$("li.slide.active").bind("transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd", function(){
 				$('.slideshow ul.arrows li a').removeClass('disabled');
-				$('.slideshow li.slide').removeClass('in');
 
+			//	$('.slideshow li.slide').removeClass('in');
 			});
 		});
 
@@ -104,24 +112,27 @@ $( document ).ready(function() {
 		$(id + ' ul.arrows a.next').click(function(e) {
 			$('.slideshow ul.arrows li a').addClass('disabled');
 			e.preventDefault();
-			clearInterval(cycleSlides);
+ 			clearInterval(cycleSlides);
+ 			console.log(globalIndex);
+ 			if (globalIndex < count - 1) {
+				globalIndex = globalIndex + 1;
+				//$('li.slide').removeClass('in');
+				activate(globalIndex);
 
-			if (index < count - 1) {
-				index = index + 1;
-				$('li.slide').removeClass('in');
-				activate(index);
+				$('.slideshow li.slide.next').children().addClass('hidden');
 				$('.slideshow li.slide.previous').addClass('in');
 
 			} else {
-				index = 0;
-				$('li.slide').removeClass('in');
-				activate(index);
+				globalIndex = 0;
+			//	$('li.slide').removeClass('in');
+				activate(globalIndex);
+				$('.slideshow li.slide.next').children().addClass('hidden');
 				$('.slideshow li.slide.previous').addClass('in');
 			}
 
 			$("li.slide.active").bind("transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd", function(){
 				$('.slideshow ul.arrows li a').removeClass('disabled');
-				$('.slideshow li.slide').removeClass('in');
+			//	$('.slideshow li.slide').removeClass('in');
 
 			});
 
@@ -130,7 +141,7 @@ $( document ).ready(function() {
 
 	carouselController('#carousel-1');
 	carouselController('#carousel-2');
-	/* carouselController('#carousel-3'); */
+	carouselController('#carousel-3');
 
 
 	var waypoint = new Waypoint({
