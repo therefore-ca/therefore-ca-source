@@ -152,7 +152,7 @@ $( document ).ready(function() {
 		offset: '50%'
 	});
 
-	$(function() {
+	/*$(function() {
 		$('.logo-cloud').swipe( {
 			swipe:function(event,direction,distance) {
 
@@ -189,6 +189,6 @@ $( document ).ready(function() {
 				};
 			}
 		});
-	});
+}); */
 
 });
