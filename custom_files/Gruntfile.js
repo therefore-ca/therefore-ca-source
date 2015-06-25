@@ -35,7 +35,7 @@ module.exports = function (grunt) {
     // The actual grunt server settings
     connect: {
       options: {
-        port: 8080,
+        port: 80,
         open: true,
         middleware: function (connect, options, middlewares) {
            /* middlewares.push(function(req, res, next){
