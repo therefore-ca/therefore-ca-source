@@ -33,11 +33,11 @@ $( document ).ready(function() {
 
 			if (index < count - 1) {
 				nextItem = items.eq(index + 1);
-	
+				
 				nextItem.addClass('next');
 			} else {
 				nextItem = items.eq(0);
-			
+				
 				nextItem.addClass('next');
 			}
 
@@ -106,15 +106,15 @@ $( document ).ready(function() {
 				$('.slideshow ul.arrows li a').removeClass('disabled');
 
 			//	$('.slideshow li.slide').removeClass('in');
-			});
+		});
 		});
 
 
 		$(id + ' ul.arrows a.next').click(function(e) {
 			$('.slideshow ul.arrows li a').addClass('disabled');
 			e.preventDefault();
- 			clearInterval(cycleSlides);
- 			if (globalIndex < count - 1) {
+			clearInterval(cycleSlides);
+			if (globalIndex < count - 1) {
 				globalIndex = globalIndex + 1;
 				//$('li.slide').removeClass('in');
 				activate(globalIndex);
@@ -125,23 +125,24 @@ $( document ).ready(function() {
 			} else {
 				globalIndex = 0;
 			//	$('li.slide').removeClass('in');
-				activate(globalIndex);
-				$('.slideshow li.slide.next').children().addClass('hidden');
-				$('.slideshow li.slide.previous').addClass('in');
-			}
+			activate(globalIndex);
+			$('.slideshow li.slide.next').children().addClass('hidden');
+			$('.slideshow li.slide.previous').addClass('in');
+		}
 
-			$("li.slide.active").bind("transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd", function(){
-				$('.slideshow ul.arrows li a').removeClass('disabled');
+		$("li.slide.active").bind("transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd", function(){
+			$('.slideshow ul.arrows li a').removeClass('disabled');
 			//	$('.slideshow li.slide').removeClass('in');
 
-			});
-
 		});
+
+	});
 	};
 
 	carouselController('#carousel-1');
 	carouselController('#carousel-2');
 	/*carouselController('#carousel-3');*/
+
 
 
 	var waypoint = new Waypoint({
