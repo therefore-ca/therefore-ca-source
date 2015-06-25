@@ -141,9 +141,27 @@ module.exports = function (grunt) {
                     res.setHeader('Content-Length', '0');
                     res.end();
                  }
+                 else if(req.url == '/brand/allseating' || req.url == '/brand/allseating/' || req.url == '/allseating-website' || req.url == '/allseating-website/') {
+                    res.statusCode = status;
+                    res.setHeader('Location', '/allseating.html');
+                    res.setHeader('Content-Length', '0');
+                    res.end();
+                 }
+                 else if(req.url == '/brand/unifor' || req.url == '/brand/unifor/') {
+                    res.statusCode = status;
+                    res.setHeader('Location', '/work.html');
+                    res.setHeader('Content-Length', '0');
+                    res.end();
+                 }
                   else if(req.url == '/sites/default/files/do-the-right-thing-slides.pdf') {
                     res.statusCode = status;
                     res.setHeader('Location', '/do-the-right-thing-slides.pdf');
+                    res.setHeader('Content-Length', '0');
+                    res.end();
+                 }
+                 else if(req.url == '/website-content-management' || req.url == '/website-content-management/') {
+                    res.statusCode = status;
+                    res.setHeader('Location', '/services.html');
                     res.setHeader('Content-Length', '0');
                     res.end();
                  }
