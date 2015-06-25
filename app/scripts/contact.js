@@ -18,8 +18,12 @@ $( document ).ready(function() {
             	$.ajax({
             		type: 'POST',
             		url: 'https://mandrillapp.com/api/1.0/messages/send.json',
+                        //url:'/contact-process',
             		data: {
             			'key': 'yU1xPprQ1LjIdmsbvqxCaQ',
+                              //'name' : name,
+                              //'email' : email,
+                              //'comment': comment
             			'message': {
             				'from_email': 'contact@therefore.ca',
             				'to': [
@@ -49,7 +53,7 @@ $( document ).ready(function() {
             		}
             	}).done(function(response) {
             		$('#contact-calltoaction .inner.container').html('<div class = "call-to-action col-12"><h1>Thank you for contacting <span class = "underline">us</span></h1><p class = "lead">Someone will be in touch shortly!</p></div>')
-				   //console.log(response); // if you're into that sorta thing
+				
 				});
             },
         }
