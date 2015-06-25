@@ -23,6 +23,10 @@ article.offering {
 		background: white;
 	}
 
+	p {
+		line-height: 1.3em;
+	}
+
 	.offering-icon {
 		height: 200px;
 		display: block;
@@ -51,7 +55,7 @@ article.offering {
 		padding-bottom: 1em;
 
 		@media screen and (min-width: 992px) {
-			height: 200px;
+			height: 190px;
 		}
 
 		h1, h2 {

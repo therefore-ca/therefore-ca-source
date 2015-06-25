@@ -62,7 +62,7 @@
     <div class="orange-poly-lrg">
       <div class="promotional gradient">
         <div class="inner contrast">
-          <h1 class="alt">Service Offerings</h1>
+          <h1>Service Offerings</h1>
           <p class="lead">Discover the Truth, Design the Solution,<br>Build It the Right Way.</p>
         </div>
         <div class="sevice-navigation contrast">
@@ -209,7 +209,6 @@
       <div class="grey-trans contrast wrapper-tall">
         <div class="single-col-540 text-center">
           <h1>Tell us about your <span class = "underline">idea</span></h1>
-          <div class="divider"></div>
           <p class="lead">We're ready to listen.</p>
           <a href="contact.html" class="btn btn-success btn-lg">Contact us<div class="ripple-wrapper"></div></a>
         </div>
@@ -225,7 +224,7 @@
         <li><a href=""><span>Twitter</span><i class="fa fa-twitter-square"></i></a></li>
         <li><a href=""><span>Google+</span><i class="fa fa-google-plus-square"></i></a></li>
       </ul>
-      <span itemscope itemtype="http://schema.org/LocalBusiness">
+      <div itemscope itemtype="http://schema.org/LocalBusiness">
         <div class = "contact"><span itemprop="telephone"><a href = "tel:+19059182690">(905) 918-2690</a></span> |
           <span itemprop="email"><a href = "mailto:hello@therefore.ca">hello@therefore.ca</a></span></br>
         </div>
@@ -238,23 +237,25 @@
             <span itemprop="addressCountry">Canada</span>
             <span itemprop="postalCode">M6K 3J1</span>
           </span>
-        </span>
+        </div>
       </div>
       <div class="copyright">© 2015 Therefore Interactive Inc. All Rights Reserved.</div>
       <ul class="menu">
-        <li><a href="">Privacy policy</a></li> |
-        <li><a href="">Accessibility</a></li>
+        <li><a href="">Privacy policy</a> |</li>
+        <li><a href="">Accessibility</a> |</li>
+        <li><a href="/style.html">Style</a></li>
+
       </ul>
     </div>
   </footer>
 
-  <!-- build:js(.) scripts/vendor.js -->
-  <!-- bower:js -->
-  <script src="bower_components/jquery/dist/jquery.js"></script>
-  <!-- endbower -->
+  <!-- build:js scripts/vendor.js -->
+  <script src="scripts/vendor/jquery.min.js"></script>
+  <script src="scripts/vendor/material.js"></script>
+  <script src="scripts/vendor/ripples.js"></script>
   <!-- endbuild -->
-  <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
 
+  <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
   <script>
   (function(b, o, i, l, e, r) {
     b.GoogleAnalyticsObject = l;
@@ -273,8 +274,6 @@
   </script>
 
   <!-- build:js({app,.tmp}) scripts/main.js -->
-  <script src="scripts/material.js"></script>
-  <script src="scripts/ripples.js"></script>
   <script src="scripts/main.js"></script>
 
   <!-- endbuild -->

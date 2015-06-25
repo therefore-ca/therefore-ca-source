@@ -233,7 +233,11 @@
         }
     }
 
-    /* Slider customizations */
+
+    .ie li.slide.hidden .showcase-stage {
+        display: none;
+    }
+
     ul.slides {
         @media screen and (min-width: 992px) {
             height: 650px;
@@ -257,6 +261,7 @@
         }
         .showcase-stage {
             opacity: 0;
+            display: none;
         }
     }
     ul.controls {

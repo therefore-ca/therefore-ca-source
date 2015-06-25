@@ -17,7 +17,7 @@ ul.main-menu {
 
 	@include mobile	{
 		text-align: center;
-		font-size: 2.3em;
+		font-size: 2.0em;
 		padding-top: 2em;
 	}
 
@@ -30,7 +30,10 @@ ul.main-menu {
 
 	li {
 		padding: 0 0 0 0;
-
+		@include mobile	{
+			margin-bottom: 0.2em;
+		}
+		
 		@media screen and (min-width: 768px) {
 			display: inline-block;
 			margin: 0px 1em;

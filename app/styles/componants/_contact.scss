@@ -1,3 +1,14 @@
 .container.contact {
 	max-width: 1024px;
 }
+
+span.phone {
+	display: inline-block;
+	margin-left: 1em;
+	font-size: 1.2em;
+	color: $greyLight50;
+	a {
+		color: white;
+	}
+}
+
