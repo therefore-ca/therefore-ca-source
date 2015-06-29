@@ -27,21 +27,21 @@ $( document ).ready(function() {
                               'message': {
                                 'from_email': 'contact@therefore.ca',
                                 'to': [
-                                {
-                                  'email': 'clement@therefore.ca',
-                                  'name': 'Clément Hurel',
-                                  'type': 'to'
-                                },
+                                //{
+                                //  'email': 'clement@therefore.ca',
+                                //  'name': 'Clément Hurel',
+                                //  'type': 'to'
+                                //},
                                 {
                                   'email': 'alex@therefore.ca',
                                   'name': 'Alex De Winne',
                                   'type': 'to'
                                 },
-                                {
-                                  'email': 'sean@therefore.ca',
-                                  'name': 'Sean De Rioux',
-                                  'type': 'to'
-                                }
+                                //{
+                                //  'email': 'sean@therefore.ca',
+                                //  'name': 'Sean De Rioux',
+                                //  'type': 'to'
+                                //}
                                 ],
                                 'autotext': 'true',
                                 'subject': 'New Contact Form Submission',
