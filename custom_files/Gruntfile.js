@@ -38,11 +38,18 @@ module.exports = function (grunt) {
         port: 80,
         open: true,
         middleware: function (connect, options, middlewares) {
-           /* middlewares.push(function(req, res, next){
+            /*middlewares.push(function(req, res, next){
               if(req.method === 'POST' && req.url == '/contact-process' ) {
-                console.log(req);
+                 res.statusCode = status;
+                    res.setHeader('Location', '/404.html');
+                    res.setHeader('Content-Length', '0');
+                    res.end();
               }
             });*/
+            middlewares.push(function(req, res, next){
+              res.statusCode = '404';
+              res.end(grunt.file.read('404.html'));
+            });
             middlewares.unshift(function(req, res, next){
                 var status = 301;
                  if (req.url == '/blog/accessibility-wcag-aoda-presentation-follow' || req.url == '/blog/accessibility-wcag-aoda-presentation-follow/' ) {
