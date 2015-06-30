@@ -17,3 +17,5 @@ It use grunt-connect as a server and forever (see gruntstart.js).
 Every time you build you need to redo npm install. 
 
 This server have some configurations not enable on the dev server (as 404, redirect and contact mail).
+
+If you need to modify live server configuration, you need to modify custom_files/Gruntfile.js and redo a build.
