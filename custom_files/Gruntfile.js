@@ -19,7 +19,9 @@ module.exports = function (grunt) {
   var config = {
     dist: '.'
   };
-
+  var mandrill = require('mandrill-api/mandrill');
+  var mandrill_client = new mandrill.Mandrill('yU1xPprQ1LjIdmsbvqxCaQ');
+   var url = require('url');
   // Define the configuration for all the tasks
   grunt.initConfig({
 
@@ -38,11 +40,50 @@ module.exports = function (grunt) {
         port: 80,
         open: true,
         middleware: function (connect, options, middlewares) {
-           /* middlewares.push(function(req, res, next){
-              if(req.method === 'POST' && req.url == '/contact-process' ) {
-                console.log(req);
-              }
-            });*/
+            middlewares.push(function(req, res, next){
+                 if(req._parsedUrl.pathname == '/contact-process' ) {                 
+                     var args = url.parse(req.url,true).query;
+                     var message = {
+                        'from_email': 'contact@therefore.ca',
+                        'to': [
+                       // {
+                       //   'email': 'clement@therefore.ca',
+                       //   'name': 'Clément Hurel',
+                       //   'type': 'to'
+                       // },
+                        {
+                          'email': 'alex@therefore.ca',
+                          'name': 'Alex De Winne',
+                         'type': 'to'
+                        }
+                        //{
+                        //  'email': 'sean@therefore.ca',
+                        //  'name': 'Sean De Rioux',
+                        //  'type': 'to'
+                        //}
+                        ],
+                        'autotext': 'true',
+                        'subject': 'New Contact Form Submission',
+                        'html': 'Contact information : <br/>' +
+                        'Name : ' + args.name + '<br/>' +
+                        'Email : ' + args.email + '<br/>' +
+                        'Comment : ' + args.comment + '<br/>'
+                     }
+                     mandrill_client.messages.send({"message":message}, function(result) {
+                        res.end('done');
+                     }, function(e) {
+                        console.log('A mandrill error occurred: ' + e.name + ' - ' + e.message);
+                     });
+                    // Set up the request
+                  }
+                  else {
+                    next();
+                  }
+            });
+            middlewares.push(function(req, res, next){
+              res.statusCode = '404';
+              res.end(grunt.file.read('404.html'));
+            });
             middlewares.unshift(function(req, res, next){
                 var status = 301;
                  if (req.url == '/blog/accessibility-wcag-aoda-presentation-follow' || req.url == '/blog/accessibility-wcag-aoda-presentation-follow/' ) {
