@@ -30,6 +30,11 @@
 	overflow: hidden;
 }
 
+.link-text {
+	position: absolute;
+	text-indent: -9999px;
+}
+
 .contrast {
 	div, p, h1, h2 {
 		color: white;
