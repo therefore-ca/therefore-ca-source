@@ -325,6 +325,10 @@ htmlmin: {
     dest: '<%= config.dist %>/gruntstart.js'
   },
   {
+    src: 'custom_files/index.js',
+    dest: '<%= config.dist %>/index.js'
+  },
+  {
     src: 'custom_files/package.json',
     dest: '<%= config.dist %>/package.json'
   },
@@ -430,7 +434,7 @@ grunt.registerTask('build', [
   'uglify',
   'copy:dist',
   'modernizr',
-  'rev',
+  //'rev',
   'usemin',
   'htmlmin'
   ]);

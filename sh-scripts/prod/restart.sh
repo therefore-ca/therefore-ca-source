@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
 cd dist
-forever stop gruntstart.js
-forever start gruntstart.js
+forever stop index.js
+forever start index.js
 cd ..

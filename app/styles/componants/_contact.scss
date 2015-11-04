@@ -1,14 +1,22 @@
 .container.contact {
-	max-width: 1024px;
+  max-width: 1024px;
 }
 
 span.phone {
-	display: inline-block;
-	margin-left: 1em;
-	font-size: 1.2em;
-	color: $greyLight50;
-	a {
-		color: white;
-	}
+  display: inline-block;
+  margin-left: 1em;
+  font-size: 1.2em;
+  color: $greyLight50;
+  a {
+    color: white;
+  }
 }
 
+.errorNotice {
+  font-size: 1.25em;
+  padding-bottom: 1.25em;
+  font-weight: bold;
+  margin-bottom: 1em;
+  display: inline-block;
+  text-transform: uppercase;
+}
