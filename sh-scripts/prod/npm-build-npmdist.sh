@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-npm i && bower i
+npm i && bower i --allow-root
 grunt build
 cd dist
-npm i && bower i
+npm i
 cd ..
