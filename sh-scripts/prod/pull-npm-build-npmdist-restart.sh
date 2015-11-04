@@ -5,6 +5,6 @@ npm i && bower i --allow-root
 grunt build
 cd dist
 npm i
-forever stop index.js
-forever start index.js
+forever stop server.js
+forever start server.js
 cd ..

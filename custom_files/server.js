@@ -9,30 +9,28 @@ var port = 8888;
 var mandrill = require('mandrill-api/mandrill');
 var mandrill_client = new mandrill.Mandrill('yU1xPprQ1LjIdmsbvqxCaQ');
 
-var redirects = [
-  {
-    "/blog/accessibility-wcag-aoda-presentation-follow": "/accessibility-wcag-aoda-presentation.html",
-    "/blog/birth-merlin": "/blog/birth-merlin.html",
-    "/blog/decoupling-drupal": "/blog/decoupling-drupal.html",
-    "/about-us": "/about-us.html",
-    "/mobile-web": "/work.html",
-    "/meet-the-team": "/about-us.html",
-    "/protfolio": "/work.html",
-    "/blog": "/#home-blog-teasers",
-    "/contact": "/contact.html",
-    "/brand/loblaws": "/work.html",
-    "/brand/unifor": "/work.html",
-    "/brand/canada-lands": "/work.html",
-    "/portfolio/slide/125/all": "/work.html",
-    "/portfolio/slide/129/all": "/work.html",
-    "/portfolio/slide/131/all": "/work.html",
-    "/cupw": "/work.html",
-    "/youre-agency": "/contact.html",
-    "/website-content-management": "/services.html",
-    "/brand/allseating": "/allseating.html",
-    "/sites/default/files/do-the-right-thing-slides.pdf": "/do-the-right-thing-slides.pdf",
-  }
-];
+var redirects = {
+  "/blog/accessibility-wcag-aoda-presentation-follow": "/accessibility-wcag-aoda-presentation.html",
+  "/blog/birth-merlin": "/blog/birth-merlin.html",
+  "/blog/decoupling-drupal": "/blog/decoupling-drupal.html",
+  "/about-us": "/about-us.html",
+  "/mobile-web": "/work.html",
+  "/meet-the-team": "/about-us.html",
+  "/protfolio": "/work.html",
+  "/blog": "/#home-blog-teasers",
+  "/contact": "/contact.html",
+  "/brand/loblaws": "/work.html",
+  "/brand/unifor": "/work.html",
+  "/brand/canada-lands": "/work.html",
+  "/portfolio/slide/125/all": "/work.html",
+  "/portfolio/slide/129/all": "/work.html",
+  "/portfolio/slide/131/all": "/work.html",
+  "/cupw": "/work.html",
+  "/youre-agency": "/contact.html",
+  "/website-content-management": "/services.html",
+  "/brand/allseating": "/allseating.html",
+  "/sites/default/files/do-the-right-thing-slides.pdf": "/do-the-right-thing-slides.pdf",
+};
 
 var contentTypesByExtension = {
   '.html': "text/html",
@@ -42,19 +40,31 @@ var contentTypesByExtension = {
 };
 
 http.createServer(function (req, res) {
-  var uri      = url.parse(req.url).pathname
-    , filename = path.join(process.cwd(), uri);
-
-  //console.log('Uri lookup: ', uri);
+  var uri = url.parse(req.url).pathname;
+  var filename = path.join(process.cwd(), uri);
+  var threeOhOne = false;
 
   fs.exists(filename, function (exists) {
+
+    // Log raw uris, not file assets
+    if (!path.extname(filename)) {
+      console.log('GET >> ', uri);
+    }
+
     _.each(redirects, function (target, check) {
-      if (uri === check || uri === check + '/') {
+      if (!threeOhOne && (uri == check || uri == check + '/')) {
+        console.log('301 >> ', uri, ' <--> ', target);
+
         res.writeHead(301, {'Location': target});
-        res.end();
-        return;
+
+        threeOhOne = true;
       }
     });
+
+    if (threeOhOne) {
+      res.end();
+      return;
+    }
 
     if (uri == '/contact-process') {
       sendEmail(req, res);

@@ -325,8 +325,8 @@ htmlmin: {
     dest: '<%= config.dist %>/gruntstart.js'
   },
   {
-    src: 'custom_files/index.js',
-    dest: '<%= config.dist %>/index.js'
+    src: 'custom_files/server.js',
+    dest: '<%= config.dist %>/server.js'
   },
   {
     src: 'custom_files/package.json',

@@ -4,5 +4,5 @@ grunt build
 cd dist
 mkdir log
 npm i
-node index.js
+node server.js
 cd ..
