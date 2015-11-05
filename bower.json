@@ -3,7 +3,8 @@
   "private": true,
   "dependencies": {
     "modernizr": "~2.8.3",
-    "jquery-touchswipe": "~1.6.9"
+    "jquery-touchswipe": "~1.6.9",
+    "moment": "~2.10.6"
   },
   "devDependencies": {
     "html5shiv": "~3.7.2",

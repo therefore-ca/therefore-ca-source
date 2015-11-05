@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 
-cd dist
+cd www
 node server.js
 cd ..

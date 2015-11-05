@@ -6,7 +6,7 @@ grunt build
 cd dist
 npm i
 cd ..
-cp -R dist www
+rsync -rtvuc --stats dist/ www/
 cd www
 forever stop server.js
 forever start server.js
