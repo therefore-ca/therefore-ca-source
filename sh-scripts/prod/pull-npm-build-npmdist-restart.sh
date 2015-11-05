@@ -6,8 +6,8 @@ grunt build
 cd dist
 npm i
 cd ..
-cp -R dist server
-cd server
+cp -R dist www
+cd www
 forever stop server.js
 forever start server.js
 cd ..
