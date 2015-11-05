@@ -317,12 +317,8 @@ htmlmin: {
     dest: '<%= config.dist %>/.htaccess'
   },
   {
-    src: 'custom_files/Gruntfile.js',
-    dest: '<%= config.dist %>/Gruntfile.js'
-  },
-  {
-    src: 'custom_files/gruntstart.js',
-    dest: '<%= config.dist %>/gruntstart.js'
+    src: 'custom_files/redirects.js',
+    dest: '<%= config.dist %>/redirects.js'
   },
   {
     src: 'custom_files/server.js',
