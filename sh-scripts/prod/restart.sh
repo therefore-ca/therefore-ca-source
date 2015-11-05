@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-cd dist
+cd server
 forever stop server.js
 forever start server.js
 cd ..
