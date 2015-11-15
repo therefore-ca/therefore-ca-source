@@ -22,7 +22,7 @@ server.connection({
 
 
 server.route({
-  method: 'POST',
+  method: 'GET',
   path: '/contact-process',
   handler: function (request, reply) {
     var args = url.parse(request.url, true).query;
