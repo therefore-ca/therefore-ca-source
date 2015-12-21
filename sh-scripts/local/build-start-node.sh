@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 grunt build
-cd dist
+cd www
 mkdir log
 npm i
 #cd ..

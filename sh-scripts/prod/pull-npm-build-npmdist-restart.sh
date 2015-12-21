@@ -3,7 +3,7 @@
 git pull
 #npm i && bower i --allow-root
 #grunt build
-cd dist
+cd www
 #npm i
 #cd ..
 #rsync -rtvuc --stats dist/ www/
