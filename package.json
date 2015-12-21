@@ -1,5 +1,9 @@
 {
   "name": "therefore-webapp",
+  "scripts": {
+    "build": "grunt build",
+    "serve": "grunt build && cd www && npm i && node server.js && cd .."
+  },
   "devDependencies": {
     "apache-server-configs": "^2.7.1",
     "grunt": "^0.4.5",
