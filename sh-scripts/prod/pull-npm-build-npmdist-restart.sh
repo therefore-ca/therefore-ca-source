@@ -4,7 +4,7 @@ git pull
 #npm i && bower i --allow-root
 #grunt build
 cd www
-#npm i
+npm i
 #cd ..
 #rsync -rtvuc --stats dist/ www/
 #cd www
