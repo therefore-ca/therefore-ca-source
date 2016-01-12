@@ -261,7 +261,7 @@ ul.arrows {
 
 /*** UNIFOR ***/
 
-#unifor-case-study {
+#unifor-case-study, #allseating-case-study {
 
 	#case-cover {
 		padding-top: 2em !important;
@@ -316,6 +316,39 @@ ul.arrows {
 		}
 	} 	
 
+ 	li.slide.allseating {
+		@media screen and (max-width: 700px) {
+			color: white;
+			background-image: url('/images/allseating-case1.jpg');
+			background-size: cover;
+			background-position: center;
+			height: 400px;
+			width: 100%;
+		}
+	}
+
+	li.slide.allseating2 {
+		@media screen and (max-width: 700px) {
+			color: white;
+			background-image: url('/images/allseating-case2.jpg');
+			background-size: cover;
+			background-position: center;
+			height: 400px;
+			width: 100%;
+		}
+	}
+
+	li.slide.allseating3 {
+		@media screen and (max-width: 700px) {
+			color: white;
+			background-image: url('/images/allseating-case3.jpg');
+			background-size: cover;
+			background-position: center;
+			height: 400px;
+			width: 100%;
+		}
+	}
+
 	.panel {
 		.list-group {
 			padding-left: 1em;
@@ -349,7 +382,7 @@ ul.arrows {
 	 	}		
 	}
 
-	section#overview {
+	section#overview, .overview {
 		margin-top: 130px;
 	}
 
@@ -401,6 +434,9 @@ ul.arrows {
 		}
 	}
 
+	.single-col {
+		max-width: 66.6666666667%;
+	}
  }
 
 .case-studies.wrapper {

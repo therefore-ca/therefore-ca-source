@@ -1924,19 +1924,19 @@ a.disabled {
   padding-top: 4em; }
 
 /*** UNIFOR ***/
-#unifor-case-study #case-cover {
+#unifor-case-study #case-cover, #allseating-case-study #case-cover {
   padding-top: 2em !important; }
-#unifor-case-study #carousel-4 ul.arrows {
+#unifor-case-study #carousel-4 ul.arrows, #allseating-case-study #carousel-4 ul.arrows {
   display: block; }
-#unifor-case-study #carousel-4 .case-study-showcase {
+#unifor-case-study #carousel-4 .case-study-showcase, #allseating-case-study #carousel-4 .case-study-showcase {
   margin-top: -70px; }
 @media screen and (max-width: 700px) {
-  #unifor-case-study ul.arrows {
+  #unifor-case-study ul.arrows, #allseating-case-study ul.arrows {
     top: 35px;
     position: absolute;
     width: 100%; } }
 @media screen and (max-width: 700px) {
-  #unifor-case-study li.slide.unifor {
+  #unifor-case-study li.slide.unifor, #allseating-case-study li.slide.unifor {
     color: white;
     background-image: url("/images/unifor-case3-mobile.jpg");
     background-size: cover;
@@ -1944,7 +1944,7 @@ a.disabled {
     height: 400px;
     width: 100%; } }
 @media screen and (max-width: 700px) {
-  #unifor-case-study li.slide.unifor2 {
+  #unifor-case-study li.slide.unifor2, #allseating-case-study li.slide.unifor2 {
     color: white;
     background-image: url("/images/unifor-case2.jpg");
     background-size: cover;
@@ -1952,59 +1952,85 @@ a.disabled {
     height: 400px;
     width: 100%; } }
 @media screen and (max-width: 700px) {
-  #unifor-case-study li.slide.unifor3 {
+  #unifor-case-study li.slide.unifor3, #allseating-case-study li.slide.unifor3 {
     color: white;
     background-image: url("/images/unifor-case.png");
     background-size: cover;
     background-position: center;
     height: 400px;
     width: 100%; } }
-#unifor-case-study .panel .list-group {
+@media screen and (max-width: 700px) {
+  #unifor-case-study li.slide.allseating, #allseating-case-study li.slide.allseating {
+    color: white;
+    background-image: url("/images/allseating-case1.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    width: 100%; } }
+@media screen and (max-width: 700px) {
+  #unifor-case-study li.slide.allseating2, #allseating-case-study li.slide.allseating2 {
+    color: white;
+    background-image: url("/images/allseating-case2.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    width: 100%; } }
+@media screen and (max-width: 700px) {
+  #unifor-case-study li.slide.allseating3, #allseating-case-study li.slide.allseating3 {
+    color: white;
+    background-image: url("/images/allseating-case3.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    width: 100%; } }
+#unifor-case-study .panel .list-group, #allseating-case-study .panel .list-group {
   padding-left: 1em; }
 @media (min-width: 600px) and (max-width: 991px) {
-  #unifor-case-study .how-its-done ul.slides {
+  #unifor-case-study .how-its-done ul.slides, #allseating-case-study .how-its-done ul.slides {
     height: 400px; } }
 @media (min-width: 450px) and (max-width: 599px) {
-  #unifor-case-study .how-its-done ul.slides {
+  #unifor-case-study .how-its-done ul.slides, #allseating-case-study .how-its-done ul.slides {
     height: 500px; } }
 @media (max-width: 449px) {
-  #unifor-case-study .how-its-done ul.slides {
+  #unifor-case-study .how-its-done ul.slides, #allseating-case-study .how-its-done ul.slides {
     height: 560px; } }
-#unifor-case-study .how-its-done ul.tabs li.active a {
+#unifor-case-study .how-its-done ul.tabs li.active a, #allseating-case-study .how-its-done ul.tabs li.active a {
   border-bottom: 2px solid white; }
 @media screen and (min-width: 992px) {
-  #unifor-case-study .how-its-done .showcase-text {
+  #unifor-case-study .how-its-done .showcase-text, #allseating-case-study .how-its-done .showcase-text {
     top: 0px; } }
-#unifor-case-study section#overview {
+#unifor-case-study section#overview, #unifor-case-study .overview, #allseating-case-study section#overview, #allseating-case-study .overview {
   margin-top: 130px; }
 @media (min-width: 768px) {
-  #unifor-case-study section#strategy .stratimg {
+  #unifor-case-study section#strategy .stratimg, #allseating-case-study section#strategy .stratimg {
     text-align: right; } }
 @media (max-width: 767px) {
-  #unifor-case-study section#strategy .stratimg {
+  #unifor-case-study section#strategy .stratimg, #allseating-case-study section#strategy .stratimg {
     text-align: left; } }
-#unifor-case-study section#strategy img {
+#unifor-case-study section#strategy img, #allseating-case-study section#strategy img {
   width: 100%;
   max-width: 300px; }
-#unifor-case-study section#strategy h2 {
+#unifor-case-study section#strategy h2, #allseating-case-study section#strategy h2 {
   margin-bottom: 2em; }
-#unifor-case-study section#red-banner-1 {
+#unifor-case-study section#red-banner-1, #allseating-case-study section#red-banner-1 {
   margin-top: 35px; }
-#unifor-case-study section#red-banner-2 {
+#unifor-case-study section#red-banner-2, #allseating-case-study section#red-banner-2 {
   margin-bottom: -16px;
   margin-top: 2em; }
   @media (min-width: 992px) {
-    #unifor-case-study section#red-banner-2 {
+    #unifor-case-study section#red-banner-2, #allseating-case-study section#red-banner-2 {
       margin-bottom: -115px; } }
-#unifor-case-study article.blog img {
+#unifor-case-study article.blog img, #allseating-case-study article.blog img {
   max-width: none; }
-#unifor-case-study article.blog img.unifor-shield {
+#unifor-case-study article.blog img.unifor-shield, #allseating-case-study article.blog img.unifor-shield {
   width: 75px;
   max-width: 75px; }
-#unifor-case-study article.blog img.author-portrait {
+#unifor-case-study article.blog img.author-portrait, #allseating-case-study article.blog img.author-portrait {
   width: 170px;
   max-width: 170px;
   margin: 1em; }
+#unifor-case-study .single-col, #allseating-case-study .single-col {
+  max-width: 66.6666666667%; }
 
 .case-studies.wrapper {
   background: -moz-linear-gradient(top, #f3f3f3 0%, rgba(64, 64, 64, 0.19) 100%);
