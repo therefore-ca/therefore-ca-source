@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
 
 grunt build
-cd dist
+cd www
 mkdir log
 npm i
-cd ..
-rsync -rtvu --stats dist/ www/
-cd www
+#cd ..
+#cp -R dist server
+#cd server
 node server.js
 cd ..
-rm -R dist
+#rm -R dist
