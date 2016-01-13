@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-git checkout master
+git checkout development
 git pull
-git merge development
+git merge local
 git push
 git checkout local
