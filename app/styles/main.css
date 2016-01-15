@@ -1230,10 +1230,6 @@ span.phone {
   max-width: 1200px;
   margin: 0 auto;
   transition: all 0.3s ease; }
-  @media screen and (max-width: 600px) {
-    .logo-cloud {
-      width: 150%;
-      margin-left: -25%; } }
   @media screen and (min-width: 1300px) {
     .logo-cloud {
       max-width: 1400px; } }
