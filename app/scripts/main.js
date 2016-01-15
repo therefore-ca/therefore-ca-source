@@ -15,3 +15,5 @@ jQuery(document).ready(function ($) {
     $('a.menu-open').removeClass('mobile-hidden');
   });
 });
+
+$(".card").flip();

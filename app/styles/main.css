@@ -1308,6 +1308,64 @@ span.phone {
     max-width: 300px;
     margin: 0 auto; }
 
+.people-list {
+      margin-top: 30px;
+    }
+    .people-cloud {
+    clear: both;
+    overflow: hidden;
+    max-width: 1100px;
+    margin: 0 auto;
+    transition: all 0.3s ease; }
+  .headshot {
+    display: block;
+    width: 25%;
+    float: left;
+    transition: all 0.5s ease; }
+    @media screen and (min-width: 1300px) {
+    .headshot {
+        width: 25%; } }
+    @media screen and (max-width: 768px) {
+    .headshot {
+      padding: 0 0.35em;
+      width: 33.333%; } }
+    @media screen and (max-width: 640px) {
+    .headshot {
+      padding: 0 1.5em;
+      width: 50%; } }  
+    @media screen and (max-width: 480px) {
+    .headshot {
+      width: 100%; } }  
+    .people-list h1 {
+      font-size: 1.5rem;
+    }
+    .card {
+      width: 100%;
+      height: 234px;
+      display: inline-block;     
+    }
+    .card .back {
+      color: white;
+      padding: 10px 25px;
+    }
+    .card .back h1 {
+      color: white;
+      font-size: 1.7rem;
+    }
+    .card .back p {
+      color: white;
+      font-size: 1.46rem;      
+    }
+    .card .back.strategy {
+      background-image: url("/images/green-back-500.png");
+    }
+    .card .back.dev {
+      background-image: url("/images/orange-back-500.png");
+    }
+    .card .back.design {
+      background-image: url("/images/yellow-back-500.png");
+    }
+
 /* How it's done animation */
 @keyframes analyticsWindow {
   from {
