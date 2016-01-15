@@ -1319,6 +1319,7 @@ span.phone {
     transition: all 0.3s ease; }
   .headshot {
     display: block;
+    margin: 0 0.1rem;
     width: 25%;
     float: left;
     transition: all 0.5s ease; }
