@@ -1320,7 +1320,7 @@ span.phone {
     .headshot {
     display: block;
     width: 25%;
-    padding: 0 0.9em;
+    padding: 0 0.95em;
     float: left;
     transition: all 0.5s ease; }
     @media screen and (min-width: 1300px) {
