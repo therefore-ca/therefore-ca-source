@@ -1339,6 +1339,7 @@ span.phone {
       width: 100%; } }  
     .people-list h1 {
       font-size: 1.5rem;
+      margin-top: 10px;
     }
     .card {
       width: 100%;
