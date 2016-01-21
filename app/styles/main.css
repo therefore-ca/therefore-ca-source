@@ -1308,7 +1308,6 @@ span.phone {
     max-width: 300px;
     margin: 0 auto; }
 
-<<<<<<< HEAD
 .people-list {
       margin-top: 30px;
     }
@@ -1371,8 +1370,6 @@ span.phone {
       background-image: url("/images/yellow-back-500.png");
     }
 
-=======
->>>>>>> local
 /* How it's done animation */
 @keyframes analyticsWindow {
   from {
