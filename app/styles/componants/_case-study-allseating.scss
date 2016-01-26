@@ -1,0 +1,35 @@
+#case-study.allseating-case-study {
+	.medal {
+	margin-top: 45px;
+	}
+	.promotional h1 {
+		padding-top: 25px;
+	}
+ 	li.slide {
+		&.allseating{
+			@media screen and (max-width: 700px) {
+				background-image: url('/images/allseating-case1.jpg');
+			}
+		}
+		&.allseating2{
+			@media screen and (max-width: 700px) {
+				background-image: url('/images/allseating-case2.jpg');
+			}
+		}
+		&.allseating3{
+			@media screen and (max-width: 700px) {
+				background-image: url('/images/allseating-case3.jpg');
+			}
+		}
+	}
+}
+
+li.slide.allseating {
+	@media screen and (max-width: 700px) {
+		background-image: url('/images/case-allseating.jpg');
+		background-size: cover;
+		background-position: center;
+		height: 400px;
+		width: 100%;
+	}
+}

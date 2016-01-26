@@ -1,0 +1,77 @@
+#case-study.rcm-case-study {
+
+	.promotional {
+
+		.inner {
+			max-width: 840px;
+		}
+
+		span.alt {
+			line-height: 1;
+		}
+
+		h1 {
+			@media screen and (min-width: 768px) {
+				font-size: 3.2em;
+				margin-bottom: 0px;
+			}
+
+
+			@media screen and (max-width: 767px) {
+				font-size: 3.4em;
+				margin-bottom: 0px;
+			}
+
+			@media screen and (max-width: 540px) {
+				font-size: 2.6em;
+				margin-bottom: 0px;
+			}
+
+			@media screen and (max-width: 400px) {
+				font-size: 2.0em;
+				margin-bottom: 0px;
+			}
+		}
+
+	}
+
+ 	li.slide {
+
+ 		&.rcm {
+			@media screen and (max-width: 700px) {
+				background-image: url('/images/case-allseating.jpg');
+				background-size: cover;
+				background-position: center;
+				height: 400px;
+				width: 100%;
+			}
+		}
+
+		&.rcm1{
+			@media screen and (max-width: 700px) {
+				background-image: url('/images/allseating-case1.jpg');
+			}
+		}
+
+	}
+
+	section#agile {
+
+		.agileimg {
+			text-align: right;
+		}
+
+		img {
+		    width: 100%;
+		    max-width: 400px;
+		}
+
+	}
+
+	section#red-banner-1 {
+		@media screen and (min-width: 768px) {
+    		margin-bottom: -135px;
+    	}
+	}
+
+}

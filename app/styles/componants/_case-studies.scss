@@ -72,27 +72,6 @@
 	}
 }
 
-li.slide.unifor {
-	@media screen and (max-width: 700px) {
-		background-image: url('/images/unifor-case.png');
-		background-size: cover;
-		background-position: center;
-		height: 400px;
-		width: 100%;
-	}
-}
-
-
-li.slide.allseating {
-	@media screen and (max-width: 700px) {
-		background-image: url('/images/case-allseating.jpg');
-		background-size: cover;
-		background-position: center;
-		height: 400px;
-		width: 100%;
-	}
-}
-
 li.slide.cloverleaf {
 	@media screen and (max-width: 700px) {
 		background-image: url('/images/case-cloverleaf.jpg');
@@ -259,9 +238,7 @@ ul.arrows {
  	padding-top: 4em;
  }
 
-/*** UNIFOR / ALLSEATING ***/
-
-#unifor-case-study, #allseating-case-study {
+#case-study {
 
 	#case-cover {
 		padding-top: 2em !important;
@@ -290,36 +267,6 @@ ul.arrows {
 			background-position: center;
 			height: 400px;
 			width: 100%;
-		}
-		&.unifor{
-			@media screen and (max-width: 700px) {
-				background-image: url('/images/unifor-case3-mobile.jpg');
-			}
-		}
-		&.unifor2{
-			@media screen and (max-width: 700px) {
-				background-image: url('/images/unifor-case2.jpg');
-			}
-		}
-		&.unifor3{
-			@media screen and (max-width: 700px) {
-				background-image: url('/images/unifor-case.png');
-			}
-		}
-		&.allseating{
-			@media screen and (max-width: 700px) {
-				background-image: url('/images/allseating-case1.jpg');
-			}
-		}
-		&.allseating2{
-			@media screen and (max-width: 700px) {
-				background-image: url('/images/allseating-case2.jpg');
-			}
-		}
-		&.allseating3{
-			@media screen and (max-width: 700px) {
-				background-image: url('/images/allseating-case3.jpg');
-			}
 		}
 	}
 
@@ -415,15 +362,6 @@ ul.arrows {
 		}
 	}
  }
-
-#allseating-case-study {
-	.medal {
-	margin-top: 45px;
-	}
-	.promotional h1 {
-		padding-top: 25px;
-	}
-}
 
 .case-studies.wrapper {
 	background: -moz-linear-gradient(top, rgba(243,243,243,1) 0%, rgba(64,64,64,0.19) 100%); /* FF3.6+ */

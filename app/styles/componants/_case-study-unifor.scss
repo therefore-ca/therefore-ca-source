@@ -1,0 +1,29 @@
+#case-study.unifor-case-study {
+ 	li.slide {
+		&.unifor{
+			@media screen and (max-width: 700px) {
+				background-image: url('/images/unifor-case3-mobile.jpg');
+			}
+		}
+		&.unifor2{
+			@media screen and (max-width: 700px) {
+				background-image: url('/images/unifor-case2.jpg');
+			}
+		}
+		&.unifor3{
+			@media screen and (max-width: 700px) {
+				background-image: url('/images/unifor-case.png');
+			}
+		}
+	}
+}
+
+li.slide.unifor {
+	@media screen and (max-width: 700px) {
+		background-image: url('/images/unifor-case.png');
+		background-size: cover;
+		background-position: center;
+		height: 400px;
+		width: 100%;
+	}
+}
