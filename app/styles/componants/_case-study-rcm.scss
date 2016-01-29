@@ -3,7 +3,7 @@
 	.promotional {
 
 		.inner {
-			max-width: 840px;
+			max-width: 1000px;
 		}
 
 		span.alt {
@@ -12,7 +12,7 @@
 
 		h1 {
 			@media screen and (min-width: 768px) {
-				font-size: 3.2em;
+				font-size: 3.8em;
 				margin-bottom: 0px;
 			}
 
@@ -35,24 +35,31 @@
 
 	}
 
- 	li.slide {
+	ul.slides {
+		height: 535px;
+		li.slide {
 
- 		&.rcm {
-			@media screen and (max-width: 700px) {
-				background-image: url('/images/case-allseating.jpg');
-				background-size: cover;
-				background-position: center;
-				height: 400px;
-				width: 100%;
+	 		&.rcm {
+				@media screen and (max-width: 700px) {
+					background-image: url('/images/rcm/rcm-slide-1.jpg');
+					background-size: cover;
+					background-position: center;
+					height: 400px;
+					width: 100%;
+				}
+			}
+
+			&.rcm1{
+				@media screen and (max-width: 700px) {
+					background-image: url('/images/allseating-case1.jpg');
+				}
 			}
 		}
-
-		&.rcm1{
-			@media screen and (max-width: 700px) {
-				background-image: url('/images/allseating-case1.jpg');
+		img.rcm1 {
+			@media screen and (min-width: 768px) {
+				bottom: -60px;
 			}
 		}
-
 	}
 
 	section#agile {
@@ -70,7 +77,7 @@
 
 	section#red-banner-1 {
 		@media screen and (min-width: 768px) {
-    		margin-bottom: -135px;
+    		margin-bottom: -150px;
     	}
 	}
 
