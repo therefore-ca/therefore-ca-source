@@ -2,13 +2,17 @@ var _ = require('lodash');
 var url = require("url");
 var path = require("path");
 var fs = require("fs");
-var mandrill = require('mandrill-api/mandrill');
 var Hapi = require('hapi');
 var Good = require('good');
 
 var redirects = require('./redirects');
 
-var mandrill_client = new mandrill.Mandrill('yU1xPprQ1LjIdmsbvqxCaQ');
+var SparkPost = require('sparkpost');
+var smptClient = new SparkPost('cf7bf3520f542bf8f9e0a17d52538ad7ec7fec76', {
+  // endpoint: 'https://dev.sparkpost.com:443' // for development testing
+});
+
+
 var server = new Hapi.Server();
 
 server.connection({
@@ -26,27 +30,62 @@ server.route({
   path: '/contact-process',
   handler: function (request, reply) {
     var args = url.parse(request.url, true).query;
-    var message = {
-      'from_email': 'contact@therefore.ca',
-      'to': [
+
+    // If blank values for any of the required fields somehow made it through, it's likely this wasn't submitted through
+    // the form, and should be rejected. The site validates that all of these must be present before sumbmitting over
+    // ajax.
+    if(!args.name || !args.email || !args.comment) {
+      return reply({success: false});
+    }
+
+    var htmlContent = '<h3>Contact information</h3>' +
+      '<b>Name</b><br>' + args.name + '<br><br>' +
+      '<b>Email</b><br>' + args.email + '<br><br>' +
+      '<b>Comment</b><br>' + args.comment + '<br>';
+
+    var requestObject = {
+      description: 'therefore.ca - Contact submission from ' + args.name + '<' + args.email + '>',
+      recipients: [
         {
-          'email': 'alex@therefore.ca',
-          'name': 'Alex De Winne',
-          'type': 'to'
-        }
+          address: {
+            email: 'alex@therefore.ca',
+            name: 'Alex De Winne'
+          }
+        },
+        // {
+        //   address: {
+        //     email: 'homer@therefore.ca',
+        //     name: 'Homer'
+        //   }
+        // }
       ],
-      'autotext': 'true',
-      'subject': 'New Contact Form Submission',
-      'html': 'Contact information : <br/>' +
-      'Name : ' + args.name + '<br/>' +
-      'Email : ' + args.email + '<br/>' +
-      'Comment : ' + args.comment + '<br/>'
+      content: {
+        subject: 'therefore.ca - New Contact Form Submission',
+        from: {
+          name:'Contact Form Submission',
+          email: 'contact@therefore.ca'
+        },
+        html: htmlContent
+      },
+      options: {
+        "open_tracking": true
+      }
     };
-    mandrill_client.messages.send({"message": message}, function (result) {
-      reply({success: true});
-    }, function (e) {
-      console.log('A mandrill error occurred: ' + e.name + ' - ' + e.message);
-      reply({success: false});
+
+    smptClient.transmissions.send({transmissionBody:requestObject}, function (err, r) {
+      var success = false;
+      var body = r && r.body ? r.body : {};
+      var results = body.results || {};
+
+      console.log('Email result',body);
+
+      if (err) {
+        console.log('An email error occurred: ', err);
+      } else if (results.total_accepted_recipients > 0) {
+        success = true;
+      }
+
+      reply({success: success});
     });
   }
 });
