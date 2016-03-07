@@ -70,15 +70,17 @@ server.route({
       }
     };
 
+    console.log('Email -- Attempting to send',requestObject);
+
     smptClient.transmissions.send({transmissionBody:requestObject}, function (err, r) {
       var success = false;
       var body = r && r.body ? r.body : {};
       var results = body.results || {};
 
-      console.log('Email result',body);
+      console.log('Email -- Result',body);
 
       if (err) {
-        console.log('An email error occurred: ', err);
+        console.log('Email -- Error', err);
       } else if (results.total_accepted_recipients > 0) {
         success = true;
       }
