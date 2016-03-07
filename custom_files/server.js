@@ -48,8 +48,7 @@ server.route({
       recipients: [
         {
           address: {
-            email: 'alexd@therefore.ca',
-            name: 'Alex De Winne'
+            email: 'hello@therefore.ca'
           }
         },
         // {
@@ -62,8 +61,7 @@ server.route({
       content: {
         subject: 'therefore.ca - New Contact Form Submission',
         from: {
-          name:'Contact Form Submission',
-          email: 'contact@therefore.ca'
+          email: 'hello@therefore.ca'
         },
         html: htmlContent
       },
