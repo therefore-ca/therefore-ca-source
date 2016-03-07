@@ -48,7 +48,7 @@ server.route({
       recipients: [
         {
           address: {
-            email: 'alex@therefore.ca',
+            email: 'alexd@therefore.ca',
             name: 'Alex De Winne'
           }
         },
