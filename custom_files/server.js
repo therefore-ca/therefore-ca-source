@@ -117,6 +117,8 @@ server.register(require('inert'), function (err) {
       }
       else if (redirects['/' + uri]) {
         reply.redirect(redirects['/' + uri]);
+      } else if (fs.existsSync(uri + 'index.html')) {
+        reply.file(uri + 'index.html');
       } else {
         reply.file('404.html');
       }
