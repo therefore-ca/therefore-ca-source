@@ -311,7 +311,8 @@ module.exports = function(grunt) {
             '*.{ico,png,txt,pdf}',
             'images/{,*/}*.webp',
             '{,*/}*.html',
-            'styles/fonts/{,*/}*.*'
+            'styles/fonts/{,*/}*.*',
+            'extras/**/*'
           ]
         }, {
           src: 'node_modules/apache-server-configs/dist/.htaccess',
@@ -388,13 +389,13 @@ module.exports = function(grunt) {
             name: 'medium', width: 640,
           },{
             name: 'large', width: 1024,
-          }]          
+          }]
         },
         files: [{
           expand: true,
           cwd: '<%= config.app %>/images',
           src: '{,*/}*.{gif,jpeg,jpg,png}',
-          dest: '<%= config.dist %>/images/'          
+          dest: '<%= config.dist %>/images/'
         }]
       }
     },
