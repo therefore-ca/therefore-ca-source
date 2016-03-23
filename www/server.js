@@ -24,6 +24,17 @@ server.connection({
   port: 8888
 });
 
+// Handle possible cookies coming in from the blog node server; reject them at all costs
+server.state('express', {
+  ttl: 1, // expire quickly, we don't want this
+  ignoreErrors: true, // bypass if errors
+  clearInvalid: true // remove invalid cookies
+});
+server.state('sess', {
+  ttl: 1, // expire quickly, we don't want this
+  ignoreErrors: true, // bypass if errors
+  clearInvalid: true // remove invalid cookies
+});
 
 server.route({
   method: 'GET',
