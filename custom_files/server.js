@@ -13,7 +13,19 @@ var smptClient = new SparkPost('cf7bf3520f542bf8f9e0a17d52538ad7ec7fec76', {
 });
 
 
-var server = new Hapi.Server();
+// Handle possible cookies coming in from the blog node server; reject them at all costs
+var serverConfig = {
+  connections: {
+    routes: {
+      state: {
+        //parse: false,
+        failAction: 'ignore'
+      }
+    }
+  }
+};
+
+var server = new Hapi.Server(serverConfig);
 
 server.connection({
   routes: {
@@ -22,18 +34,6 @@ server.connection({
     }
   },
   port: 8888
-});
-
-// Handle possible cookies coming in from the blog node server; reject them at all costs
-server.state('express', {
-  ttl: 1, // expire quickly, we don't want this
-  ignoreErrors: true, // bypass if errors
-  clearInvalid: true // remove invalid cookies
-});
-server.state('sess', {
-  ttl: 1, // expire quickly, we don't want this
-  ignoreErrors: true, // bypass if errors
-  clearInvalid: true // remove invalid cookies
 });
 
 server.route({
