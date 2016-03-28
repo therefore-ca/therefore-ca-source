@@ -33,7 +33,7 @@ ul.main-menu {
 		@include mobile	{
 			margin-bottom: 0.2em;
 		}
-		
+
 		@media screen and (min-width: 768px) {
 			display: inline-block;
 			margin: 0px 1em;
@@ -47,7 +47,7 @@ ul.main-menu {
 		font-weight: 700;
 		text-transform: uppercase;
 
-		&:hover, &:focus {
+		&:hover, &:focus, &.active {
 			text-decoration: none;
 			@media screen and (min-width: 768px) {
 				border-bottom: 3px white solid;
