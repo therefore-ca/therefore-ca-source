@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+npm i
+bower i
 grunt build
 cd www
 mkdir log

@@ -6,7 +6,6 @@ module.exports = {
   "/mobile-web": "/work.html",
   "/meet-the-team": "/about-us.html",
   "/protfolio": "/work.html",
-  "/blog": "/#home-blog-teasers",
   "/contact": "/contact.html",
   "/brand/loblaws": "/work.html",
   "/brand/unifor": "/work.html",

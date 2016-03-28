@@ -19,7 +19,7 @@ jQuery(document).ready(function ($) {
     if (data && data.posts) {
       var posts = data.posts;
 
-      var blogTeasers = $("#home-blog-teasers article.teaser.card");
+      var blogTeasers = $("/blog article.teaser.card");
 
       $.each(posts, function (i, post) {
         var date = moment(post.date);
