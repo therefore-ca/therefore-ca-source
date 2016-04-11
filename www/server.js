@@ -4,13 +4,20 @@ var path = require("path");
 var fs = require("fs");
 var Hapi = require('hapi');
 var Good = require('good');
+var nodemailer = require('nodemailer');
 
 var redirects = require('./redirects');
 
-var SparkPost = require('sparkpost');
-var smptClient = new SparkPost('cf7bf3520f542bf8f9e0a17d52538ad7ec7fec76', {
-  // endpoint: 'https://dev.sparkpost.com:443' // for development testing
-});
+var smtpConfig = {
+  host: 'mail-manager.smtp.com',
+  port: 25,
+  secure: false, // use SSL
+  auth: {
+    user: 'alexd@therefore.ca',
+    pass: '9bacf2ae'
+  }
+};
+var transporter = nodemailer.createTransport(smtpConfig);
 
 
 // Handle possible cookies coming in from the blog node server; reject them at all costs
@@ -45,7 +52,7 @@ server.route({
     // If blank values for any of the required fields somehow made it through, it's likely this wasn't submitted through
     // the form, and should be rejected. The site validates that all of these must be present before sumbmitting over
     // ajax.
-    if(!args.name || !args.email || !args.comment) {
+    if (!args.name || !args.email || !args.comment) {
       return reply({success: false});
     }
 
@@ -55,47 +62,25 @@ server.route({
       '<b>Comment</b><br>' + args.comment + '<br>';
 
     var requestObject = {
-      description: 'therefore.ca - Contact submission from ' + args.name + '<' + args.email + '>',
-      recipients: [
-        {
-          address: {
-            email: 'hello@therefore.ca'
-          }
-        },
-        // {
-        //   address: {
-        //     email: 'homer@therefore.ca',
-        //     name: 'Homer'
-        //   }
-        // }
-      ],
-      content: {
-        subject: 'therefore.ca - New Contact Form Submission',
-        from: {
-          email: 'hello@therefore.ca'
-        },
-        html: htmlContent
-      },
-      options: {
-        "open_tracking": true
-      }
+      to: 'hello@therefore.ca',
+      from: 'hello@therefore.ca',
+      subject: 'therefore.ca - New Contact Form Submission',
+      text: htmlContent,
+      html: htmlContent
     };
 
-    console.log('Email -- Attempting to send',requestObject);
+    console.log('Email -- Attempting to send', requestObject);
 
-    smptClient.transmissions.send({transmissionBody:requestObject}, function (err, r) {
+    // send mail with defined transport object
+    transporter.sendMail(requestObject, function (error, info) {
       var success = false;
-      var body = r && r.body ? r.body : {};
-      var results = body.results || {};
 
-      console.log('Email -- Result',body);
-
-      if (err) {
-        console.log('Email -- Error', err);
-      } else if (results.total_accepted_recipients > 0) {
+      if (error) {
+        return console.log(error);
+      } else {
         success = true;
       }
-
+      console.log('Message sent: ' + info.response);
       reply({success: success});
     });
   }
