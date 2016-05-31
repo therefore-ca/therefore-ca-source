@@ -1878,7 +1878,7 @@ span.phone {
       padding-top: 0.5em; } }
 
 ul.arrows {
-  display: none;
+  /*display: none;
   /*Temp for launch */
   list-style: none;
   margin: 0 auto;
