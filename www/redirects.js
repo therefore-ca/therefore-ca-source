@@ -1,12 +1,8 @@
 module.exports = {
-  "/blog/accessibility-wcag-aoda-presentation-follow": "/accessibility-wcag-aoda-presentation.html",
-  "/blog/birth-merlin": "/blog/birth-merlin.html",
-  "/blog/decoupling-drupal": "/blog/decoupling-drupal.html",
   "/about-us": "/about-us.html",
   "/mobile-web": "/work.html",
   "/meet-the-team": "/about-us.html",
-  "/protfolio": "/work.html",
-  "/blog": "/#home-blog-teasers",
+  "/portfolio": "/work.html",
   "/contact": "/contact.html",
   "/brand/loblaws": "/work.html",
   "/brand/unifor": "/work.html",

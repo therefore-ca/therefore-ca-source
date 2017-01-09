@@ -140,7 +140,7 @@ $( document ).ready(function() {
 
 	carouselController('#carousel-1');
 	carouselController('#carousel-2');
-	//carouselController('#carousel-3');
+	carouselController('#carousel-3');
 	carouselController('#carousel-4');
 
 	var waypoint = new Waypoint({
