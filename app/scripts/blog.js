@@ -3,16 +3,14 @@
 jQuery(document).ready(function ($) {
   var blogFeedUrl = 'http://therefore.ca/blog/latest.json';
 
-  $.ajax({
-    dataType: "json",
-    url: blogFeedUrl,
-    error: function (event, jqXHR, ajaxSettings, thrownError) {
-      console.warn(thrownError);
-    },
-    success: handleBlogJson
-  });
-
-  //handleBlogJson({"posts":[{"title":"Welcome to Ghost","tag":"Getting Started","excerpt":"You&apos;re live! Nice. We&apos;ve put together a little post to introduce you to the Ghost editor and get you started. You can manage your content by signing in to the admin area at &lt;your blog URL&gt;/ghost/. When you arrive, you can select this post from a list on&#x2026;","author":{"url":"http://therefore.ca/blog/author/therefore/","name":"Therefore Blog Admin","img":"//www.gravatar.com/avatar/1557ec68b1fd4fbbc75a6c52bdc06dd9?s=250&d=mm&r=x"},"uri":"http://therefore.ca/blog/welcome-to-ghost/","date":"2015-11-02T05:00:00.000Z"}]});
+  // $.ajax({
+  //   dataType: "json",
+  //   url: blogFeedUrl,
+  //   error: function (event, jqXHR, ajaxSettings, thrownError) {
+  //     console.warn(thrownError);
+  //   },
+  //   success: handleBlogJson
+  // });
 
   function handleBlogJson(data) {
     console.log('blog data', data);
