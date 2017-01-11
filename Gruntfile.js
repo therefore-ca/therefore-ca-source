@@ -35,7 +35,9 @@ module.exports = function(grunt) {
         tasks: ['wiredep']
       },
       js: {
-        files: ['<%= config.app %>/scripts/**/*.js'],
+        files: [
+          '<%= config.app %>/scripts/**/*.js'
+        ],
         tasks: [],
         options: {
           livereload: true
@@ -389,13 +391,13 @@ module.exports = function(grunt) {
             name: 'medium', width: 640,
           },{
             name: 'large', width: 1024,
-          }]          
+          }]
         },
         files: [{
           expand: true,
           cwd: '<%= config.app %>/images',
           src: '{,*/}*.{gif,jpeg,jpg,png}',
-          dest: '<%= config.dist %>/images/'          
+          dest: '<%= config.dist %>/images/'
         }]
       }
     },
