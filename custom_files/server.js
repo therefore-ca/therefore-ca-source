@@ -86,6 +86,42 @@ server.route({
   }
 });
 
+server.route({
+  method: 'GET',
+  path: '/estimate-process',
+  handler: function (request, reply) {
+    var args = url.parse(request.url, true).query;
+
+    var htmlContent = '<h3>Contact information</h3>' +
+      '<b>Name</b><br>' + args.name + '<br><br>' +
+      '<b>Email</b><br>' + args.email + '<br><br>' +
+      '<b>Comment</b><br>' + args.comment + '<br>';
+
+    var requestObject = {
+      to: 'kana@therefore.ca',
+      from: 'hello@therefore.ca',
+      subject: 'therefore.ca - Project Estimate Form Submission',
+      text: htmlContent,
+      html: htmlContent
+    };
+
+    console.log('Email -- Attempting to send', requestObject);
+
+    // send mail with defined transport object
+    transporter.sendMail(requestObject, function (error, info) {
+      var success = false;
+
+      if (error) {
+        return console.log(error);
+      } else {
+        success = true;
+      }
+      console.log('Message sent: ' + info.response);
+      reply({success: success});
+    });
+  }
+});
+
 server.register(require('inert'), function (err) {
   if (err) {
     throw err;
