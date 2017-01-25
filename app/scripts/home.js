@@ -52,7 +52,7 @@ $( document ).ready(function() {
 			$('.slideshow li.slide.next').addClass('in');
 		}
 
-		/*var cycleSlides = setInterval(function () {
+		var cycleSlides = setInterval(function () {
 			globalIndex += 1;
 			if(globalIndex > count - 1) {
 				globalIndex = 0;
@@ -61,7 +61,7 @@ $( document ).ready(function() {
 			$('.slideshow li.slide.next').children().addClass('hidden');
 			
 
-		}, 6000);*/
+		}, 30000);
 
 		$(id + ' ul.controls li a').click(function(e) {
 			e.preventDefault();
