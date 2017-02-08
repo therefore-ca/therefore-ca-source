@@ -91,14 +91,35 @@ server.route({
   path: '/estimate-process',
   handler: function (request, reply) {
     var args = url.parse(request.url, true).query;
+    var result = {
+      success: false,
+      errorMessage: ''
+    };
+
+    // If blank values for any of the required fields somehow made it through, it's likely this wasn't submitted through
+    // the form, and should be rejected. The site validates that all of these must be present before sumbmitting over
+    // ajax.
+    if (!args.name || !args.email || !args.projectTimeline || !args.projectDetails || !args.estimatedBudget) {
+      result.errorMessage = "All fields are required, please ensure to fill them in and try again.";
+      return reply(result);
+    }
+    // If the budget amount is invalid, flag the error
+    var cleanNumber = parseInt(args.estimatedBudget.replace(new RegExp('[\$\,\.]','gm'), ''));
+    if (!_.isNumber(cleanNumber) || _.isNaN(cleanNumber) || cleanNumber <= 0) {
+      result.errorMessage = "Please enter a positive numerical budget amount.";
+      return reply(result);
+    }
 
     var htmlContent = '<h3>Contact information</h3>' +
       '<b>Name</b><br>' + args.name + '<br><br>' +
       '<b>Email</b><br>' + args.email + '<br><br>' +
-      '<b>Comment</b><br>' + args.comment + '<br>';
+      '<h3>Project</h3><b>Details</b><br>' + args.projectDetails + '<br><br>' +
+      '<b>Estimated Budget</b><br>' + args.estimatedBudget + '<br><br>' +
+      '<b>Timeline</b><br>' + args.projectTimeline + '<br><br>'
+    ;
 
     var requestObject = {
-      to: 'kana@therefore.ca',
+      to: 'homer@therefore.ca',
       from: 'hello@therefore.ca',
       subject: 'therefore.ca - Project Estimate Form Submission',
       text: htmlContent,
