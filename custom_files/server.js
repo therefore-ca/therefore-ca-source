@@ -119,7 +119,7 @@ server.route({
     ;
 
     var requestObject = {
-      to: 'homer@therefore.ca',
+      to: 'hello@therefore.ca',
       from: 'hello@therefore.ca',
       subject: 'therefore.ca - Project Estimate Form Submission',
       text: htmlContent,
