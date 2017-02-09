@@ -27,6 +27,7 @@
       }
     }
   }
+
   form {
     background: $greyLight70;
     padding: 30px;
@@ -45,6 +46,18 @@
       @include mobile {
         width: 100%;
       }
+    }
+  }
+
+  .call-to-action {
+    background-color: #d9edf7;
+    border-color: #bce8f1;
+    h1 {
+      font-size: 32px;
+      color: #34789a;
+    }
+    .lead {
+      color: #3a87ad;
     }
   }
 }
