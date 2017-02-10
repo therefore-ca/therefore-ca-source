@@ -61,7 +61,7 @@ $( document ).ready(function() {
 			$('.slideshow li.slide.next').children().addClass('hidden');
 			
 
-		}, 30000);
+		}, 5000);
 
 		$(id + ' ul.controls li a').click(function(e) {
 			e.preventDefault();
