@@ -100,7 +100,7 @@ server.route({
     // the form, and should be rejected. The site validates that all of these must be present before sumbmitting over
     // ajax.
     if (!args.name || !args.email || !args.projectTimeline || !args.projectDetails || !args.estimatedBudget) {
-      result.errorMessage = "All fields are required, please ensure to fill them in and try again.";
+      result.errorMessage = "Opps, it looks like you missed entering a field. Please ensure to enter all your details so we can provide you the best estimate as possible.";
       return reply(result);
     }
     // If the budget amount is invalid, flag the error
