@@ -58,6 +58,10 @@
 		margin-left: -100%;
 	}
 
+	.slide.third {
+		margin-left: -200%;
+	}
+
 	.slide.in.hidden {
 		opacity: 1;
 	}
@@ -80,6 +84,16 @@ li.slide.cloverleaf {
 		height: 400px;
 		width: 100%;
 	}
+}
+
+#carousel-3 {
+	.arrows {
+		display: block;
+	}
+}
+
+#home-case-studies {
+	padding-top: 2em;
 }
 
 .title-wrapper {
