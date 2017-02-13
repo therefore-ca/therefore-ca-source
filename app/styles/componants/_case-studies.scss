@@ -86,14 +86,58 @@ li.slide.cloverleaf {
 	}
 }
 
-#carousel-3 {
-	.arrows {
-		display: block;
-	}
-}
-
 #home-case-studies {
-	padding-top: 2em;
+	.carousel-inner {
+		overflow: visible;
+	}
+
+	.carousel-control {
+		background-image: none;
+		span {
+		    border-radius: 100%;
+		    width: 40px;
+		    height: 40px;	
+		    border: $grey 3px solid;	
+		    display: block;	
+		    position: absolute;
+			top: 50%;
+		}
+
+		&.left {
+			span {
+				right: 0;
+			}
+		}
+	}
+
+	.fa {
+	    font-size: 1em;
+		color: $grey;
+		vertical-align: middle;
+		text-shadow: none;
+		padding-top: 5px;
+		@media screen and (max-width: 700px) {
+			left: 20px;
+		}
+	}
+
+	img.case-study {
+		@media screen and (max-width: 700px) {
+			left: -50px;
+		}
+	}
+
+	.title-wrapper {
+		@media screen and (max-width: 700px) {
+			background: transparent;
+			padding: 0 30px 0 30px;
+			h2 {
+				color: $grey;
+				margin-top: 0;
+				font-size: 26px;
+			}
+		}
+	}
 }
 
 .title-wrapper {
@@ -250,6 +294,7 @@ ul.arrows {
 
  #home-logos.wrapper {
  	padding-top: 4em;
+ 	clear: both;
  }
 
 #case-study {
