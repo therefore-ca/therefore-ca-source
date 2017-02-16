@@ -21,4 +21,62 @@
 			line-height: .95;
 		}
 	}
+
+ 	li.slide {
+		&.cse{
+			@media screen and (max-width: 700px) {
+				background-image: url('/images/cse-case-mobile.jpg');
+			}
+		}
+		&.cse2{
+			@media screen and (max-width: 700px) {
+				background-image: url('/images/cse-case-mobile2.jpg');
+			}
+		}
+		&.cse3{
+			@media screen and (max-width: 700px) {
+				background-image: url('/images/cse-case-mobile3.jpg');
+			}
+		}
+	}
+}
+
+#case-study.visualsonics-case-study {
+ 	li.slide {
+		&.vs{
+			@media screen and (max-width: 700px) {
+				background-image: url('/images/vs-case-mobile.jpg');
+			}
+		}
+		&.vs2{
+			@media screen and (max-width: 700px) {
+				background-image: url('/images/vs-case-mobile2.jpg');
+			}
+		}
+		&.vs3{
+			@media screen and (max-width: 700px) {
+				background-image: url('/images/vs-case-mobile3.jpg');
+			}
+		}
+	}	
+}
+
+#case-study.esri-case-study {
+ 	li.slide {
+		&.esri{
+			@media screen and (max-width: 700px) {
+				background-image: url('/images/esri-case-mobile.jpg');
+			}
+		}
+		&.esri2{
+			@media screen and (max-width: 700px) {
+				background-image: url('/images/esri-case-mobile2.jpg');
+			}
+		}
+		&.esri3{
+			@media screen and (max-width: 700px) {
+				background-image: url('/images/esri-case-mobile3.jpg');
+			}
+		}
+	}	
 }
