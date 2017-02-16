@@ -1,0 +1,24 @@
+#case-study.cse-case-study {
+	.promotional {
+		.inner {
+			max-width: 960px;
+		}
+
+		h1 {
+			@media screen and (min-width: 768px) {
+				font-size: 4em;
+				margin-bottom: 0px;
+			}
+
+
+			@media screen and (max-width: 767px) {
+				font-size: 1.8em;
+				margin-bottom: 0px;
+			}
+		}
+
+		.alt {
+			line-height: .95;
+		}
+	}
+}
