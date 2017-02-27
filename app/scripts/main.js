@@ -14,10 +14,6 @@ jQuery(document).ready(function ($) {
     $('.menu-container').addClass('mobile-hidden open').addClass('closed');
     $('a.menu-open').removeClass('mobile-hidden');
   });
-
-  $('#home-case-studies').carousel({
-      interval:   3000
-  });
 });
 
 $(".card").flip();
