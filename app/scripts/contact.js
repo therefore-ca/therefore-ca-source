@@ -17,6 +17,7 @@ $(document).ready(function () {
 
         var name = $contactForm.find('input#name').val();
         var email = $contactForm.find('input#email').val();
+        var tel = $contactForm.find('input#tel').val();
         var comment = $contactForm.find('#comment').val();
 
         $.ajax({
@@ -25,6 +26,7 @@ $(document).ready(function () {
           data: {
             'name': name,
             'email': email,
+            'tel': tel,
             'comment': comment
           }
         }).done(function (response) {
@@ -56,6 +58,7 @@ $(document).ready(function () {
 
         var name = $estimateForm.find('input#firstName').val() + ' ' + $estimateForm.find('input#lastName').val();
         var email = $estimateForm.find('input#email').val();
+        var tel = $estimateForm.find('input#tel').val();
         var projectDetails = $estimateForm.find('#projectDetails').val();
         var estimatedBudget = $estimateForm.find('#estimatedBudget').val();
         var projectTimeline = $estimateForm.find('#projectTimeline').val();
@@ -66,6 +69,7 @@ $(document).ready(function () {
           data: {
             'name': name,
             'email': email,
+            'tel': tel,
             'projectDetails': projectDetails,
             'estimatedBudget': estimatedBudget,
             'projectTimeline': projectTimeline,
