@@ -52,13 +52,14 @@ server.route({
     // If blank values for any of the required fields somehow made it through, it's likely this wasn't submitted through
     // the form, and should be rejected. The site validates that all of these must be present before sumbmitting over
     // ajax.
-    if (!args.name || !args.email || !args.comment) {
+    if (!args.name || !args.email || !args.tel || !args.comment) {
       return reply({success: false});
     }
 
     var htmlContent = '<h3>Contact information</h3>' +
       '<b>Name</b><br>' + args.name + '<br><br>' +
       '<b>Email</b><br>' + args.email + '<br><br>' +
+      '<b>Phone number</b><br>' + args.tel + '<br><br>' +
       '<b>Comment</b><br>' + args.comment + '<br>';
 
     var requestObject = {
@@ -99,7 +100,7 @@ server.route({
     // If blank values for any of the required fields somehow made it through, it's likely this wasn't submitted through
     // the form, and should be rejected. The site validates that all of these must be present before sumbmitting over
     // ajax.
-    if (!args.name || !args.email || !args.projectTimeline || !args.projectDetails || !args.estimatedBudget) {
+    if (!args.name || !args.email || !args.tel || !args.projectTimeline || !args.projectDetails || !args.estimatedBudget) {
       result.errorMessage = "Opps, it looks like you missed entering a field. Please ensure to enter all your details so we can provide you the best estimate as possible.";
       return reply(result);
     }
@@ -113,6 +114,7 @@ server.route({
     var htmlContent = '<h3>Contact information</h3>' +
       '<b>Name</b><br>' + args.name + '<br><br>' +
       '<b>Email</b><br>' + args.email + '<br><br>' +
+      '<b>Phone number</b><br>' + args.tel + '<br><br>' +
       '<h3>Project</h3><b>Details</b><br>' + args.projectDetails + '<br><br>' +
       '<b>Estimated Budget</b><br>' + args.estimatedBudget + '<br><br>' +
       '<b>Timeline</b><br>' + args.projectTimeline + '<br><br>'
