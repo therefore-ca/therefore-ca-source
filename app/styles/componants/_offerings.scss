@@ -20,7 +20,7 @@ article.offering {
 	.inner {
 		border-radius: 10px;
 		overflow: hidden;
-		background: white;
+		background: #f7f7f7;
 	}
 
 	p {
@@ -53,6 +53,8 @@ article.offering {
 	.offering-info {
 		float: right;
 		padding-bottom: 1em;
+		padding-left: 20px;
+		padding-right: 20px;
 
 		@media screen and (min-width: 992px) {
 			height: 190px;

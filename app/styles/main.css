@@ -952,7 +952,7 @@ article.offering {
   article.offering .inner {
     border-radius: 10px;
     overflow: hidden;
-    background: white; }
+    background: #f7f7f7; }
   article.offering p {
     line-height: 1.3em; }
   article.offering .offering-icon {
@@ -976,7 +976,9 @@ article.offering {
           width: 90%; } }
   article.offering .offering-info {
     float: right;
-    padding-bottom: 1em; }
+    padding-bottom: 1em; 
+    padding-left: 20px;
+    padding-right: 20px; }
     @media screen and (min-width: 992px) {
       article.offering .offering-info {
         height: 190px; } }
@@ -2113,7 +2115,8 @@ a.disabled {
   /* IE6-9 */
   padding-bottom: 0;
   padding-top: 1em;
-  position: relative; }
+  position: relative; 
+  margin-bottom: 3em; }
   .case-studies.wrapper .lead.single-col {
     margin-bottom: 0em; }
     @media screen and (max-width: 700px) {
