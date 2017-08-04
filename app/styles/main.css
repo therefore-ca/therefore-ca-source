@@ -976,7 +976,7 @@ article.offering {
           width: 90%; } }
   article.offering .offering-info {
     float: right;
-    padding-bottom: 1em; 
+    padding-bottom: 1em;
     padding-left: 20px;
     padding-right: 20px; }
     @media screen and (min-width: 992px) {
@@ -1279,7 +1279,7 @@ span.phone {
   display: block;
   padding: 0 1.2em;
   background-size: 100% auto;
-  width: 25%;
+  width: 20%;
   float: left;
   filter: grayscale(100%);
   transition: all 0.5s ease; }
@@ -1292,10 +1292,11 @@ span.phone {
   @media screen and (min-width: 1300px) {
     .brand-logo {
       padding: 0 1.5em;
-      width: 16.6666667%; } }
+      width: 20%; } }
   @media screen and (max-width: 767px) {
     .brand-logo {
-      width: 33.333%; } }
+      width: 40%;
+      padding: 0 10%; } }
   .brand-logo img {
     width: 100%;
     height: auto; }
@@ -1341,17 +1342,17 @@ span.phone {
     @media screen and (max-width: 640px) {
     .headshot {
       padding: 0 1.5em;
-      width: 50%; } }  
+      width: 50%; } }
     @media screen and (max-width: 480px) {
     .headshot {
-      width: 100%; } }  
+      width: 100%; } }
     .people-list h1 {
       font-size: 1.5rem;
     }
     .card {
       width: 100%;
       height: 234px;
-      display: inline-block;     
+      display: inline-block;
     }
     .card .front img {
       border: none;
@@ -1366,7 +1367,7 @@ span.phone {
     }
     .card .back p {
       color: white;
-      font-size: 1.46rem;      
+      font-size: 1.46rem;
     }
     .card .back.strategy {
       background-image: url("/images/green-back-500.png");
@@ -2115,7 +2116,7 @@ a.disabled {
   /* IE6-9 */
   padding-bottom: 0;
   padding-top: 1em;
-  position: relative; 
+  position: relative;
   margin-bottom: 3em; }
   .case-studies.wrapper .lead.single-col {
     margin-bottom: 0em; }
