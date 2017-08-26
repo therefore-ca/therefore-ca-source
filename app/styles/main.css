@@ -2118,6 +2118,12 @@ a.disabled {
   padding-top: 1em;
   position: relative;
   margin-bottom: 3em; }
+  @media screen and (max-width: 700px) {
+    .case-studies.wrapper {
+      overflow: hidden;
+      min-height: 400px;
+    }
+  }
   .case-studies.wrapper .lead.single-col {
     margin-bottom: 0em; }
     @media screen and (max-width: 700px) {

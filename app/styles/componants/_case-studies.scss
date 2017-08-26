@@ -484,6 +484,11 @@ ul.arrows {
 	padding-top: 1em;
 	position: relative;
 
+	@media screen and (max-width: 700px) {
+		overflow: hidden;
+		min-height: 400px;
+	}
+
 	.divider {
 		width: 100%;
 		max-width: 390px;
