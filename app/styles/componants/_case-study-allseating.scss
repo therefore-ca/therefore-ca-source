@@ -22,14 +22,23 @@
 			}
 		}
 	}
+
+	.carousel-inner {
+		margin-bottom: -60px;
+	}
 }
 
-li.slide.allseating {
-	@media screen and (max-width: 700px) {
-		background-image: url('/images/case-allseating.jpg');
-		background-size: cover;
-		background-position: center;
-		height: 400px;
-		width: 100%;
+@media screen and (max-width: 700px) {
+	#case-study.allseating-case-study .carousel-inner {
+		height: 300px;
+		overflow: hidden !important;
+	}
+
+	#case-study.allseating-case-study section#overview {
+		margin-top: 0px;
+	}
+
+	#case-study.allseating-case-study .case-studies.wrapper {
+		margin-bottom: 40px;
 	}
 }

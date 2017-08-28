@@ -1,7 +1,7 @@
 
 $( document ).ready(function() {
 	'use strict';
-	
+
 	var carouselController = function(id) {
 		var items = $(id + ' ul.slides li'),
 		controls = $(id + ' ul.controls li'),
@@ -18,7 +18,7 @@ $( document ).ready(function() {
 			var prevItem;
 
 			items.removeClass('animate next previous');
-			
+
 			items.addClass('hidden').removeClass('active');
 			item.removeClass('hidden').addClass('active');
 			item.children().removeClass('hidden');
@@ -33,11 +33,11 @@ $( document ).ready(function() {
 
 			if (index < count - 1) {
 				nextItem = items.eq(index + 1);
-				
+
 				nextItem.addClass('next');
 			} else {
 				nextItem = items.eq(0);
-				
+
 				nextItem.addClass('next');
 			}
 
@@ -59,7 +59,7 @@ $( document ).ready(function() {
 			};
 			activate(globalIndex);
 			$('.slideshow li.slide.next').children().addClass('hidden');
-			
+
 
 		}, 5000);
 
@@ -141,7 +141,7 @@ $( document ).ready(function() {
 	carouselController('#carousel-1');
 	carouselController('#carousel-2');
 	carouselController('#carousel-3');
-	carouselController('#carousel-4');
+	// carouselController('#carousel-4');
 
 	var waypoint = new Waypoint({
 		element: document.getElementById('carousel-2'),
