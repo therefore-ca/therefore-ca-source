@@ -143,13 +143,13 @@ $( document ).ready(function() {
 	carouselController('#carousel-3');
 	// carouselController('#carousel-4');
 
-	var waypoint = new Waypoint({
-		element: document.getElementById('carousel-2'),
-		handler: function() {
-			$('ul.slides li.active').addClass('animate');
-		},
-		offset: '50%'
-	});
+	// var waypoint = new Waypoint({
+	// 	element: document.getElementById('carousel-2'),
+	// 	handler: function() {
+	// 		$('ul.slides li.active').addClass('animate');
+	// 	},
+	// 	offset: '50%'
+	// });
 
 	/*$(function() {
 		$('.logo-cloud').swipe( {

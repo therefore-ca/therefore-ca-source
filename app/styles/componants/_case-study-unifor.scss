@@ -27,20 +27,34 @@
 }
 
 @media screen and (max-width: 700px) {
-	#case-study.unifor-case-study .case-studies.wrapper {
-	    min-height: 360px;
-	}
+	#case-study.unifor-case-study {
+		.case-studies.wrapper {
+		    min-height: 360px;
+		}
 
-	#case-study.unifor-case-study .carousel-inner {
-		height: 300px;
-		overflow: hidden !important;
-	}
+		img.case-study {
+			width: 115%;
+    		left: -50px;
+		}
 
-	#case-study.unifor-case-study section#overview {
-		margin-top: 0px;
-	}
+		.carousel-inner {
+			height: 300px;
+			overflow: hidden !important;
+			margin-top: -15px;
+			margin-bottom: -90px;
+		}
 
-	#case-study.unifor-case-study .case-studies.wrapper {
-		margin-bottom: 40px;
+		.carousel-inner {
+			height: 300px;
+			overflow: hidden !important;
+		}
+
+		section#overview {
+			margin-top: 0px;
+		}
+
+		.case-studies.wrapper {
+			margin-bottom: 40px;
+		}
 	}
 }

@@ -27,7 +27,7 @@
 
 	@include mobile {
 		width: 25%;
-	}	
+	}
 }
 
 .cut-off {
@@ -102,7 +102,7 @@
 }
 ul.bullets li ul {
     padding-left: 0px;
-} 
+}
 .two-col.bullets {
 	li {
 		@include desktop {
