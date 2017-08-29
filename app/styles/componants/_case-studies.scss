@@ -48,7 +48,7 @@
 		display: block !important;
 		visibility: visible !important;
 		opacity: 0;
-	}	
+	}
 
 	.slide.active {
 		margin-left: 0;
@@ -99,14 +99,14 @@ li.slide.cloverleaf {
 		span {
 		    border-radius: 100%;
 		    width: 40px;
-		    height: 40px;	
-		    border: $grey 3px solid;	
-		    display: block;	
+		    height: 40px;
+		    border: $grey 3px solid;
+		    display: block;
 		    position: absolute;
 			top: 50%;
 			@media screen and (max-width: 700px) {
 				width: 30px;
-				height: 30px;	
+				height: 30px;
 				top: 55%;
 			}
 		}
@@ -153,7 +153,7 @@ li.slide.cloverleaf {
 			h2 {
 				color: $grey;
 				margin-top: 0;
-				font-size: 26px;
+				font-size: 21px;
 			}
 		}
 	}
@@ -169,7 +169,7 @@ li.slide.cloverleaf {
 		@media screen and (max-width: 700px) {
 			color: white;
 		}
-	} 
+	}
 
 	@media screen and (max-width: 700px) {
 		background: rgba(0,0,0,0.5);
@@ -278,7 +278,7 @@ ul.arrows {
  	bottom: 0em;
  	width: 110px;
  	height: 110px;
- 	background-color: white; 
+ 	background-color: white;
  	border: 5px solid lightgray;
  }
 
@@ -335,7 +335,7 @@ ul.arrows {
 	 		top: 35px;
 	 		position: absolute;
 	 		width: 100%;
-	 	}	
+	 	}
 	 }
 
  	li.slide {
@@ -352,7 +352,7 @@ ul.arrows {
 		.list-group {
 			padding-left: 1em;
 		}
-	}	
+	}
 
 	.how-its-done ul.slides {
 		@media (min-width: 600px) and (max-width: 991px)
@@ -377,8 +377,8 @@ ul.arrows {
 
 	.how-its-done .showcase-text {
 	 	@media screen and (min-width: 992px) {
-	 		top: 0px; 
-	 	}		
+	 		top: 0px;
+	 	}
 	}
 
 	section#overview, .overview {
@@ -425,7 +425,7 @@ ul.arrows {
 
 	article.blog {
 		img {
-			max-width: none;	
+			max-width: none;
 		}
 
 		img.unifor-shield {
@@ -449,7 +449,7 @@ ul.arrows {
 	background: -ms-linear-gradient(top, rgba(243,243,243,1) 0%,rgba(64,64,64,0.19) 100%); /* IE10+ */
 	background: linear-gradient(to bottom, rgba(243,243,243,1) 0%,rgba(64,64,64,0.19) 100%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f3f3f3', endColorstr='#30404040',GradientType=0 ); /* IE6-9 */
-	margin-bottom: 3em;
+	margin-bottom: 3rem;
 
 	.lead.single-col {
 		margin-bottom: 0em;
@@ -476,7 +476,7 @@ ul.arrows {
 		}
 
 		@media screen and (max-width: 700px) {
-			bottom: -30px;
+			bottom: -50px;
 		}
 	}
 
@@ -486,7 +486,8 @@ ul.arrows {
 
 	@media screen and (max-width: 700px) {
 		overflow: hidden;
-		min-height: 400px;
+		min-height: 430px;
+		margin-bottom: -1rem;
 	}
 
 	.divider {
@@ -511,25 +512,25 @@ section .red-content .background {
 
 	@media (min-width: 1200px) {
 	    background-size: 100% 50%;
-	    margin-top: -110px;	    
+	    margin-top: -110px;
 	}
 
 	@media (min-width: 992px) and (max-width: 1199px) {
 	    background-size: 100% 60%;
-	    margin-top: -100px;	    
+	    margin-top: -100px;
 	    font-size: .9em;
-	}		
+	}
 
 	@media (min-width: 768px) and (max-width: 991px) {
 	    background-size: 100% 90%;
    	    margin-top: -50px;
 	    font-size: .9em;
-	}	
+	}
 
 	@media (min-width: 768px) {
 	    background-position: 100%;
 	    background-repeat: no-repeat;
-	    background-repeat-x: inherit;   
+	    background-repeat-x: inherit;
 	    .left {
   	    	padding-left: 4em;
 	    	padding-right: 0em;
@@ -543,7 +544,7 @@ section .red-content .background {
 
 	.right {
 	    padding: 1em;
-	}    
+	}
 
     p {
     	color: #ffffff;

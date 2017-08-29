@@ -1,7 +1,7 @@
 .logo-cloud {
 	clear: both;
 	overflow: hidden;
-	max-width: 1200px; 
+	max-width: 1200px;
 	margin: 0 auto;
 	transition: all 0.3s ease;
 
@@ -12,7 +12,7 @@
 
 
 	@media screen and (min-width: 1300px) {
-		max-width: 1400px; 
+		max-width: 1400px;
 	}
 
 
@@ -35,7 +35,7 @@
 	.logo-cloud {
 		clear: both;
 		overflow: hidden;
-		max-width: 1200px; 
+		max-width: 1200px;
 		margin: 0 auto;
 		transition: all 0.3s ease;
 
@@ -89,7 +89,7 @@
 
 	@media screen and (min-width: 1300px) {
 		padding: 0 1.5em;
-		width: 16.6666667%;
+		width: 20%;
 	}
 
 	@include mobile {
