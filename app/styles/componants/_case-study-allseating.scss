@@ -37,36 +37,3 @@
 		margin-bottom: -60px;
 	}
 }
-
-@media screen and (max-width: 700px) {
-	#case-study.allseating-case-study {
-		.case-studies.wrapper {
-		    min-height: 360px;
-		}
-
-		img.case-study {
-			width: 115%;
-    		left: -50px;
-		}
-
-		.carousel-inner {
-			height: 300px;
-			overflow: hidden !important;
-			margin-top: -15px;
-			margin-bottom: -90px;
-		}
-
-		.carousel-inner {
-			height: 300px;
-			overflow: hidden !important;
-		}
-
-		section#overview {
-			margin-top: 0px;
-		}
-
-		.case-studies.wrapper {
-			margin-bottom: 40px;
-		}
-	}
-}
