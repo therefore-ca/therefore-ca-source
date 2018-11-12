@@ -1,6 +1,0 @@
-# robotstxt.org/
-
-User-agent: *
-Disallow: /blog/
-Disallow: /extras/
-Sitemap: http://therefore.ca/sitemap.xml

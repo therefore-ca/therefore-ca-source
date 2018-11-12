@@ -3,7 +3,7 @@
   "scripts": {
     "build": "grunt build",
     "serve": "grunt build && cd www && npm i && node server.js && cd ..",
-    "init": "npm i -g grunt-cli && npm i && bower i --allow-root"
+    "init": "npm i -g grunt-cli bower && npm i && bower i --allow-root"
   },
   "devDependencies": {
     "apache-server-configs": "^2.7.1",
