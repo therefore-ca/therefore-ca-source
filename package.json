@@ -1,8 +1,8 @@
 {
   "name": "therefore-webapp",
   "scripts": {
-    "build": "grunt build",
-    "serve": "grunt build && cd www && npm i && node server.js && cd ..",
+    "build": "grunt build && git add www",
+    "serve": "grunt build && cd www && npm i && node server.js && cd .. && git add www",
     "init": "npm i -g grunt-cli bower && npm i && bower i --allow-root"
   },
   "devDependencies": {
