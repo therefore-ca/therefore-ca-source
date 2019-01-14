@@ -551,8 +551,8 @@ span.underline {
 
 /* Company logo */
 .logo {
-  background-image: url("/images/therefore-logo.svg");
-  margin-top: 1.5em;
+  background-image: url("/images/therefore-logo.png");
+  margin-top: 2em;
   width: 160px;
   height: 80px;
   background-size: 100% auto;
