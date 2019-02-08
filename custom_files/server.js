@@ -9,7 +9,7 @@ var nodemailer = require('nodemailer');
 var redirects = require('./redirects');
 
 var smtpConfig = {
-  host: 'email-smtp.us-east-1.amazonaws.com',
+  host: process.env.SMTP_HOST,
   port: 25,
   secure: false, // use SSL
   requireTLS: true,
