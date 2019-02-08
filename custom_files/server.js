@@ -9,14 +9,16 @@ var nodemailer = require('nodemailer');
 var redirects = require('./redirects');
 
 var smtpConfig = {
-  host: 'mail-manager.smtp.com',
+  host: 'email-smtp.us-east-1.amazonaws.com',
   port: 25,
   secure: false, // use SSL
+  requireTLS: true,
   auth: {
-    user: 'alexd@therefore.ca',
-    pass: '9bacf2ae'
+    user: process.env.SMTP_USER,
+    pass: process.env.SMTP_PASS
   }
 };
+console.log('smptConfig', smtpConfig);
 var transporter = nodemailer.createTransport(smtpConfig);
 
 
@@ -121,8 +123,8 @@ server.route({
     ;
 
     var requestObject = {
-      to: 'hello@therefore.ca',
-      from: 'hello@therefore.ca',
+      to: 'homer@therefore.ca',
+      from: 'homer@therefore.ca',
       subject: 'therefore.ca - Project Estimate Form Submission',
       text: htmlContent,
       html: htmlContent
