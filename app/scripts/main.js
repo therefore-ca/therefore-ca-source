@@ -14,6 +14,8 @@ jQuery(document).ready(function ($) {
     $('.menu-container').addClass('mobile-hidden open').addClass('closed');
     $('a.menu-open').removeClass('mobile-hidden');
   });
+
+  $('#footer .copyright .copyright-year').html(new Date().getFullYear());
 });
 
 $(".card").flip();
