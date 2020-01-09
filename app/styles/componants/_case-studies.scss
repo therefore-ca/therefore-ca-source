@@ -97,12 +97,12 @@ li.slide.cloverleaf {
 			width: 10%;
 		}
 		span {
-		    border-radius: 100%;
-		    width: 40px;
-		    height: 40px;
-		    border: $grey 3px solid;
-		    display: block;
-		    position: absolute;
+      border-radius: 100%;
+      width: 40px;
+      height: 40px;
+      border: $grey 3px solid;
+      display: block;
+      position: absolute;
 			top: 50%;
 			@media screen and (max-width: 700px) {
 				width: 30px;
@@ -479,12 +479,10 @@ ul.arrows {
 	}
 
 	.button-wrapper {
-		position: absolute;
-		bottom: 50px;
 		display: block;
 		width: 100%;
+    margin-top: 15px;
 		text-align: center;
-		left: 0;
 
 		@media screen and (max-width: 900px) {
 			bottom: 10px;
