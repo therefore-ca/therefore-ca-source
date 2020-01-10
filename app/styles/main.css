@@ -2133,12 +2133,10 @@ a.disabled {
     overflow: hidden;
     height: 500px; }
   .case-studies.wrapper .button-wrapper {
-    position: absolute;
-    bottom: 50px;
     display: block;
     width: 100%;
-    text-align: center;
-    left: 0; }
+    margin-top: 15px;
+    text-align: center;}
     @media screen and (max-width: 900px) {
       .case-studies.wrapper .button-wrapper {
         bottom: 10px; } }
