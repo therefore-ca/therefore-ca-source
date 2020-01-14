@@ -7,6 +7,8 @@ module.exports = {
   "/brand/loblaws": "/work.html",
   "/brand/unifor": "/work.html",
   "/brand/canada-lands": "/work.html",
+  "/profile": "/",
+  "/profile/therefore": "/",
   "/portfolio/slide/125/all": "/work.html",
   "/portfolio/slide/129/all": "/work.html",
   "/portfolio/slide/131/all": "/work.html",
