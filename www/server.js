@@ -147,6 +147,53 @@ server.route({
   }
 });
 
+server.route({
+  method: 'GET',
+  path: '/get-in-touch-process',
+  handler: function (request, reply) {
+    var args = url.parse(request.url, true).query;
+
+    // If blank values for any of the required fields somehow made it through, it's likely this wasn't submitted through
+    // the form, and should be rejected. The site validates that all of these must be present before sumbmitting over
+    // ajax.
+    if (!args.name || !args.email || !args.website) {
+      return reply({success: false});
+    }
+
+    var htmlContent = '<h3>Contact information</h3>' +
+      '<b>Name</b><br>' + args.name + '<br><br>' +
+      '<b>Email</b><br>' + args.email + '<br><br>' +
+      '<b>Website</b><br>' + args.website + '<br><br>';
+
+    if (args.comment !== '') {
+      htmlContent += '<b>Notes</b><br>' + args.comment + '<br>';
+    }
+
+    var requestObject = {
+      to: 'marketing@therefore.ca',
+      from: 'hello@therefore.ca',
+      subject: args.website + ' - I’d like to know my Drupal Migration options.',
+      text: htmlContent,
+      html: htmlContent
+    };
+
+    console.log('Email -- Attempting to send', requestObject);
+
+    // send mail with defined transport object
+    transporter.sendMail(requestObject, function (error, info) {
+      var success = false;
+
+      if (error) {
+        return console.log(error);
+      } else {
+        success = true;
+      }
+      console.log('Message sent: ' + info.response);
+      reply({success: success});
+    });
+  }
+});
+
 server.register(require('inert'), function (err) {
   if (err) {
     throw err;

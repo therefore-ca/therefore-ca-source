@@ -1,0 +1,46 @@
+.thank-you {
+  background-color: #303030;
+  color: #ffffff;
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  @media (min-width: 768px) {
+    padding-top: 115px;
+    padding-bottom: 115px;
+  }
+
+  &__title {
+    @include sf-style(34px, $font-family: $ff-open-sans, $line-height: 42px);
+    max-width: 580px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40px;
+
+    @media (min-width: 768px) {
+      margin-bottom: 60px;
+    }
+  }
+
+  &__description {
+    @include sf-style(23px, $font-family: $ff-open-sans, $font-weight: 300, $line-height: 37px, $letter-spacing: 1.27px);
+    max-width: 580px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 60px;
+
+    @media (min-width: 768px) {
+      margin-bottom: 95px;
+    }
+  }
+
+  &__links {
+    a {
+      margin-bottom: 15px;
+
+      @media (min-width: 768px) {
+        margin-left: 10px;
+        margin-right: 10px;
+      }
+    }
+  }
+}

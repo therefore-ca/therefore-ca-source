@@ -1,0 +1,132 @@
+.get-in-touch {
+  background-color: #242424;
+  padding-top: 30px;
+  padding-bottom: 40px;
+  color: #ffffff;
+
+  @media (min-width: 768px) {
+    padding-top: 40px;
+  }
+
+  .title {
+    margin-bottom: 40px;
+
+    @media (min-width: 768px) {
+      margin-bottom: 50px;
+    }
+  }
+
+  form {
+    padding-bottom: 50px;
+    margin-bottom: 40px;
+    border-bottom: 1px solid #979797;
+  }
+
+  a {
+    text-decoration: underline;
+    color: #ffffff;
+    -webkit-transition: all 350ms ease-out;
+    transition: all 350ms ease-out;
+
+    &:hover,
+    &:focus {
+      color: #7F7F7F;
+    }
+  }
+
+  &__description {
+    @include sf-style(20px, $font-family: $ff-open-sans, $font-weight: 300, $line-height: 27px, $letter-spacing: 0.94px);
+    margin-bottom: 40px;
+
+    p {
+      color: #ffffff;
+    }
+
+    span {
+      font-weight: 400;
+    }
+  }
+
+  &__contact {
+    @include sf-style(18px, $font-family: $ff-open-sans, $line-height: 27px, $letter-spacing: 0.94px);
+
+    a {
+      font-weight: 300;
+    }
+  }
+
+  label {
+    @include sf-style(16px, $font-family: $ff-open-sans, $line-height: 27px, $letter-spacing: 0.75px);
+    color: #ffffff;
+  }
+
+  input.form-control,
+  textarea.form-control {
+    @include sf-style(16px, $font-family: $ff-open-sans, $font-weight: 300, $line-height: 27px, $letter-spacing: 0.75px);
+    color: #ffffff;
+    box-sizing: border-box;
+    border: 1px solid #ffffff;
+    border-radius: 3px;
+    background-color: transparent;
+  }
+
+  textarea {
+    &.form-control {
+      resize: none;
+
+      @media (min-width: 768px) {
+        height: 268px;
+      }
+    }
+  }
+
+  .form-group {
+    margin-bottom: 33px;
+  }
+
+  .control-group {
+    position: relative;
+
+    .form-control {
+      -webkit-transition: border 350ms ease-out;
+      transition: border 350ms ease-out;
+
+      &:focus {
+        border: 1px solid #ffffff;
+        background: transparent;
+      }
+    }
+
+    &.error,
+    &.warning {
+      .help-block {
+        visibility: visible;
+        opacity: 1;
+        -webkit-transition: 0s;
+        transition-delay: 0s;
+      }
+    }
+  }
+
+  .help-block {
+    position: absolute;
+    bottom: -40px;
+    left: 0;
+    color: #d64339;
+    line-height: 27px;
+    letter-spacing: 0.75px;
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transition: visibility 0s linear 350ms, opacity 350ms linear;
+    transition: visibility 0s linear 350ms, opacity 350ms linear;
+
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+  }
+}
