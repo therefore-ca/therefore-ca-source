@@ -4,7 +4,7 @@
   position: relative;
   background: url('../images/drupal-migration/banner-image-route.png') no-repeat top center;
   background-size: cover;
-  color: #ffffff;
+  color: $sc-white;
 
   @media (min-width: 768px) {
     padding-top: 62px;
@@ -21,7 +21,7 @@
     height: 100%;
     width: 100%;
     transform: rotate(180deg);
-    background: linear-gradient(180deg, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0) 100%);
+    background: linear-gradient(180deg, $sc-black-rgba 0%, rgba(0,0,0,0) 100%);
     z-index: 1;
   }
 

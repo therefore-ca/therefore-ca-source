@@ -1,8 +1,8 @@
 .timeline {
   padding-top: 55px;
   padding-bottom: 35px;
-  background-color: #003C74;
-  color: #ffffff;
+  background-color: $sc-blue;
+  color: $sc-white;
 
   @media (min-width: 768px) {
     padding-top: 75px;
@@ -64,7 +64,7 @@
     justify-content: center;
     height: 85px;
     box-sizing: border-box;
-    border: 2px solid rgba(255, 255, 255, 0.5);
+    border: 2px solid $sc-white-rgba;
     border-radius: 2px;
   }
 
@@ -86,15 +86,15 @@
     justify-content: center;
     min-height: 57px;
     padding: 5px;
-    background-color: #30608E;
+    background-color: $sc-blue-light;
     margin-top: 5px;
     margin-bottom: 5px;
     text-align: center;
   }
 
   &__release--active {
-    background-color: #ffffff;
-    color: #003C74;
+    background-color: $sc-white;
+    color: $sc-blue;
   }
 
   &__description {
@@ -111,7 +111,7 @@
 
     p {
       @include sf-style(19px, $font-family: $ff-open-sans, $font-weight: 300, $line-height: 31px, $letter-spacing: 0.95px);
-      color: #ffffff;
+      color: $sc-white;
       margin-bottom: 40px;
     }
   }

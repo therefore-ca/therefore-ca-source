@@ -20,8 +20,22 @@ $greyLight70: lighten($grey, 70);
 $greyTrans: rgba(64, 64, 64, 0.90);
 $greyTransLight: rgba(64, 64, 64, 0.5);
 $whiteTrans: rgba(255, 255, 255, 0.60);
-/* Global brand colors */
 
+// Colors for Drupal migration landing page.
+$sc-white: #ffffff;
+$sc-white-rgba: rgba(255, 255, 255, 0.5);
+$sc-black: #000000;
+$sc-black-light: #242424;
+$sc-black-light-2: #303030;
+$sc-black-rgba: rgba(0,0,0,0.95);
+$sc-red: #da2208;
+$sc-grey: #7f7f7f;
+$sc-grey-dark: #646464;
+$sc-grey-light: #979797;
+$sc-blue: #003c74;
+$sc-blue-light: #30608e;
+
+/* Global brand colors */
 .primary,
 .therefore-primary,
 .navbar.navbar.therefore-primary,

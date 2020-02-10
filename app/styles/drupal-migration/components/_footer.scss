@@ -8,12 +8,12 @@
 
     a {
       @include sf-style(16px, $font-family: $ff-open-sans, $line-height: 27px, $letter-spacing: 0.84px);
-      color: #000000;
+      color: $sc-black;
       -webkit-transition: all 350ms ease-out;
       transition: all 350ms ease-out;
 
       &:hover {
-        color: #7F7F7F;
+        color: $sc-grey;
         text-decoration: none;
       }
     }
@@ -21,7 +21,7 @@
 
   &__copyright {
     @include sf-style(14px, $font-family: $ff-open-sans, $line-height: 19px, $letter-spacing: 0.88px);
-    color: #000000;
+    color: $sc-black;
   }
 
   &__logo {

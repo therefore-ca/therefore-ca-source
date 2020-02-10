@@ -50,7 +50,7 @@
 
 .title {
   @include sf-style(23px, $font-family: $ff-open-sans, $font-weight: 600, $line-height: 37px, $letter-spacing: 0.77px);
-  color: #000000;
+  color: $sc-black;
   text-transform: none;
   margin-bottom: 50px;
 
@@ -59,16 +59,16 @@
   }
 
   &--white {
-    color: #ffffff;
+    color: $sc-white;
   }
 }
 
 .cta-link {
   @include sf-style(14px, $font-family: $ff-open-sans, $font-weight: 600, $line-height: 19px, $letter-spacing: 0.88px);
-  color: #000000;
+  color: $sc-black;
   padding: 10px 17px;
   box-sizing: border-box;
-  border: 1px solid #FF492F;
+  border: 1px solid $sc-red;
   border-radius: 3px;
   -webkit-transition: all 350ms ease-out;
   transition: all 350ms ease-out;
@@ -93,8 +93,8 @@
 
   &:hover,
   &:focus {
-    background-color: #FF492F;
-    color: #ffffff;
+    background-color: $sc-red;
+    color: $sc-white;
     text-decoration: none;
 
     &::after {
@@ -103,7 +103,7 @@
   }
 
   &--white {
-    color: #ffffff;
+    color: $sc-white;
   }
 
   &--right {
@@ -116,10 +116,10 @@
 
 .btn--submit {
   @include sf-style(15px, $font-family: $ff-open-sans, $font-weight: 600, $line-height: 20px, $letter-spacing: 0.94px);
-  color: #ffffff !important;
-  border: 1px solid #FF492F;
+  color: $sc-white !important;
+  border: 1px solid $sc-red;
   border-radius: 3px;
-  background-color: #DA2208 !important;
+  background-color: $sc-red !important;
   text-transform: none;
   padding: 12px 62px;
   -webkit-transition: all 350ms ease-out;
@@ -145,7 +145,7 @@
   &.error {
     label {
       &::before {
-        border-color: #d64339;
+        border-color: $sc-red;
       }
     }
   }
@@ -178,7 +178,7 @@
       -webkit-transition: border 350ms ease-out;
       transition: border 350ms ease-out;
       border-radius: 3px;
-      border: 1px solid #ffffff;
+      border: 1px solid $sc-white;
     }
 
     &::after {
@@ -186,8 +186,8 @@
       display: block;
       width: 10px;
       height: 5px;
-      border-bottom: 2px solid #ffffff;
-      border-left: 2px solid #ffffff;
+      border-bottom: 2px solid $sc-white;
+      border-left: 2px solid $sc-white;
       -webkit-transform: rotate(-45deg) scale(0);
       -moz-transform: rotate(-45deg) scale(0);
       -ms-transform: rotate(-45deg) scale(0);
@@ -206,7 +206,7 @@
   }
 
   input[type="checkbox"]:checked ~ label::before {
-    color: #ffffff;
+    color: $sc-white;
   }
 
   input[type="checkbox"]:checked ~ label::after {
