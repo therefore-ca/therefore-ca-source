@@ -92,4 +92,46 @@ $(document).ready(function () {
       }
     }
   );
+
+  var $getInTouchForm = $('#get-in-touch-form');
+  $getInTouchForm.submit(function (event) {
+    event.preventDefault();
+  });
+  $getInTouchForm.find('input,textarea').jqBootstrapValidation(
+    {
+      preventSubmit: true,
+      submitError: function ($form, event, errors) {
+        // Here I do nothing, but you could do something like display
+        // the error messages to the user, log, etc.
+      },
+      submitSuccess: function ($form, event) {
+        event.preventDefault();
+        var formError = $('#get-in-touch-form .form-error');
+        formError.html('');
+
+        var name = $getInTouchForm.find('input#name').val();
+        var email = $getInTouchForm.find('input#email').val();
+        var website = $getInTouchForm.find('input#website').val();
+        var comment = $getInTouchForm.find('#comment').val();
+
+        $.ajax({
+          url: '/get-in-touch-process',
+          method: 'GET',
+          data: {
+            'name': name,
+            'email': email,
+            'website': website,
+            'comment': comment
+          }
+        }).done(function (response) {
+          if (response && !!response.success) {
+            // Redirect to Thank you page.
+            window.location.href = 'https://therefore.ca/drupal-migration-thank-you';
+          } else {
+            formError.html('<span class="errorNotice underline">There was an error submitting your request. Please try again.</span>');
+          }
+        });
+      }
+    }
+  );
 });

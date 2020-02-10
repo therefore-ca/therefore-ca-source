@@ -1,0 +1,114 @@
+.banner {
+  padding-top: 20px;
+  padding-bottom: 50px;
+  position: relative;
+  background: url('../images/drupal-migration/banner-image-route.png') no-repeat top center;
+  background-size: cover;
+  color: #ffffff;
+
+  @media (min-width: 768px) {
+    padding-top: 62px;
+    padding-bottom: 62px;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    transform: rotate(180deg);
+    background: linear-gradient(180deg, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0) 100%);
+    z-index: 1;
+  }
+
+  .container {
+    position: relative;
+    z-index: 2;
+  }
+
+  .inner {
+    @media (min-width: 992px) {
+      padding-left: 45px;
+      padding-right: 45px;
+    }
+  }
+
+  .vertical-align {
+    display: flex;
+    align-items: center;
+  }
+
+  &__title {
+    @include sf-style(35px, $font-family: $ff-open-sans, $font-weight: 600, $line-height: 45px, $letter-spacing: 1.04px);
+    margin: 20px 0 50px;
+
+    @media (min-width: 450px) {
+      font-size: 45px;
+      line-height: 60px;
+    }
+
+    @media (min-width: 768px) {
+      font-size: 55px;
+      line-height: 75px;
+      margin: 50px 0 110px;
+    }
+  }
+
+  &__logo {
+    img {
+      margin: auto;
+
+      @media (min-width: 768px) {
+        margin: 0;
+      }
+    }
+  }
+
+  &__quote {
+    @include sf-style(23px, $font-family: $ff-open-sans, $font-weight: 300, $line-height: 35px, $letter-spacing: 0.77px);
+    font-style: italic;
+    position: relative;
+    margin-bottom: 28px;
+    margin-left: 25px;
+    margin-top: 50px;
+
+    @media (min-width: 768px) {
+      margin-left: 0;
+      margin-top: 0;
+    }
+
+    q {
+      quotes: "“" "”";
+
+      &::before {
+        @include sf-style(84px, $font-family: $ff-open-sans, $font-weight: 500, $line-height: 36px, $letter-spacing: 2.8px);
+        content: open-quote;
+        position: absolute;
+        top: -10px;
+        left: -35px;
+
+        @media (min-width: 768px) {
+          left: -45px;
+        }
+      }
+
+      &::after {
+        content: "";
+      }
+    }
+  }
+
+  &__signature {
+    @include sf-style(15px, $font-family: $ff-open-sans, $line-height: 20px, $letter-spacing: 0.94px);
+    font-style: italic;
+    margin-left: 25px;
+
+    @media (min-width: 768px) {
+      margin-left: 0;
+    }
+  }
+}
