@@ -110,7 +110,7 @@
     }
 
     p {
-      @include sf-style(19px, $font-family: $ff-open-sans, $font-weight: 300, $line-height: 31px, $letter-spacing: 0.95px);
+      @include sf-style(19px, $font-family: $ff-open-sans, $font-weight: 500, $line-height: 31px, $letter-spacing: 0.95px);
       color: $sc-white;
       margin-bottom: 40px;
     }

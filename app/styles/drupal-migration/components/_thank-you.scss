@@ -7,6 +7,13 @@
   @media (min-width: 768px) {
     padding-top: 115px;
     padding-bottom: 115px;
+    min-height: 100%;
+  }
+
+  .container {
+    @media (min-width: 768px) {
+      padding-bottom: 87px;
+    }
   }
 
   &__title {

@@ -1,6 +1,11 @@
+html {
+  height: 100%;
+}
+
 .sticky-menu {
   @media (min-width: 768px) {
     margin-top: 87px;
+    height: calc(100% - 87px);
   }
 }
 
@@ -273,6 +278,14 @@
   @media (max-width: 767px) {
     &--sm {
       padding: 0;
+    }
+  }
+}
+
+.thank-you-page {
+  .footer {
+    @media (min-width: 768px) {
+      margin-top: -161px;
     }
   }
 }

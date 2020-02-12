@@ -35,7 +35,7 @@
   }
 
   &__description {
-    @include sf-style(20px, $font-family: $ff-open-sans, $font-weight: 300, $line-height: 27px, $letter-spacing: 0.94px);
+    @include sf-style(20px, $font-family: $ff-open-sans, $font-weight: 500, $line-height: 27px, $letter-spacing: 0.94px);
     margin-bottom: 40px;
 
     p {
