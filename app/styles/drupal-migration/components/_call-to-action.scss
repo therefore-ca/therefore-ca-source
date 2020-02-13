@@ -24,7 +24,7 @@
 
     p {
       @include sf-style(16px, $font-family: $ff-open-sans, $line-height: 25px, $letter-spacing: 0.94px);
-      color: #000000;
+      color: $sc-black;
       margin-bottom: 25px;
 
       @media (min-width: 768px) {

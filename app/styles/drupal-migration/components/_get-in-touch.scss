@@ -1,8 +1,8 @@
 .get-in-touch {
-  background-color: #242424;
+  background-color: $sc-black-light;
   padding-top: 30px;
   padding-bottom: 40px;
-  color: #ffffff;
+  color: $sc-white;
 
   @media (min-width: 768px) {
     padding-top: 40px;
@@ -19,27 +19,27 @@
   form {
     padding-bottom: 50px;
     margin-bottom: 40px;
-    border-bottom: 1px solid #979797;
+    border-bottom: 1px solid $sc-grey-light;
   }
 
   a {
     text-decoration: underline;
-    color: #ffffff;
+    color: $sc-white;
     -webkit-transition: all 350ms ease-out;
     transition: all 350ms ease-out;
 
     &:hover,
     &:focus {
-      color: #7F7F7F;
+      color: $sc-grey;
     }
   }
 
   &__description {
-    @include sf-style(20px, $font-family: $ff-open-sans, $font-weight: 300, $line-height: 27px, $letter-spacing: 0.94px);
+    @include sf-style(20px, $font-family: $ff-open-sans, $font-weight: 500, $line-height: 27px, $letter-spacing: 0.94px);
     margin-bottom: 40px;
 
     p {
-      color: #ffffff;
+      color: $sc-white;
     }
 
     span {
@@ -57,15 +57,15 @@
 
   label {
     @include sf-style(16px, $font-family: $ff-open-sans, $line-height: 27px, $letter-spacing: 0.75px);
-    color: #ffffff;
+    color: $sc-white;
   }
 
   input.form-control,
   textarea.form-control {
     @include sf-style(16px, $font-family: $ff-open-sans, $font-weight: 300, $line-height: 27px, $letter-spacing: 0.75px);
-    color: #ffffff;
+    color: $sc-white;
     box-sizing: border-box;
-    border: 1px solid #ffffff;
+    border: 1px solid $sc-white;
     border-radius: 3px;
     background-color: transparent;
   }
@@ -92,7 +92,7 @@
       transition: border 350ms ease-out;
 
       &:focus {
-        border: 1px solid #ffffff;
+        border: 1px solid $sc-white;
         background: transparent;
       }
     }
@@ -112,7 +112,7 @@
     position: absolute;
     bottom: -40px;
     left: 0;
-    color: #d64339;
+    color: $sc-red;
     line-height: 27px;
     letter-spacing: 0.75px;
     font-family: "Open Sans", sans-serif;

@@ -60,13 +60,20 @@
     <!-- End Facebook Pixel Code -->
 </head>
 
-<body class="sticky-menu">
+<body class="sticky-menu thank-you-page">
 <!-- Facebook Pixel Event Code -->
 <script>
-  fbq('track', 'CompleteRegistration', {
-    value: 0.00,
-    currency: 'CAD'
-  });
+  var referer = document.referrer;
+  if (referer) {
+    fbq('track', 'CompleteRegistration', {
+      value: 0.00,
+      currency: 'CAD'
+    });
+  } else {
+    // Redirect to Drupal migration landing page.
+    window.location.href = 'https://therefore.ca/drupal-migration';
+  }
+
 </script>
 <!-- End Facebook Pixel Event Code -->
 <!--[if lt IE 10]><p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a
@@ -79,7 +86,7 @@
     <div class="row">
       <div class="col-xs-12">
         <a href="https://therefore.ca/" class="header__logo">
-          <img src="../images/drupal-migration/logo-therefore.png" alt="Therefore Interactive’s company logo" />
+          <img src="images/drupal-migration/logo-therefore.png" alt="Therefore Interactive’s company logo" />
         </a>
       </div>
     </div>
@@ -112,7 +119,7 @@
             </div>
             <div class="col-sm-6 col-xs-12 text-right--sm">
                 <a href="https://therefore.ca/" class="footer__logo">
-                    <img src="../images/drupal-migration/logo-therefore.png" alt="Therefore Interactive’s company logo" />
+                    <img src="images/drupal-migration/logo-therefore.png" alt="Therefore Interactive’s company logo" />
                 </a>
             </div>
         </div>
