@@ -7,3 +7,4 @@ server
 .idea/
 www/node_modules/
 bak/
+*.log
