@@ -6,3 +6,5 @@ bower_components
 server
 .idea/
 www/node_modules/
+bak/
+*.log

@@ -219,6 +219,10 @@ server.register(require('inert'), function (err) {
       } else if (fs.existsSync(uri + '.html')) {
         reply.file(uri + '.html');
       }
+      // Send the blog paths back to the homepage
+      else if (uri === 'blog' || uri.indexOf('blog/') !== -1) {
+        reply.redirect('/');
+      }
       else if (redirects['/' + uri]) {
         reply.redirect(redirects['/' + uri]);
       } else {
