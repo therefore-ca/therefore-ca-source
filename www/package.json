@@ -10,7 +10,7 @@
     "apache-server-configs": "^2.7.1",
     "good": "^6.4.0",
     "good-console": "^5.1.0",
-    "hapi": "10.5.0",
+    "hapi": "18.1.0",
     "inert": "^3.2.0",
     "lodash": "^3.10.1",
     "sparkpost":"1.1.0",
